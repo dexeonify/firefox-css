@@ -19,6 +19,22 @@ Here's a quick roundown on the basics of setting up Firefox CSS:
 3. Create a new folder named `chrome`, download this repo (or `git clone`)
    and just copy the downloaded files into the `chrome` folder you just created.
 
+4. If you want smooth scrolling, copy the `user.js` file to the Profile folder, NOT the `chrome/` folder.
+
+So the directory tree is something like this:
+```
+<your profile folder>
+│   user.js
+└── chrome/
+    │   userChrome.css
+    │   userContent.css
+    │   noise-512x512.png
+    │
+    └── components
+            hide_tabs_toolbar.css
+            windows_controls_placeholder.css
+```
+
 If you want a proper getting started guide, you should check out
 [the wiki in r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS/wiki/index/tutorials).
 
@@ -30,6 +46,7 @@ Modified from [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur)
 Removed all other customisations, leaving only the relevant CSS for the url bar.
 
 ![Blurred URL Bar](screenshots/Blurred%20URL%20Bar.png)
+
 
 ### Thin scrollbar
 #### userChrome.css
@@ -48,6 +65,7 @@ Though I've also themed the scrollbar for new Reddit because it doesn't have a n
 
 ![Reddit dark-themed scrollbar](screenshots/Reddit%20Scrollbar.png)
 
+
 ### Cleaner context menu
 Credit to [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard) so I can find the entries easily. 😄
 
@@ -62,6 +80,7 @@ Credit to [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simple
   ![Context menu (After)](screenshots/Context%20Menu%20(After).png)
 
 - You can also remove Pocket by disabling `extensions.pocket.enabled` in `about:config`
+
 
 ### Dynamic tab bar
 Autohide tabs bar when Sidebery is active, *with animation*.
@@ -78,12 +97,10 @@ and [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firef
 
 ![Dynamic tabs bar](screenshots/Dynamic%20Sidebery.gif)
 
-It's probably very "bloated" to have 2 css files just for this but hey, it's complete.
+It's probably very "bloated" to have 2 CSS files just for this but hey, it's complete.
 Though, I did tried to leave only the necessary CSS rules in both files.
 
-Anyways, to set this up you need to set the window preface value in Sidebery settings. 
-
+Anyways, to set this up you need to set the window preface value in Sidebery settings.
 From the wiki: `Sidebery settings` > `Help` > `Preface value`
 
-**Note:** The preface value can be anything, but you have to change it in the CSS as well.
-          In my CSS, it's "Sidebery".
+**Note:** The preface value can be anything, but you have to change it in the CSS as well. In my CSS, it's "Sidebery".
