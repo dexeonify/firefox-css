@@ -7,13 +7,13 @@ URL bar blur
 Minimimalize from https://github.com/datguypiko/Firefox-Mod-Blur
 */
 #urlbar[breakout][breakout-extend][open] {
-	background-image: url(noise-512x512.png) !important;
-	background-color: #1C1B22BF !important;
-	backdrop-filter: blur(32px) !important;
+    background-image: url(noise-512x512.png) !important;
+    background-color: #1C1B22BF !important;
+    backdrop-filter: blur(32px) !important;
 }
 
 #navigator-toolbox {
-	--toolbar-field-focus-background-color: transparent !important
+    --toolbar-field-focus-background-color: transparent !important
 }
 
 /*
@@ -23,14 +23,14 @@ Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/mi
 See the above repository for updates as well as full license text.
 */
 .panel-subview-body, #permList, scrollbar {
-	color: inherit;
-	scrollbar-width: thin
+    color: inherit;
+    scrollbar-width: thin
 }
 
 /* Remove "Send tab to device" and "Share" entry in tab context menu */
 #tabContextMenu #context_sendTabToDevice,
 .share-tab-url-item {
-	display: none
+    display: none
 }
 
 /* Remove "Email Image...", "Send Link to Device" and "Set As Desktop Background..." entry in context menu */
@@ -38,5 +38,5 @@ See the above repository for updates as well as full license text.
 #context-sendlinktodevice,
 #context-sep-setbackground,
 #context-setDesktopBackground {
-	display: none
+    display: none
 }
