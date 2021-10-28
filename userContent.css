@@ -1,2 +1,7 @@
 /* Thin scrollbar */
 * { scrollbar-width: thin }
+
+/* Dark scrollbar specifically for new reddit because they can be arsed to dark theme the scrollbar */
+@-moz-document domain(www.reddit.com) {
+    :root { scrollbar-color: rgb(70,70,70) rgb(20,20,20) !important }
+}
