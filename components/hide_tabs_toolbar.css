@@ -2,6 +2,11 @@
 See the above repository for updates as well as full license text. */
 
 /* Hides tabs toolbar */
+/* For OSX use hide_tabs_toolbar_osx.css instead */
+
+/* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
+ * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
+ */
 
 /* IMPORTANT */
 /*
@@ -9,43 +14,42 @@ Get window_control_placeholder_support.css
 Window controls will be all wrong without it
 */
 
-:root {--uc-toolbar-height: 41px}
+:root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
+:root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
 
-:root[titlepreface*="Sidebery"] #TabsToolbar {
-    visibility: collapse !important
+#TabsToolbar{ visibility: collapse !important }
+
+:root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
+  visibility: visible !important;
+  z-index: 2;
 }
 
-:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #TabsToolbar > #window-controls {
-    visibility: visible !important;
-    z-index: 2
+:root:not([inFullscreen]) #nav-bar{
+  margin-top: calc(0px - var(--uc-toolbar-height,0px));
 }
 
-:root[titlepreface*="Sidebery"]:not([inFullscreen]) #nav-bar {
-    margin-top: calc(0px - var(--uc-toolbar-height));
-    transition: margin-top .3s ease-in-out !important;
+:root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
+  min-height: unset !important;
+  height: var(--uc-toolbar-height,0px) !important;
+  position: relative;
 }
 
-#main-window[titlepreface*="Sidebery"] #toolbar-menubar {
-    min-height: unset !important;
-    height:var(--uc-toolbar-height) !important;
-    position: relative;
-    transition: height .3s ease-in-out !important;
+#toolbar-menubar[autohide="false"]{
+  margin-bottom: var(--uc-toolbar-height,0px)
 }
 
-#main-window[titlepreface*="Sidebery"] #main-menubar {
-    -moz-box-flex: 1;
-    background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
-    background-clip: padding-box;
-    border-right: 30px solid transparent;
-    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
+:root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
+  -moz-box-flex: 1;
+  -moz-box-align: stretch;
+  background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+  background-clip: padding-box;
+  border-right: 30px solid transparent;
+  border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
 }
 
-#main-window[titlepreface*="Sidebery"] #toolbar-menubar:not([inactive]) {
-    z-index: 2
-}
-
-#main-window[titlepreface*="Sidebery"] #toolbar-menubar[inactive] > #menubar-items {
-    opacity: 0;
-    pointer-events: none;
-    margin-left: var(--uc-window-drag-space-pre,0px)
+#toolbar-menubar:not([inactive]){ z-index: 2 }
+#toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+  opacity: 0;
+  pointer-events: none;
+  margin-left: var(--uc-window-drag-space-pre,0px)
 }
