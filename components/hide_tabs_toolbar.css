@@ -6,7 +6,6 @@ See the above repository for updates as well as full license text.
 /* Hides tabs toolbar */
 
 :root[tabsintitlebar] { --uc-toolbar-height: 40px; }
-/* :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px } */
 
 #TabsToolbar { visibility: collapse !important }
 
@@ -29,25 +28,14 @@ See the above repository for updates as well as full license text.
 }
 
 /*
-#toolbar-menubar[autohide="false"]{
-    margin-bottom: var(--uc-toolbar-height,0px)
-}
-*/
-
-/*
 Modify the menu bar (usually accessed by Alt key) to be the same
 position as navigation/address bar, and some pretty fade out ;)
 */
 :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
     -moz-box-flex: 1;
-    /*
-    -moz-box-align: stretch;
-    background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
-    background-clip: padding-box;
-    */
     border-right: 30px solid transparent;
     border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
-  }
+}
 
 /* Menu bar won't work without this */
 #toolbar-menubar:not([inactive]){ z-index: 2 }
