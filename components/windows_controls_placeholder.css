@@ -3,66 +3,75 @@ See the above repository for updates as well as full license text. */
 
 /* Creates placeholders for window controls */
 /* This is a supporting file used by other stylesheets */
-
 /* This stylesheet is pretty much unnecessary if window titlebar is enabled */
-
 /* This file should preferably be imported before other stylesheets */
-
 /* Defaults for window controls on RIGHT side of the window */
 /* Modify these values to match your preferences */
-:root[tabsintitlebar]{
-    --uc-window-control-width: 138px; /* Space reserved for window controls (Win10) */
+
+:root[tabsintitlebar] {
+    /* Space reserved for window controls (Win10) */
+    --uc-window-control-width: 138px;
+
     /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
     --uc-window-drag-space-pre: 30px; /* left side*/
     --uc-window-drag-space-post: 30px; /* right side*/
+}
+
+/* Remove left space when maximized */
+:root[tabsintitlebar][sizemode="maximized"] {
+    --uc-window-drag-space-pre: 0px;
+}
+
+/*
+@media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
+  :root[tabsintitlebar] {
+    --uc-window-control-width: 105px;
   }
-  
-  :root[tabsintitlebar][sizemode="maximized"] {
-    --uc-window-drag-space-pre: 0px; /* Remove pre space */
+}
+
+@media (-moz-gtk-csd-available) {
+  :root[tabsintitlebar] {
+    --uc-window-control-width: 84px;
   }
-  
-  @media (-moz-os-version: windows-win7), (-moz-os-version: windows-win8) {
-    :root[tabsintitlebar] {
-      --uc-window-control-width: 105px;
-    }
-  }
-  
-  @media (-moz-gtk-csd-available) {
-    :root[tabsintitlebar] {
-      --uc-window-control-width: 84px;
-    }
-  }
-  
-  /* macOS settings are further below */
-  .titlebar-buttonbox, #window-controls{ color: var(--toolbar-color) }
-  :root[sizemode="fullscreen"] .titlebar-buttonbox-container{ display: none }
-  :root[sizemode="fullscreen"] #navigator-toolbox { position: relative; }
-  
-  :root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
-  :root[sizemode="fullscreen"] #window-controls{
+}
+*/
+
+/* macOS settings are further below */
+
+/* .titlebar-buttonbox, #window-controls{ color: var(--toolbar-color) } */
+/* :root[sizemode="fullscreen"] .titlebar-buttonbox-container{ display: none } */
+
+/* Hide windows control when full screen */
+:root[sizemode="fullscreen"] #navigator-toolbox { position: relative; }
+
+/* Show window control when your cursor is near the toolbar, when full screen */
+/* :root[sizemode="fullscreen"] #window-controls */ 
+:root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
     position: absolute;
     display: flex;
     top: 0;
     right:0;
-    height: 40px;
-  }
-  
-  :root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
-  :root[uidensity="compact"][sizemode="fullscreen"] #window-controls{ height: 32px }
-  
-  #nav-bar{
+    /* height: 40px; */
+}
+
+/* :root[uidensity="compact"][sizemode="fullscreen"] #window-controls{ height: 32px } */
+
+/* Reduce width of address bar so icons doesn't overlapped with window control */
+#nav-bar{
     border-inline: var(--uc-window-drag-space-pre,0px) solid var(--toolbar-bgcolor);
-    border-inline-style: solid !important;
+    /* border-inline-style: solid !important; */
     border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px));
   }
-  
-  /* Use this pref to check Mac OS where window controls are on left */
-  /* This pref defaults to true on Mac and doesn't actually do anything on other platforms. So if your system has window controls on LEFT side you can set the pref to true */
-  @supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
-    :root{ --uc-window-control-width: 72px; }
-    :root[tabsintitlebar="true"]:not([inFullscreen]) #nav-bar{
-      border-inline-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px)) var(--uc-window-drag-space-pre,0px)
-    }
-    :root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
-    :root[sizemode="fullscreen"] #window-controls{ right: unset }
+
+/* Use this pref to check Mac OS where window controls are on left */
+/* This pref defaults to true on Mac and doesn't actually do anything on other platforms. So if your system has window controls on LEFT side you can set the pref to true */
+/*
+@supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
+  :root{ --uc-window-control-width: 72px; }
+  :root[tabsintitlebar="true"]:not([inFullscreen]) #nav-bar{
+    border-inline-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px)) var(--uc-window-drag-space-pre,0px)
   }
+  :root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child,
+  :root[sizemode="fullscreen"] #window-controls{ right: unset }
+}
+*/

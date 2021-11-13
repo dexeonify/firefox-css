@@ -1,55 +1,60 @@
-/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_toolbar.css made available under Mozilla Public License v. 2.0
-See the above repository for updates as well as full license text. */
-
-/* Hides tabs toolbar */
-/* For OSX use hide_tabs_toolbar_osx.css instead */
-
-/* Note, if you have either native titlebar or menubar enabled, then you don't really need this style.
- * In those cases you can just use: #TabsToolbar{ visibility: collapse !important }
- */
-
-/* IMPORTANT */
 /*
-Get window_control_placeholder_support.css
-Window controls will be all wrong without it
+Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_toolbar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text.
 */
 
-:root[tabsintitlebar]{ --uc-toolbar-height: 40px; }
-:root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px }
+/* Hides tabs toolbar */
 
-#TabsToolbar{ visibility: collapse !important }
+:root[tabsintitlebar] { --uc-toolbar-height: 40px; }
+/* :root[tabsintitlebar][uidensity="compact"]{ --uc-toolbar-height: 32px } */
 
-:root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls,.titlebar-buttonbox-container){
-  visibility: visible !important;
-  z-index: 2;
+#TabsToolbar { visibility: collapse !important }
+
+/* Make windows control visible in full screen */
+:root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls, .titlebar-buttonbox-container) {
+    visibility: visible !important;
+    z-index: 2;
 }
 
-:root:not([inFullscreen]) #nav-bar{
-  margin-top: calc(0px - var(--uc-toolbar-height,0px));
+/* Push up the address bar */
+:root:not([inFullscreen]) #nav-bar {
+    margin-top: calc(0px - var(--uc-toolbar-height,0px));
 }
 
-:root[tabsintitlebar] #toolbar-menubar[autohide="true"]{
-  min-height: unset !important;
-  height: var(--uc-toolbar-height,0px) !important;
-  position: relative;
+/* Push down the menu bar */
+:root[tabsintitlebar] #toolbar-menubar[autohide="true"] {
+    min-height: unset !important;
+    height: var(--uc-toolbar-height,0px) !important;
+    position: relative;
 }
 
+/*
 #toolbar-menubar[autohide="false"]{
-  margin-bottom: var(--uc-toolbar-height,0px)
+    margin-bottom: var(--uc-toolbar-height,0px)
 }
+*/
 
+/*
+Modify the menu bar (usually accessed by Alt key) to be the same
+position as navigation/address bar, and some pretty fade out ;)
+*/
 :root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
-  -moz-box-flex: 1;
-  -moz-box-align: stretch;
-  background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
-  background-clip: padding-box;
-  border-right: 30px solid transparent;
-  border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
-}
+    -moz-box-flex: 1;
+    /*
+    -moz-box-align: stretch;
+    background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+    background-clip: padding-box;
+    */
+    border-right: 30px solid transparent;
+    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
+  }
 
+/* Menu bar won't work without this */
 #toolbar-menubar:not([inactive]){ z-index: 2 }
+
+/* Enables dragging if menu bar is inactive */
 #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
-  opacity: 0;
-  pointer-events: none;
-  margin-left: var(--uc-window-drag-space-pre,0px)
+    opacity: 0;
+    pointer-events: none;
+    margin-left: var(--uc-window-drag-space-pre,0px)
 }
