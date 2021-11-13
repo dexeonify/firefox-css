@@ -19,7 +19,7 @@ See the above repository for updates as well as full license text.
 /* Push up the address bar */
 :root[titlepreface*="Sidebery"]:not([inFullscreen]) #nav-bar {
     margin-top: calc(0px - var(--uc-toolbar-height, 0px));
-    transition: margin-top .5s ease-in-out !important;
+    transition: margin-top .3s ease-in-out !important;
 }
 
 /* Push down the menu bar */
@@ -27,7 +27,7 @@ See the above repository for updates as well as full license text.
     min-height: unset !important;
     height: var(--uc-toolbar-height, 0px) !important;
     position: relative;
-    transition: margin-top .5s ease-in-out !important;
+    transition: margin-top .3s ease-in-out !important;
 }
 
 /*
