@@ -3,46 +3,51 @@ Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hi
 See the above repository for updates as well as full license text.
 */
 
+:root[tabsintitlebar] { --uc-toolbar-height: 40px }
+
 /* Hides tabs toolbar */
-
-:root[tabsintitlebar] { --uc-toolbar-height: 40px; }
-
-#TabsToolbar { visibility: collapse !important }
+:root[titlepreface*="Sidebery"] #TabsToolbar {
+    visibility: collapse !important
+}
 
 /* Make windows control visible in full screen */
-:root[sizemode="fullscreen"] #TabsToolbar > :is(#window-controls, .titlebar-buttonbox-container) {
+:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #TabsToolbar > :is(#window-controls, .titlebar-buttonbox-container) {
     visibility: visible !important;
     z-index: 2;
 }
 
 /* Push up the address bar */
-:root:not([inFullscreen]) #nav-bar {
-    margin-top: calc(0px - var(--uc-toolbar-height,0px));
+:root[titlepreface*="Sidebery"]:not([inFullscreen]) #nav-bar {
+    margin-top: calc(0px - var(--uc-toolbar-height, 0px));
+    transition: margin-top .5s ease-in-out !important;
 }
 
 /* Push down the menu bar */
-:root[tabsintitlebar] #toolbar-menubar[autohide="true"] {
+:root[titlepreface*="Sidebery"][tabsintitlebar] #toolbar-menubar[autohide="true"] {
     min-height: unset !important;
-    height: var(--uc-toolbar-height,0px) !important;
+    height: var(--uc-toolbar-height, 0px) !important;
     position: relative;
+    transition: margin-top .5s ease-in-out !important;
 }
 
 /*
 Modify the menu bar (usually accessed by Alt key) to be the same
-position as navigation/address bar, and some pretty fade out ;)
+position as navigation/address bar, and add some pretty fade out ;)
 */
-:root[tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar{
+:root[titlepreface*="Sidebery"][tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar {
     -moz-box-flex: 1;
     border-right: 30px solid transparent;
     border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
 }
 
 /* Menu bar won't work without this */
-#toolbar-menubar:not([inactive]){ z-index: 2 }
+:root[titlepreface*="Sidebery"] #toolbar-menubar:not([inactive]) {
+    z-index: 2
+}
 
 /* Enables dragging if menu bar is inactive */
-#toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+:root[titlepreface*="Sidebery"] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
     opacity: 0;
     pointer-events: none;
-    margin-left: var(--uc-window-drag-space-pre,0px)
+    margin-left: var(--uc-window-drag-space-pre, 0px)
 }

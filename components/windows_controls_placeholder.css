@@ -10,34 +10,33 @@ See the above repository for updates as well as full license text.
 /* Defaults for window controls on RIGHT side of the window */
 /* Modify these values to match your preferences */
 
-:root[tabsintitlebar] {
-    /* Space reserved for window controls (Win10) */
+:root[titlepreface*="Sidebery"][tabsintitlebar] {
+    /* Space reserved for window controls*/
     --uc-window-control-width: 138px;
 
     /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
-    --uc-window-drag-space-pre: 30px; /* left side*/
-    --uc-window-drag-space-post: 30px; /* right side*/
+    --uc-window-drag-space-pre: 30px;  /* left side */
+    --uc-window-drag-space-post: 30px; /* right side */
 }
 
 /* Remove left space when maximized */
-:root[tabsintitlebar][sizemode="maximized"] {
+:root[titlepreface*="Sidebery"][tabsintitlebar][sizemode="maximized"] {
     --uc-window-drag-space-pre: 0px;
 }
 
 /* Hide windows control when full screen */
-:root[sizemode="fullscreen"] #navigator-toolbox { position: relative; }
+:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #navigator-toolbox { position: relative }
 
 /* Show window control when your cursor is near the toolbar, when full screen */
-/* :root[sizemode="fullscreen"] #window-controls */ 
-:root[sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
+:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
     position: absolute;
     display: flex;
     top: 0;
-    right:0;
+    right: 0
 }
 
 /* Reduce width of address bar so icons doesn't overlapped with window control */
-#nav-bar{
-    border-inline: var(--uc-window-drag-space-pre,0px) solid var(--toolbar-bgcolor);
-    border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-post,0px));
+:root[titlepreface*="Sidebery"] #nav-bar {
+    border-inline: var(--uc-window-drag-space-pre, 0px) solid var(--toolbar-bgcolor);
+    border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-post, 0px));
 }
