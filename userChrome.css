@@ -2,6 +2,9 @@
 @import url(components/windows_controls_placeholder.css);
 @import url(components/hide_tabs_toolbar.css);
 
+/* Autohide sidebar */
+@import url(components/autohide_sidebar.css);
+
 /*
 URL bar blur
 Minimimalize from https://github.com/datguypiko/Firefox-Mod-Blur
