@@ -5,18 +5,11 @@
 /* Autohide sidebar */
 @import url(components/autohide_sidebar.css);
 
-/*
-URL bar blur
-Minimimalize from https://github.com/datguypiko/Firefox-Mod-Blur
-*/
-#urlbar[breakout][breakout-extend][open] {
+/* URL bar blur */
+#urlbar[breakout][breakout-extend] #urlbar-background {
     background-image: url(noise-512x512.png) !important;
     background-color: #1C1B22BF !important;
-    backdrop-filter: blur(32px) !important;
-}
-
-#navigator-toolbox {
-    --toolbar-field-focus-background-color: transparent !important
+    backdrop-filter: saturate(2) blur(32px) !important;
 }
 
 /*
@@ -46,5 +39,5 @@ See the above repository for updates as well as full license text.
 
 /* Remove sidebar header */
 #sidebar-header {
-    display: none;
+    display: none
 }
