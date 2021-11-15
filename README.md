@@ -21,7 +21,7 @@ Here's a quick roundown on the basics of setting up Firefox CSS:
 1. Go to `about:config`, and enable `toolkit.legacyUserProfileCustomizations.stylesheets`
    and `layout.css.backdrop-filter.enabled`.
 
-2. Go to `about:support` and click Open Folder at "Profile folder".
+2. Go to `about:support` and click **Open Folder** at "Profile folder".
 
 3. Create a new folder named `chrome`, download this repo (or `git clone`) and
    just copy the downloaded files into the `chrome` folder you just created.
@@ -40,6 +40,7 @@ So the directory tree is something like this:
     │   noise-512x512.png
     │
     └── components
+            autohide_sidebar.css
             hide_tabs_toolbar.css
             windows_controls_placeholder.css
 ```
@@ -51,17 +52,32 @@ If you want a proper getting started guide, you should check out
 
 ### URL bar blur
 
-Modified from [Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur)
-(which is derived from [this reddit post](https://www.reddit.com/r/FirefoxCSS/comments/ddi4dc/testing_the_backdropfilter_in_the_url_dropdown/)).
-Removed all other customisations, leaving only the relevant CSS for the url bar.
-
 ![Blurred URL Bar](screenshots/Blurred%20URL%20Bar.png)
+
+### Dynamic tab bar
+
+Dynamically autohide tabs bar when Sidebery is active, *with animation*.
+
+![Dynamic tabs bar](screenshots/Dynamic%20Sidebery.gif)
+
+#### How to set up
+
+Set window preface value: `Sidebery settings > Help > Preface value`
+
+**Note:**
+The preface value can be anything, but you would have to change it accordingly
+inside the CSS files as well. In my CSS, it's "Sidebery".
+
+### Autohide sidebar
+
+Automatically hides sidebar (Sidebery). Only expand when the cursor hovers it.
+
+![Autohide sidebar](screenshots/Autohide%20Sidebar.gif)
 
 ### Thin scrollbar
 
 #### userChrome.css
 
-Taken from [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/minimal_in-UI_scrollbars.css).
 Changes various **in-UI** scrollbars to be slim and more subtle,
 such as the Library window and sidebar.
 
@@ -74,12 +90,10 @@ such as the Library window and sidebar.
 
 #### userContent.css
 
-Also taken from [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/content/css_scrollbar_width_color.css).
 Changes **websites'** scrollbar to be slim.
 
 I've decided not to specify a global colour for the scrollbar,
 and instead leave the choice to the website owner ;).
-
 Though I've also themed the scrollbar for new Reddit
 because it doesn't have a native dark themed scrollbar.
 
@@ -88,16 +102,9 @@ because it doesn't have a native dark themed scrollbar.
 
 ![Thin scrollbar (Websites)](screenshots/Thin%20Scrollbar%20(Websites).png)
 
-Reddit dark-themed scrollbar
-
-![Reddit dark-themed scrollbar](screenshots/Reddit%20Scrollbar.png)
-
 </details>
 
 ### Cleaner context menu
-
-Credit to [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)
-so I can find the entries easily. 😄
 
 - Removes **Send tab to device** and **Share** entries in tab context menu
 
@@ -123,32 +130,14 @@ so I can find the entries easily. 😄
 - You can also remove Pocket by
   disabling `extensions.pocket.enabled` in `about:config`
 
-### Dynamic tab bar
+## References
 
-Autohide tabs bar when Sidebery is active, *with animation*.
-
-[Sidebery's wiki](https://github.com/mbnuqw/sidebery/wiki/Firefox-Styles-Snippets-(via-userChrome.css)#dynamic-native-tabs)
-entry on this is outdated, while the snippets provided in
-[this discussion](https://github.com/mbnuqw/sidebery/discussions/406)
-have some glitches if the window is resized too small.
-
-![Overlapping Windows control](screenshots/Overlapping%20Windows%20Control.png)
-
-So I decided to use and modify MrOtherGuy's [autohide_tabstoolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_tabstoolbar.css)
-and [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
-to work with Sidebery, then add some animation and voilà!
-
-![Dynamic tabs bar](screenshots/Dynamic%20Sidebery.gif)
-
-It's probably very "bloated" to have 2 CSS files just for this
-but hey, it's complete. Though, I did tried to leave only the
-necessary CSS rules in both files.
-
-Anyways, to set this up you need to
-set the window preface value in Sidebery settings.
-
-From the wiki: `Sidebery settings` > `Help` > `Preface value`
-
-**Note:** The preface value can be anything,
-          but you have to change it in the CSS as well.
-          In my CSS, it's "Sidebery".
+- [datguypiko/Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur)
+- [Guerra24/Firefox-UWP-Style](https://github.com/Guerra24/Firefox-UWP-Style)
+- [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
+  - [minimal_in-UI_scrollbars.css]((https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/minimal_in-UI_scrollbars.css))
+  - [css_scrollbar_width_color.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/content/css_scrollbar_width_color.css)
+  - [autohide_tabstoolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_tabstoolbar.css)
+  - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
+- [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)
+- [Sidebery's wiki](https://github.com/mbnuqw/sidebery/wiki/Firefox-Styles-Snippets-(via-userChrome.css))
