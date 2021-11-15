@@ -13,6 +13,14 @@
 }
 
 /*
+Make the navigator toolbox transparent so the URL bar is coherent with the rest of Firefox theme.
+Navigator toolbox is the light purple box when you click the URL bar and press ESC.
+*/
+#navigator-toolbox {
+    --toolbar-field-focus-background-color: transparent !important
+}
+
+/*
 Changes various in-UI scrollabars to be slim and more subtle
 
 Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/minimal_in-UI_scrollbars.css made available under Mozilla Public License v. 2.0
