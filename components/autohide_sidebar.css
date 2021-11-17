@@ -33,4 +33,4 @@ See the above repository for updates as well as full license text.
 }
 
 /* Decrease sidebar width to 1px in full-screen so it is still hoverable */
-#main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px; }
+#main-window[sizemode="fullscreen"] #sidebar-box { --uc-sidebar-width: 1px }

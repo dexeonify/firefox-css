@@ -13,8 +13,9 @@
 }
 
 /*
-Make the navigator toolbox transparent so the URL bar is coherent with the rest of Firefox theme.
-Navigator toolbox is the light purple box when you click the URL bar and press ESC.
+Make it so that:
+When you click the URL bar and press ESC, the URL bar uses the same colour as the rest of Firefox theme,
+instead of the default light purple. (logan colour?)
 */
 #navigator-toolbox {
     --toolbar-field-focus-background-color: transparent !important

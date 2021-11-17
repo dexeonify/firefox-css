@@ -11,7 +11,7 @@ See the above repository for updates as well as full license text.
 /* Modify these values to match your preferences */
 
 :root[titlepreface*="Sidebery"][tabsintitlebar] {
-    /* Space reserved for window controls*/
+    /* Space reserved for window controls */
     --uc-window-control-width: 138px;
 
     /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
@@ -24,10 +24,10 @@ See the above repository for updates as well as full license text.
     --uc-window-drag-space-pre: 0px;
 }
 
-/* Hide windows control when full screen */
+/* Hide windows control when in full screen */
 :root[titlepreface*="Sidebery"][sizemode="fullscreen"] #navigator-toolbox { position: relative }
 
-/* Show window control when your cursor is near the toolbar, when full screen */
+/* Show window control when the cursor is near the toolbar, when full screen */
 :root[titlepreface*="Sidebery"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
     position: absolute;
     display: flex;
@@ -36,7 +36,7 @@ See the above repository for updates as well as full license text.
     height: 40px;
 }
 
-/* Reduce width of address bar so icons doesn't overlapped with window control */
+/* Reduce width of address bar so icons don't overlap with window control */
 :root[titlepreface*="Sidebery"] #nav-bar {
     border-inline: var(--uc-window-drag-space-pre, 0px) solid var(--toolbar-bgcolor);
     border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-post, 0px));
