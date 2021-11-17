@@ -135,7 +135,7 @@ because it doesn't have a native dark themed scrollbar.
 - [datguypiko/Firefox-Mod-Blur](https://github.com/datguypiko/Firefox-Mod-Blur)
 - [Guerra24/Firefox-UWP-Style](https://github.com/Guerra24/Firefox-UWP-Style)
 - [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
-  - [minimal_in-UI_scrollbars.css]((https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/minimal_in-UI_scrollbars.css))
+  - [minimal_in-UI_scrollbars.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/minimal_in-UI_scrollbars.css)
   - [css_scrollbar_width_color.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/content/css_scrollbar_width_color.css)
   - [autohide_tabstoolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_tabstoolbar.css)
   - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
