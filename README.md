@@ -139,5 +139,6 @@ because it doesn't have a native dark themed scrollbar.
   - [css_scrollbar_width_color.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/content/css_scrollbar_width_color.css)
   - [autohide_tabstoolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_tabstoolbar.css)
   - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
+  - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
 - [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)
 - [Sidebery's wiki](https://github.com/mbnuqw/sidebery/wiki/Firefox-Styles-Snippets-(via-userChrome.css))
