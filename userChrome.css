@@ -6,11 +6,13 @@
 @import url(components/autohide_sidebar.css);
 
 /* URL bar blur */
+/*
 #urlbar[breakout][breakout-extend] #urlbar-background {
     background-image: url(noise-512x512.png) !important;
     background-color: #1C1B22BF !important;
     backdrop-filter: saturate(2) blur(32px) !important;
 }
+*/
 
 /*
 Make it so that:
