@@ -26,8 +26,12 @@ Here's a quick roundown on the basics of setting up Firefox CSS:
 3. Create a new folder named `chrome`, download this repo (or `git clone`) and
    just copy the downloaded files into the `chrome` folder you just created.
 
-4. If you want smooth scrolling, copy the `user.js` file to the Profile folder,
-   *NOT* the `chrome/` folder.
+4. For smooth scrolling, copy the `user.js` file (from the `misc/` folder)
+   to the Profile folder, *NOT* the `chrome/` folder.
+
+5. To set up Sidebery CSS, open `misc/sidebery.css` and copy the content.
+   Then, navigate to `Sidebery Settings > Styles editor` and paste the CSS
+   under "Sidebar" on the right.
 
 So the directory tree is something like this:
 
@@ -141,4 +145,4 @@ because it doesn't have a native dark themed scrollbar.
   - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
   - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
 - [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)
-- [Sidebery's wiki](https://github.com/mbnuqw/sidebery/wiki/Firefox-Styles-Snippets-(via-userChrome.css))
+- [drannex42's Sidebery CSS](https://github.com/drannex42/linux-utils/tree/main/firefox)
