@@ -1,0 +1,50 @@
+/* Increase tab height */
+/* We can't increase padding between tabs because it breaks tabs reordering */
+#root { --tabs-height: 32px }
+
+/* Add some padding on both sides of the tabs and top of the tabs list */
+.container {
+    padding-top: 2.5px !important;
+    margin: 0 5px;
+    max-width: calc(100% - 10px);
+}
+
+/* Rounded corner tabs */
+.Tab, .PinnedTab {
+    border-radius: 5px
+}
+
+/* Drop shadow below the active tab */
+.Tab[data-active], .PinnedTab[data-active] {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Automatically flatten tree structure (visually) when sidebar is hidden */
+@media screen and (width: 32px) {
+    /* Flatten tree structure */
+    .Tab[data-lvl] { padding-left: 0 }
+
+    /* Align the favicons with the pinned tabs */
+    .container { margin: 2px }
+
+    /* Fix tabs highlight */
+    .Tab { min-width: 30px }
+
+    /* Only display the active panel button */
+    .panel-btn[data-active="true"] {
+        display: flex !important;
+        background: none !important
+    }
+
+    /* Hide the settings button and other panels' buttons */
+    .panel-btn, .settings-btn {
+        display: none !important
+    }
+}
+
+/* Increase contrast for tabs hightlighting */
+.Tab {
+    --tabs-bg-hover: rgb(70, 70, 70);     /* Tab color on hover */
+    --tabs-bg-active: rgb(70, 70, 70);    /* Tab color on mouse click */
+    --tabs-activated-bg: rgb(37, 37, 37); /* Active tab color */
+}
