@@ -2,11 +2,15 @@
 /* We can't increase padding between tabs because it breaks tabs reordering */
 #root { --tabs-height: 32px }
 
-/* Add some padding on both sides of the tabs */
+/* Add some padding on both sides of the tabs and top of tabs list */
 .container {
+    padding-top: 2.5px !important;
     margin: 0 5px;
     max-width: calc(100% - 10px);
 }
+
+/* Fix pointer position */
+.pointer { margin: 2.5px }
 
 /* Rounded corner tabs */
 .Tab, .PinnedTab {
