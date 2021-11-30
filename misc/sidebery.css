@@ -2,9 +2,8 @@
 /* We can't increase padding between tabs because it breaks tabs reordering */
 #root { --tabs-height: 32px }
 
-/* Add some padding on both sides of the tabs and top of the tabs list */
+/* Add some padding on both sides of the tabs */
 .container {
-    padding-top: 2.5px !important;
     margin: 0 5px;
     max-width: calc(100% - 10px);
 }
