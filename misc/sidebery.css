@@ -28,7 +28,7 @@
     .container { margin: 2px }
 
     /* Fix tabs highlight */
-    .Tab { min-width: 30px }
+    .Tab { min-width: 28px }
 
     /* Only display the active panel button */
     .panel-btn[data-active="true"] {
