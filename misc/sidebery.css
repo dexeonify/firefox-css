@@ -4,13 +4,13 @@
 
 /* Add some padding on both sides of the tabs and top of tabs list */
 .container {
-    padding-top: 2.5px !important;
+    padding-top: 5px !important;
     margin: 0 5px;
     max-width: calc(100% - 10px);
 }
 
 /* Fix pointer position */
-.pointer { margin: 2.5px }
+.pointer { margin: 5px 0 }
 
 /* Rounded corner tabs */
 .Tab, .PinnedTab {
@@ -19,7 +19,7 @@
 
 /* Drop shadow below the active tab */
 .Tab[data-active], .PinnedTab[data-active] {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Automatically flatten tree structure (visually) when sidebar is hidden */
