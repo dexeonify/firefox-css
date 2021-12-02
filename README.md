@@ -33,6 +33,11 @@ Here's a quick roundown on the basics of setting up Firefox CSS:
    Then, navigate to `Sidebery Settings > Styles editor` and paste the CSS
    under "Sidebar" on the right.
 
+6. To set up a custom new tab, install [nightTab](https://addons.mozilla.org/en-GB/firefox/addon/nighttab/).
+   Open a new tab and click the settings icon. Then, navigate to
+   `Data > Restore > Import from File` and import any of the `.json` files
+   under `misc/`. To set up nightTab as your default homepage, [see here](https://github.com/zombieFox/nightTab/wiki/Setting-nightTab-as-your-Firefox-homepage).
+
 So the directory tree is something like this:
 
 ```text
@@ -78,61 +83,15 @@ Automatically hides sidebar (Sidebery). Only expand when the cursor hovers it.
 
 ![Autohide sidebar](screenshots/Autohide%20Sidebar.gif)
 
-### Thin scrollbar
+### Custom startpage using [nightTab](https://github.com/zombieFox/nightTab)
 
-#### userChrome.css
+#### Base Theme
 
-Changes various **in-UI** scrollbars to be slim and more subtle,
-such as the Library window and sidebar.
+![nightTab](screenshots/nightTab%20Base.png)
 
-<details>
-<summary>Click to expand</summary>
+#### Nord Theme
 
-![Thin scrollbar (UI)](screenshots/Thin%20Scrollbar%20(UI).png)
-
-</details>
-
-#### userContent.css
-
-Changes **websites'** scrollbar to be slim.
-
-I've decided not to specify a global colour for the scrollbar,
-and instead leave the choice to the website owner ;).
-Though I've also themed the scrollbar for new Reddit
-because it doesn't have a native dark themed scrollbar.
-
-<details>
-<summary>Click to expand</summary>
-
-![Thin scrollbar (Websites)](screenshots/Thin%20Scrollbar%20(Websites).png)
-
-</details>
-
-### Cleaner context menu
-
-- Removes **Send tab to device** and **Share** entries in tab context menu
-
-  <details>
-  <summary>Click to expand</summary>
-
-  ![Tab context menu (Before)](screenshots/Tab%20Context%20Menu%20(Before).png)
-  ![Tab context menu (After)](screenshots/Tab%20Context%20Menu%20(After).png)
-
-  </details>
-
-- Removes **Email Image...**, **Send Link to Device** and
-  **Set As Desktop Background...** entries in context menu
-
-  <details>
-  <summary>Click to expand</summary>
-
-  ![Context menu (Before)](screenshots/Context%20Menu%20(Before).png)
-  ![Context menu (After)](screenshots/Context%20Menu%20(After).png)
-
-  </details>
-
-- You can also remove Pocket by
-  disabling `extensions.pocket.enabled` in `about:config`
+![nightTab Nord](screenshots/nightTab%20Nord.png)
 
 ## References
 
