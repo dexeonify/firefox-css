@@ -9,8 +9,10 @@
     max-width: calc(100% - 10px);
 }
 
-/* Fix pointer position */
-.pointer { margin: 5px 0 }
+/* Fix pointer position, only in tabs panel */
+:not(.Sidebar[data-panel-type="bookmarks"]) > .pointer {
+    margin: 5px 0
+}
 
 /* Rounded corner tabs */
 .Tab, .PinnedTab {
