@@ -3,7 +3,7 @@ See the above repository for updates as well as full license text. */
 
 /* Adds more proton-like styling to context menus. Rounded rows, and more consistent padding. This is only going to work on Win10+ */
 
-:root {
+#contentAreaContextMenu, #tabContextMenu {
     --arrowpanel-menuitem-margin: 0 4px;
     --arrowpanel-menuitem-padding-block: 6px;
     --arrowpanel-menuitem-padding-inline: 8px;
