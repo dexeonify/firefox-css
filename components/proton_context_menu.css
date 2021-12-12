@@ -3,43 +3,43 @@ See the above repository for updates as well as full license text. */
 
 /* Adds more proton-like styling to context menus. Rounded rows, and more consistent padding. This is only going to work on Win10+ */
 
-:root{
-  --arrowpanel-menuitem-margin: 0 4px;
-  --arrowpanel-menuitem-padding-block: 6px;
-  --arrowpanel-menuitem-padding-inline: 8px;
-  --arrowpanel-menuitem-border-radius: 4px;
-  --panel-separator-margin-vertical: 4px;
+:root {
+    --arrowpanel-menuitem-margin: 0 4px;
+    --arrowpanel-menuitem-padding-block: 6px;
+    --arrowpanel-menuitem-padding-inline: 8px;
+    --arrowpanel-menuitem-border-radius: 4px;
+    --panel-separator-margin-vertical: 4px;
 }
 
 menupopup > menuitem,
-menupopup > menu{
-  /* Add padding on both sides */
-  margin: var(--arrowpanel-menuitem-margin) !important;
+menupopup > menu {
+    /* Add padding on both sides */
+    margin: var(--arrowpanel-menuitem-margin) !important;
 
-  /* Align the menu item with the start of separator */
-  padding: var(--arrowpanel-menuitem-padding-block) var(--arrowpanel-menuitem-padding-inline) !important;
+    /* Align the menu item with the start of separator */
+    padding: var(--arrowpanel-menuitem-padding-block) var(--arrowpanel-menuitem-padding-inline) !important;
 
-  /* Rounded corner */
-  border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+    /* Rounded corner */
+    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
 
 /* Padding at the top and below of the context menu */
-menupopup:not(.in-menulist){
-  --panel-padding: var(--arrowpanel-menuitem-padding-block) 0 !important;
+menupopup:not(.in-menulist) {
+    --panel-padding: var(--arrowpanel-menuitem-padding-block) 0 !important;
 }
 
 /* Padding before and after the separator */
-menuseparator:not(.in-menulist){
-  margin-block: var(--panel-separator-margin-vertical) !important;
+menuseparator:not(.in-menulist) {
+    margin-block: var(--panel-separator-margin-vertical) !important;
 }
 
 /* context-navigation are the buttons at the top of the context menu (previous page, reload etc) */
 /* Make context-navigation aligned with the context menu list */
-#context-navigation{
-  padding-inline: var(--arrowpanel-menuitem-padding-inline) !important;
+#context-navigation {
+    padding-inline: var(--arrowpanel-menuitem-padding-inline) !important;
 }
 
 /* Make the highlight in context-navigation rounded */
-#context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon{
-  border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+#context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
+    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
