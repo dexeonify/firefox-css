@@ -101,5 +101,6 @@ Automatically hides sidebar (Sidebery). Only expand when the cursor hovers it.
   - [hide_tabs_toolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/hide_tabs_toolbar.css)
   - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
   - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
+  - [context_menus_more_proton.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/context_menus_more_proton.css)
 - [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)
 - [drannex42's Sidebery CSS](https://github.com/drannex42/linux-utils/tree/main/firefox)
