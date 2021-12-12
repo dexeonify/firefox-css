@@ -3,7 +3,23 @@ See the above repository for updates as well as full license text. */
 
 /* Adds more proton-like styling to context menus. Rounded rows, and more consistent padding. This is only going to work on Win10+ */
 
-#contentAreaContextMenu, #tabContextMenu {
+/* Only apply CSS to actual context menus */
+/*
+All of these are self-explanatory.
+
+#contentAreaContextMenu is the context menu when you right-click on the webpage,
+be it a link, a picture, or just the webpage itself.
+
+#tabContextMenu and #backForwardMenu respectively refers to the context menu
+when you right-click a tab and back/forward button.
+
+.textbox-contextmenu refers to the context menu when you right-click a textbox, such as the URL bar.
+*/
+#contentAreaContextMenu,
+#tabContextMenu,
+#backForwardMenu,
+#toolbar-context-menu,
+.textbox-contextmenu {
     --arrowpanel-menuitem-margin: 0 4px;
     --arrowpanel-menuitem-padding-block: 6px;
     --arrowpanel-menuitem-padding-inline: 8px;
