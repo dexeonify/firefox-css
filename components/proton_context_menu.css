@@ -13,6 +13,10 @@ a link or an image.
 #tabContextMenu and #backForwardMenu refers to the context menu when you
 right-click a tab and back/forward button respectively.
 
+#pageActionContextMenu is the context menu when you right-click a page action
+item. They are located at the end of the URL bar, right beside the bookmark
+button. Examples: Reddit Enhancement Suite and Translate Web Pages.
+
 .textbox-contextmenu refers to the context menu when you right-click a textbox,
 such as the URL bar.
 */
@@ -20,6 +24,7 @@ such as the URL bar.
 #tabContextMenu,
 #backForwardMenu,
 #toolbar-context-menu,
+#pageActionContextMenu,
 .textbox-contextmenu {
     --arrowpanel-menuitem-margin: 0 4px;
     --arrowpanel-menuitem-padding-block: 6px;
