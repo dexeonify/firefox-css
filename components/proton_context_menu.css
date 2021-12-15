@@ -10,15 +10,19 @@ Most of these are self-explanatory.
 #contentAreaContextMenu is the context menu when you right-click on the webpage,
 a link or an image.
 
-#tabContextMenu and #backForwardMenu refers to the context menu when you
-right-click a tab and back/forward button respectively.
-
-#pageActionContextMenu is the context menu when you right-click a page action
-item. They are located at the end of the URL bar, right beside the bookmark
-button. Examples: Reddit Enhancement Suite and Translate Web Pages.
+#pageActionContextMenu is the context menu when you right-click a page action item.
+They are located at the end of the URL bar, right beside the bookmark icon.
+Examples: Reddit Enhancement Suite and Translate Web Pages.
 
 .textbox-contextmenu refers to the context menu when you right-click a textbox,
 such as the URL bar.
+
+#placesContext can be found when you right-click bookmark items and history entries.
+
+#customizationPanelItemContextMenu appears if you right click in any of the items
+inside the overflow menu (>>).
+
+#autohide-context is the context menu when you right-click the toolbar in fullscreen.
 */
 #contentAreaContextMenu,
 #tabContextMenu,
@@ -54,30 +58,33 @@ menupopup > menu {
     /* Add padding on both sides */
     margin: var(--arrowpanel-menuitem-margin) !important;
 
-    /* Align the menu item with the start of separator */
+    /*
+    Add padding above and below menu entries and
+    align the menu items with the menu separator
+    */
     padding: var(--arrowpanel-menuitem-padding-block) var(--arrowpanel-menuitem-padding-inline) !important;
 
     /* Rounded corner */
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
 
-/* Padding at the top and below of the context menu */
+/* Add padding at the top and below of the context menu */
 menupopup:not(.in-menulist) {
     --panel-padding: var(--arrowpanel-menuitem-padding-block) 0 !important;
 }
 
-/* Padding before and after the separator */
+/* Add padding before and after the menu separator */
 menuseparator:not(.in-menulist) {
     margin-block: var(--panel-separator-margin-vertical) !important;
 }
 
 /* context-navigation are the buttons at the top of the context menu (previous page, reload etc) */
-/* Make context-navigation aligned with the context menu list */
+/* Add padding around the context-navigation */
 #context-navigation {
     padding-inline: var(--arrowpanel-menuitem-padding-inline) !important;
 }
 
-/* Make the highlight in context-navigation rounded */
+/* Rounded corner highlight in context-navigation */
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
