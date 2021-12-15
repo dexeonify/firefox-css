@@ -25,7 +25,12 @@ such as the URL bar.
 #backForwardMenu,
 #toolbar-context-menu,
 #pageActionContextMenu,
-.textbox-contextmenu {
+.textbox-contextmenu,
+#placesContext,
+#customizationPanelItemContextMenu,
+#pictureInPictureToggleContextMenu,
+#downloadsContextMenu,
+#autohide-context {
     --arrowpanel-menuitem-margin: 0 4px;
     --arrowpanel-menuitem-padding-block: 6px;
     --arrowpanel-menuitem-padding-inline: 8px;
