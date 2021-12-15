@@ -23,6 +23,8 @@ such as the URL bar.
 inside the overflow menu (>>).
 
 #autohide-context is the context menu when you right-click the toolbar in fullscreen.
+
+#main-menubar is the dropdown menu for the menu bar (accessed by alt key).
 */
 #contentAreaContextMenu,
 #tabContextMenu,
@@ -34,7 +36,8 @@ inside the overflow menu (>>).
 #customizationPanelItemContextMenu,
 #pictureInPictureToggleContextMenu,
 #downloadsContextMenu,
-#autohide-context {
+#autohide-context,
+#main-menubar {
     --arrowpanel-menuitem-margin: 0 4px;
     --arrowpanel-menuitem-padding-block: 6px;
     --arrowpanel-menuitem-padding-inline: 8px;
