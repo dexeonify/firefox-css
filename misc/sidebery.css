@@ -53,3 +53,8 @@
     --tabs-bg-active: rgb(70, 70, 70);    /* Tab color on mouse click */
     --tabs-activated-bg: rgb(37, 37, 37); /* Active tab color */
 }
+
+/* Thin line beside the tabs to indicate sub-tree level */
+.Tab:not([data-lvl="0"]) .lvl-wrapper {
+    border-left: solid 1px rgb(79, 79, 79)
+}
