@@ -1,4 +1,6 @@
 {
+  "autoCollapseExpandSubtreeOnAttach": false,
+  "autoCollapseExpandSubtreeOnSelect": false,
   "autoGroupNewTabsFromBookmarks": false,
   "autoGroupNewTabsFromPinned": false,
   "avoidDiscardedTabToBeActivatedIfPossible": true,
@@ -33,7 +35,7 @@
       "id": "device-1639992410100-7150",
       "name": "Firefox on Windows",
       "icon": "device-desktop",
-      "timestamp": 1640054157675
+      "timestamp": 1640069175011
     }
   },
   "userStyleRules": "",
