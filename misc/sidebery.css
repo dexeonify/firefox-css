@@ -24,7 +24,7 @@
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Automatically flatten tree structure (visually) when sidebar is hidden */
+/* Visually flatten tree structure when sidebar is collapsed */
 @media screen and (width: 32px) {
     /* Flatten tree structure */
     .Tab[data-lvl] { padding-left: 0 }
