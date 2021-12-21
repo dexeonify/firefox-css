@@ -1,0 +1,44 @@
+{
+  "autoGroupNewTabsFromBookmarks": false,
+  "autoGroupNewTabsFromPinned": false,
+  "avoidDiscardedTabToBeActivatedIfPossible": true,
+  "chunkedUserStyleRules0": "LyogQWRkIG1vcmUgcGFkZGluZyBvbiBib3RoIHNpZGVzICovCnRhYi1pdGVtOm5vdCgucGlubmVkKSB7CiAgICAtLXRhYi1tYXJnaW4tbGVmdDogMi41cHg7CiAgICAtLXRhYi1tYXJnaW4tcmlnaHQ6IDIuNXB4Cn0KCi8qIE1ha2UgcGlubmVkIHRhYnMgaGlnaGxpZ2h0IGJpZ2dlciAqLwp0YWItaXRlbS5waW5uZWQgLmJhY2tncm91bmQgewogICAgaW5zZXQ6IDAKfQoKLyogRGltIHVubG9hZGVkIHRhYnMgKi8KdGFiLWl0ZW0uZGlzY2FyZGVkIHRhYi1pdGVtLXN1YnN0YW5jZSB7CiAgICBvcGFjaXR5OiAwLjUKfQoKLyogT25seSBzaG93IHRhYiBjbG9zZSBidXR0b24gb24gaG92ZXIgKi8KdGFiLWl0ZW0tc3Vic3RhbmNlOm5vdCg6aG92ZXIpIHRhYi1jbG9zZWJveCB7CiAgICBkaXNwbGF5OiBub25lCn0KCi8qIENvbG9yZWQgYmFja2dyb3VuZCBmb3IgY2xvc2Vib3ggb24gaG92ZXIgKi8KLmNsb3NlYm94OmhvdmVyOjpiZWZvcmUgewogICAgYmFja2dyb3VuZDogI2ZmNDY0NiAhaW1wb3J0YW50OwogICAgb3BhY2l0eTogMC44Cn0KCi8qIEhpZGUgc2Nyb2xsYmFyICovCiN0YWJiYXIgewogICAgc2Nyb2xsYmFyLXdpZHRoOiBub25lCn0KCi8qIERhc2hlZCBsaW5lcyBvbiB0aGUgbGVmdCBzaWRlIHRvIHNpZ25pZnkgcGFyZW50LWNoaWxkIHJlbGF0aW9uc2hpcCAqLwp0YWItaXRlbTpub3QoW2RhdGEtbGV2ZWw9IjAiXSk6bm90KC5waW5uZWQpIHsKICAgIGJvcmRlci1sZWZ0OiBkYXNoZWQgMnB4ICM2YjY5N2Y7CiAgCW1hcmdpbi1sZWZ0OiAxM3B4Cn0KCi8qIFZpc3VhbGx5IGZsYXR0ZW4gdHJlZSBzdHJ1Y3R1cmUgd2hlbiBzaWRlYmFyIGlzIGNvbGxhcHNlZCAqLwpAbWVkaWEgc2NyZWVuIGFuZCAod2lkdGg6IDMycHgpIHsKICAgIC8qIEhpZGUgdHdpc3R5IChjb2xsYXBzZS9leHBhbmQgYnV0dG9uKSBhbmQgbW92ZSB0aGUgZmF2aWNvbnMgdG8gdGhlIGxlZnQgKi8KICAgIHRhYi1pdGVtIC50d2lzdHkgewogICAgICAgIHZpc2liaWxpdHk6IGhpZGRlbjsKICAgICAgICBtYXJnaW4tbGVmdDogLTEzcHg7CiAgICB9CgogICAgLyogQWxpZ24gZmF2aWNvbnMgYW5kIGZpeCB0YWIgaGlnaGxpZ2h0ICovCiAgICB0YWItaXRlbS1zdWJzdGFuY2UgewogICAgICAgIG1hcmdpbi1sZWZ0OiAwLjIxZW0gIWltcG9ydGFudDsKICAgICAgICB3aWR0aDogOTAlCiAgICB9CgogICAgLyogQ2VudGVyIHRoZSBuZXcgdGFiIGJ1dHRvbiAqLwogICAgLm5ld3RhYi1idXR0b24gewogICAgICAgIHBhZGRpbmctbGVmdDogMC41ZW0gIWltcG9ydGFudAogICAgfQoKICAgIC8qIEhpZGUgZGVzY2VuZGFudHMgY291bnRlciAqLwogICAgdGFiLWl0ZW0gLmNvdW50ZXIgeyBkaXNwbGF5OiBub25lIH0KCiAgICAvKiBIaWRlIHNvdW5kIHBsYXlpbmcvbXV0ZWQgYnV0dG9uICovCiAgICAuc291bmQtYnV0dG9uIHsgZGlzcGxheTogbm9uZSAhaW1wb3J0YW50IH0KCiAgICAvKiBSZW1vdmUgbGVmdCBtYXJnaW4gb2YgZGFzaGVkIGxpbmVzICovCgl0YWItaXRlbTpub3QoW2RhdGEtbGV2ZWw9IjAiXSk6bm90KC5waW5uZWQpIHsKICAgIAlib3JkZXItbGVmdDogZGFzaGVkIDJweCAjNmI2OTdmOwogIAkJbWFyZ2luLWxlZnQ6IDBweAoJfQp9Cg==",
+  "closeParentBehaviorMode": 0,
+  "closeParentBehavior_insideSidebar_expanded": 0,
+  "closeParentBehavior_outsideSidebar_expanded": 0,
+  "configsVersion": 25,
+  "context_openAllBookmarksWithStructureRecursively": true,
+  "dropLinksOnTabBehavior": 2,
+  "inheritContextualIdentityToChildTabMode": 1,
+  "inheritContextualIdentityToTabsFromExternalMode": 1,
+  "insertNewTabFromPinnedTabAt": 1,
+  "moveParentBehavior_outsideSidebar_expanded": 2,
+  "notifiedFeaturesVersion": 9,
+  "optionsExpandedSections": [
+    "section-appearance",
+    "section-contextMenu",
+    "section-newTab",
+    "section-advanced",
+    "section-treeBehavior",
+    "section-drag",
+    "section-addons",
+    "section-debug"
+  ],
+  "showExpertOptions": true,
+  "sidebarPosition": 1,
+  "sidebarPositionRighsideNotificationShown": true,
+  "skipCollapsedTabsForTabSwitchingShortcuts": true,
+  "syncDevices": {
+    "device-1639992410100-7150": {
+      "id": "device-1639992410100-7150",
+      "name": "Firefox on Windows",
+      "icon": "device-desktop",
+      "timestamp": 1640054157675
+    }
+  },
+  "userStyleRules": "",
+  "userStyleRulesFieldHeight": "804px",
+  "userStyleRulesFieldTheme": "dracula",
+  "warnOnCloseTabs": false,
+  "warnOnCloseTabsByClosebox": false
+}
