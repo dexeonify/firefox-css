@@ -1,0 +1,57 @@
+/* Add more padding on both sides */
+tab-item:not(.pinned) {
+    --tab-margin-left: 2.5px;
+    --tab-margin-right: 2.5px
+}
+
+/* Make pinned tabs highlight bigger */
+tab-item.pinned .background {
+    inset: 0
+}
+
+/* Dim unloaded tabs */
+tab-item.discarded tab-item-substance {
+    opacity: 0.5
+}
+
+/* Only show tab close button on hover */
+tab-item-substance:not(:hover) tab-closebox {
+    display: none
+}
+
+/* Colored background for closebox on hover */
+.closebox:hover::before {
+    background: #ff4646 !important;
+    opacity: 0.8
+}
+
+/* Hide scrollbar */
+#tabbar {
+    scrollbar-width: none
+}
+
+/* Visually flatten tree structure when sidebar is collapsed */
+@media screen and (width: 32px) {
+    /* Hide twisty (collapse/expand button) and move the favicons to the left */
+    tab-item .twisty {
+        visibility: hidden;
+        margin-left: -13px;
+    }
+
+    /* Align favicons and fix tab highlight */
+    tab-item-substance {
+        margin-left: 0.21em !important;
+        width: 90%
+    }
+
+    /* Center the new tab button */
+    .newtab-button {
+        padding-left: 0.5em !important
+    }
+
+    /* Hide descendants counter */
+    tab-item .counter { display: none }
+
+    /* Hide sound playing/muted button */
+    .sound-button { display: none !important }
+}
