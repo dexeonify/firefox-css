@@ -30,6 +30,12 @@ tab-item-substance:not(:hover) tab-closebox {
     scrollbar-width: none
 }
 
+/* Dashed lines on the left side to signify parent-child relationship */
+tab-item:not([data-level="0"]):not(.pinned) {
+    border-left: dashed 2px #6b697f;
+  	margin-left: 13px
+}
+
 /* Visually flatten tree structure when sidebar is collapsed */
 @media screen and (width: 32px) {
     /* Hide twisty (collapse/expand button) and move the favicons to the left */
@@ -54,4 +60,10 @@ tab-item-substance:not(:hover) tab-closebox {
 
     /* Hide sound playing/muted button */
     .sound-button { display: none !important }
+
+    /* Remove left margin of dashed lines */
+	tab-item:not([data-level="0"]):not(.pinned) {
+    	border-left: dashed 2px #6b697f;
+  		margin-left: 0px
+	}
 }
