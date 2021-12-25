@@ -27,7 +27,7 @@
 /* Visually flatten tree structure when sidebar is collapsed */
 @media screen and (width: 32px) {
     /* Flatten tree structure */
-    .Tab[data-lvl] { padding-left: 0 }
+    #root { --tabs-indent: 0 }
 
     /* Align the favicons with the pinned tabs */
     .container { margin: 2px }
