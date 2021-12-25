@@ -20,8 +20,8 @@
 }
 
 /* Drop shadow below the active tab */
-.Tab[data-active], .PinnedTab[data-active] {
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+#root {
+    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
 }
 
 /* Visually flatten tree structure when sidebar is collapsed */
