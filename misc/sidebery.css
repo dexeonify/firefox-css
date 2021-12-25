@@ -48,7 +48,7 @@
 }
 
 /* Increase contrast for tabs hightlighting */
-.Tab {
+.Tab, .PinnedTab {
     --tabs-bg-hover: rgb(70, 70, 70);     /* Tab color on hover */
     --tabs-bg-active: rgb(70, 70, 70);    /* Tab color on mouse click */
     --tabs-activated-bg: rgb(37, 37, 37); /* Active tab color */
