@@ -1,5 +1,4 @@
 /* Increase tab height */
-/* We can't increase padding between tabs because it breaks tabs reordering */
 #root { --tabs-height: 32px }
 
 /* Add some padding on both sides of the tabs and top of tabs list */
