@@ -30,7 +30,7 @@
     #root { --tabs-indent: 0 }
 
     /* Align the favicons with the pinned tabs */
-    .container { margin: 2px }
+    .container { margin: 0 2px }
 
     /* Fix tabs highlight */
     .Tab { min-width: 28px }
