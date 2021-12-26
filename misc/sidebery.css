@@ -29,7 +29,7 @@
     /* Flatten tree structure */
     #root { --tabs-indent: 0 }
 
-    /* Align the favicons with the pinned tabs */
+    /* Add small padding around the tabs */
     .container { margin: 0 2px }
 
     /* Fix tabs highlight */
