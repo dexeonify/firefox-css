@@ -18,9 +18,10 @@
     border-radius: 5px
 }
 
-/* Drop shadow below the active tab */
-#root {
-    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
+/* Drop shadow below the active and selected tab */
+.Tab, .PinnedTab {
+    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
 }
 
 /* Visually flatten tree structure when sidebar is collapsed */
