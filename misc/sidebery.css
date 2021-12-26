@@ -21,7 +21,7 @@
 /* Drop shadow below the active and selected tab */
 .Tab, .PinnedTab {
     --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
+    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Visually flatten tree structure when sidebar is collapsed */
@@ -53,7 +53,7 @@
     --tabs-bg-hover: rgba(66, 65, 77, 0.8);    /* Tab color on hover */
     --tabs-bg-active: rgba(66, 65, 77, 0.8);   /* Tab color on mouse click */
     --tabs-activated-bg: rgb(66, 65, 77);      /* Active tab color */
-    --tabs-selected-bg: rgb(82, 82, 94)         /* Tab color on selection */
+    --tabs-selected-bg: rgb(82, 82, 94);       /* Tab color on selection */
 }
 
 /* Thin line beside the tabs to indicate sub-tree level */
