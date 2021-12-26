@@ -50,10 +50,10 @@
 /* Follow Firefox dark theme */
 /* Remember to set Background color to #2B2A33 in Sidebery Settings > Styles Editor > Common */
 .Tab, .PinnedTab {
-    --tabs-bg-hover: rgb(66, 65, 77);     /* Tab color on hover */
-    --tabs-bg-active: rgb(66, 65, 77);    /* Tab color on mouse click */
-    --tabs-activated-bg: rgb(66, 65, 77); /* Active tab color */
-    --tabs-selected-bg: rgb(82, 82, 94)     /* Tab color on selection */
+    --tabs-bg-hover: rgba(66, 65, 77, 0.8);    /* Tab color on hover */
+    --tabs-bg-active: rgba(66, 65, 77, 0.8);   /* Tab color on mouse click */
+    --tabs-activated-bg: rgb(66, 65, 77);      /* Active tab color */
+    --tabs-selected-bg: rgb(82, 82, 94)         /* Tab color on selection */
 }
 
 /* Thin line beside the tabs to indicate sub-tree level */
