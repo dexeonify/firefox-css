@@ -58,5 +58,5 @@
 
 /* Thin line beside the tabs to indicate sub-tree level */
 .Tab:not([data-lvl="0"]) .lvl-wrapper {
-    border-left: solid 1px rgb(79, 79, 79)
+    border-left: solid 1px var(--tabs-bg-hover)
 }
