@@ -4,7 +4,7 @@ Some `userChrome.css` and `userContent.css` configurations to customise Firefox
 to my liking.
 
 I'm currently daily-driving *Firefox Nightly*, so naturally I will try to
-update as soon as possible if there's any breaking changes.
+update as soon as possible if there are any breaking changes.
 
 ## Features
 
@@ -48,7 +48,7 @@ A quick roundown on the basics of setting up `userChrome.css`:
 
 4. Restart Firefox.
 
-The directory tree is something like this:
+The directory tree should look something like this:
 
 ```css
 <your profile folder>
@@ -61,6 +61,7 @@ The directory tree is something like this:
     └── components/
             autohide_sidebar.css
             hide_tabs_toolbar.css
+            proton_context_menu.css
             windows_controls_placeholder.css
 ```
 
@@ -71,7 +72,7 @@ For a proper getting started guide, you should check out [r/FirefoxCSS's wiki](h
 Copy the `user.js` file (from the `misc/` folder) to the **Profile folder**,
 *NOT the `chrome/` folder*. The `user.js` file can be deleted afterwards.
 
-### Vertical Tabs
+### Vertical tabs
 
 0. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery/).
 
@@ -96,7 +97,7 @@ Copy the `user.js` file (from the `misc/` folder) to the **Profile folder**,
 5. Alternatively, import `misc/sidebery-data.json` in **Sidebery Settings > Help > Import**,
    if you are fine with my settings. :P
 
-`treestyletabs.css` and `treestyletabs-config.json` is also included.
+`treestyletabs.css` and `treestyletabs-config.json` are also included.
 The same steps can be done for Tree Styles Tab as well.
 
 ### Custom new tab
