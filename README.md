@@ -19,7 +19,7 @@ which addresses the blocky artifacts caused by the blur filter.
 
 ### Sidebery Autohide, Dynamic Indentation & Floating Tabs
 
-![Sidebery Demo](https://user-images.githubusercontent.com/72267349/147921242-f2a5900d-1ef1-408a-b04e-a7c7440efb6a.mp4)
+<https://user-images.githubusercontent.com/72267349/147921242-f2a5900d-1ef1-408a-b04e-a7c7440efb6a.mp4>
 
 ### Custom startpage using [nightTab](https://github.com/zombieFox/nightTab)
 
