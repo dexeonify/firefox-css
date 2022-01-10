@@ -33,7 +33,7 @@ tab-item-substance:not(:hover) tab-closebox {
 /* Dashed lines on the left side to signify parent-child relationship */
 tab-item:not([data-level="0"]):not(.pinned) {
     border-left: dashed 2px #6b697f;
-  	margin-left: 13px
+    margin-left: 13px
 }
 
 /* Visually flatten tree structure when sidebar is collapsed */
@@ -62,8 +62,8 @@ tab-item:not([data-level="0"]):not(.pinned) {
     .sound-button { display: none !important }
 
     /* Remove left margin of dashed lines */
-	tab-item:not([data-level="0"]):not(.pinned) {
-    	border-left: dashed 2px #6b697f;
-  		margin-left: 0px
-	}
+    tab-item:not([data-level="0"]):not(.pinned) {
+        border-left: dashed 2px #6b697f;
+        margin-left: 0px
+    }
 }
