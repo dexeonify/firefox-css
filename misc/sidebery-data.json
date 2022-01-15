@@ -219,11 +219,11 @@
         "label_fg": null,
         "label_fg_hover": null,
         "label_fg_active": null,
-        "info_fg": null,
+        "info_fg": "#9494AA",
         "true_fg": null,
         "false_fg": null,
-        "active_fg": null,
-        "inactive_fg": null,
+        "active_fg": "#9494AA",
+        "inactive_fg": "#52525E",
         "favicons_placeholder_bg": null,
         "btn_bg": null,
         "btn_bg_hover": null,
@@ -283,7 +283,7 @@
         "bookmarks_folder_empty_fg": null,
         "bookmarks_open_bookmark_fg": null
     },
-    "sidebarCSS": "/* Increase tab height */\n#root { --tabs-height: 32px }\n\n/* Add some padding on both sides of the tabs and top of tabs list */\n.container {\n    padding-top: 5px !important;\n    margin: 0 5px;\n    max-width: calc(100% - 10px);\n}\n\n/* Fix pointer position, only in tabs panel */\n:not(.Sidebar[data-panel-type=\"bookmarks\"]) > .pointer {\n    margin: 5px 0\n}\n\n/* Rounded corner tabs */\n.Tab, .PinnedTab {\n    border-radius: 5px\n}\n\n/* Drop shadow below the active tab */\n.Tab, .PinnedTab {\n    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);\n    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (width: 32px) {\n    /* Flatten tree structure */\n    #root { --tabs-indent: 0 }\n\n    /* Align the favicons with the pinned tabs */\n    .container { margin: 0px }\n\n    /* Fix tabs highlight */\n    .Tab { min-width: 28px }\n\n    /* Only display the active panel button */\n    .panel-btn[data-active=\"true\"] {\n        display: flex !important;\n        background: none !important\n    }\n\n    /* Hide the settings button and other panels' buttons */\n    .panel-btn, .settings-btn {\n        display: none !important\n    }\n}\n\n/* Follow Firefox dark theme */\n@media (prefers-color-scheme: dark) {\n    .Tab, .PinnedTab {\n        --tabs-bg-hover: rgb(66, 65, 77);     /* Tab color on hover */\n        --tabs-bg-active: rgb(66, 65, 77);    /* Tab color on mouse click */\n        --tabs-activated-bg: rgb(66, 65, 77); /* Active tab color */\n        --tabs-selected-bg: rgb(82, 82, 94)     /* Tab color on selection */\n    }\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .lvl-wrapper {\n    border-left: solid 1px rgb(79, 79, 79)\n}\n",
+    "sidebarCSS": "#root {\n    /* Increase tab height */\n    --tabs-height: 32px;\n\n    /* Drop shadow below the active and selected tab */\n    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);\n    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);\n\n    /* Follow Firefox dark theme */\n    /*\n    Follow the additional steps in https://github.com/dexeonify/firefox-css#vertical-tabs\n    to apply colors globally, not just the Sidebar\n    */\n    --bg: rgb(43, 42, 51) !important;                   /* Background color */\n    --tabs-bg-hover: rgba(66, 65, 77, 0.8) !important;  /* Tab color on hover */\n    --tabs-bg-active: rgba(66, 65, 77, 0.8) !important; /* Tab color on mouse click */\n    --tabs-activated-bg: rgb(66, 65, 77) !important;    /* Active tab color */\n    --tabs-selected-bg: rgb(82, 82, 94) !important;     /* Tab color on selection */\n}\n\n/* Make panel buttons in navigation strip follow dark theme */\n.NavigationBar .panel-btn[data-active] {\n    background-color: var(--tabs-activated-bg)\n}\n\n.NavigationBar .panel-btn:hover {\n    background-color: var(--tabs-bg-hover)\n}\n\n/* Rounded corner tabs */\n.Tab, .PinnedTab {\n    border-radius: 5px\n}\n\n/* Add padding around the tabs list */\n.container {\n    padding: 5px !important;\n    padding-bottom: 64px !important; /* Allow overscrolling after sidebar is full */\n}\n\n/* Fix pointer position for tab reordering */\n.Sidebar:not([data-panel-type=\"bookmarks\"]) > .pointer {\n    margin: 5px 0\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .lvl-wrapper {\n    border-left: solid 1px var(--tabs-selected-bg)\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 32px) {\n    /* Flatten tree structure */\n    #root { --tabs-indent: 0 }\n\n    /* Add small padding around the tabs */\n    .container { padding: 2px !important}\n\n    /* Only display the active panel button */\n    .panel-btn[data-active=\"true\"] {\n        display: flex !important;\n        background: none !important\n    }\n\n    /* Hide the settings button and other panels' buttons */\n    .panel-btn, .settings-btn {\n        display: none !important\n    }\n}\n",
     "groupCSS": "",
     "snapshots_v4": [],
     "ver": "4.10.0"
