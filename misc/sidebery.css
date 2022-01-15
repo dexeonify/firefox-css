@@ -32,11 +32,9 @@
     border-radius: 5px
 }
 
-/* Add some padding on both sides of the tabs and top of tabs list */
+/* Add padding around the tabs list */
 .container {
-    padding-top: 5px !important;
-    margin: 0 5px;
-    max-width: calc(100% - 10px);
+    padding: 5px !important;
 }
 
 /* Fix pointer position for tab reordering */
@@ -55,10 +53,7 @@
     #root { --tabs-indent: 0 }
 
     /* Add small padding around the tabs */
-    .container { margin: 0 2px }
-
-    /* Fix tabs highlight */
-    .Tab { min-width: 28px }
+    .container { padding: 2px !important}
 
     /* Only display the active panel button */
     .panel-btn[data-active="true"] {
