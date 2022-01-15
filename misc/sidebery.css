@@ -35,6 +35,7 @@
 /* Add padding around the tabs list */
 .container {
     padding: 5px !important;
+    padding-bottom: 64px !important; /* Allow overscrolling after sidebar is full */
 }
 
 /* Fix pointer position for tab reordering */
