@@ -1,5 +1,36 @@
-/* Increase tab height */
-#root { --tabs-height: 32px }
+#root {
+    /* Increase tab height */
+    --tabs-height: 32px;
+
+    /* Drop shadow below the active and selected tab */
+    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+    /* Follow Firefox dark theme */
+    /*
+    Follow the additional steps in https://github.com/dexeonify/firefox-css#vertical-tabs
+    to apply colors globally, not just the Sidebar
+    */
+    --bg: rgb(43, 42, 51) !important;                   /* Background color */
+    --tabs-bg-hover: rgba(66, 65, 77, 0.8) !important;  /* Tab color on hover */
+    --tabs-bg-active: rgba(66, 65, 77, 0.8) !important; /* Tab color on mouse click */
+    --tabs-activated-bg: rgb(66, 65, 77) !important;    /* Active tab color */
+    --tabs-selected-bg: rgb(82, 82, 94) !important;     /* Tab color on selection */
+}
+
+/* Make panel buttons in navigation strip follow dark theme */
+.NavigationBar .panel-btn[data-active] {
+    background-color: var(--tabs-activated-bg)
+}
+
+.NavigationBar .panel-btn:hover {
+    background-color: var(--tabs-bg-hover)
+}
+
+/* Rounded corner tabs */
+.Tab, .PinnedTab {
+    border-radius: 5px
+}
 
 /* Add some padding on both sides of the tabs and top of tabs list */
 .container {
@@ -8,24 +39,18 @@
     max-width: calc(100% - 10px);
 }
 
-/* Fix pointer position, only in tabs panel */
-:not(.Sidebar[data-panel-type="bookmarks"]) > .pointer {
+/* Fix pointer position for tab reordering */
+.Sidebar:not([data-panel-type="bookmarks"]) > .pointer {
     margin: 5px 0
 }
 
-/* Rounded corner tabs */
-.Tab, .PinnedTab {
-    border-radius: 5px
-}
-
-/* Drop shadow below the active and selected tab */
-.Tab, .PinnedTab {
-    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+/* Thin line beside the tabs to indicate sub-tree level */
+.Tab:not([data-lvl="0"]) .lvl-wrapper {
+    border-left: solid 1px var(--tabs-selected-bg)
 }
 
 /* Visually flatten tree structure when sidebar is collapsed */
-@media screen and (width: 32px) {
+@media screen and (max-width: 32px) {
     /* Flatten tree structure */
     #root { --tabs-indent: 0 }
 
@@ -45,26 +70,4 @@
     .panel-btn, .settings-btn {
         display: none !important
     }
-}
-
-/* Follow Firefox dark theme */
-/* Remember to set Background color to #2B2A33 in Sidebery Settings > Styles Editor > Common */
-.Tab, .PinnedTab {
-    --tabs-bg-hover: rgba(66, 65, 77, 0.8);    /* Tab color on hover */
-    --tabs-bg-active: rgba(66, 65, 77, 0.8);   /* Tab color on mouse click */
-    --tabs-activated-bg: rgb(66, 65, 77);      /* Active tab color */
-    --tabs-selected-bg: rgb(82, 82, 94);       /* Tab color on selection */
-}
-
-.NavigationBar .panel-btn[data-active] {
-    background-color: rgb(66, 65, 77)
-}
-
-.NavigationBar .panel-btn:hover {
-    background-color: rgba(66, 65, 77, 0.8)
-}
-
-/* Thin line beside the tabs to indicate sub-tree level */
-.Tab:not([data-lvl="0"]) .lvl-wrapper {
-    border-left: solid 1px var(--tabs-selected-bg)
 }
