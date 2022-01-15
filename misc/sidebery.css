@@ -56,6 +56,14 @@
     --tabs-selected-bg: rgb(82, 82, 94);       /* Tab color on selection */
 }
 
+.NavigationBar .panel-btn[data-active] {
+    background-color: rgb(66, 65, 77)
+}
+
+.NavigationBar .panel-btn:hover {
+    background-color: rgba(66, 65, 77, 0.8)
+}
+
 /* Thin line beside the tabs to indicate sub-tree level */
 .Tab:not([data-lvl="0"]) .lvl-wrapper {
     border-left: solid 1px var(--tabs-selected-bg)
