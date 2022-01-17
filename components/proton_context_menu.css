@@ -1,90 +1,34 @@
-/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/context_menus_more_proton.css made available under Mozilla Public License v. 2.0
-See the above repository for updates as well as full license text. */
-
-/* Adds more proton-like styling to context menus. Rounded rows, and more consistent padding. This is only going to work on Win10+ */
-
-/* Only apply CSS to actual context menus */
 /*
-Most of these are self-explanatory.
-
-#contentAreaContextMenu is the context menu when you right-click on the webpage,
-a link or an image.
-
-#pageActionContextMenu is the context menu when you right-click a page action item.
-They are located at the end of the URL bar, right beside the bookmark icon.
-Examples: Reddit Enhancement Suite and Translate Web Pages.
-
-.textbox-contextmenu refers to the context menu when you right-click a textbox,
-such as the URL bar.
-
-#placesContext can be found when you right-click bookmark items and history entries.
-
-#customizationPanelItemContextMenu appears if you right click in any of the items
-inside the overflow menu (>>).
-
-#autohide-context is the context menu when you right-click the toolbar in fullscreen.
-
-#main-menubar is the dropdown menu for the menu bar (accessed by alt key).
+Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/context_menus_more_proton.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text.
 */
-#contentAreaContextMenu,
-#tabContextMenu,
-#backForwardMenu,
-#toolbar-context-menu,
-#pageActionContextMenu,
-.textbox-contextmenu,
-#placesContext,
-#customizationPanelItemContextMenu,
-#pictureInPictureToggleContextMenu,
-#downloadsContextMenu,
-#autohide-context,
-#main-menubar {
-    --arrowpanel-menuitem-margin: 0 4px;
-    --arrowpanel-menuitem-padding-block: 6px;
-    --arrowpanel-menuitem-padding-inline: 8px;
-    --arrowpanel-menuitem-border-radius: 4px;
-    --panel-separator-margin-vertical: 4px;
-}
 
-/*
-#ContentSelectDropdownPopup is the dropdown used by Tab Session Manager's
-category filter.
+/* Adds rounded corners highlight to context menus. This is only going to work on Win10+ */
 
-This style makes the dropdown more compact whilst keeping the rounded corner style.
-*/
-#ContentSelectDropdownPopup {
-    --arrowpanel-menuitem-margin: 0 4px;
-    --arrowpanel-menuitem-padding-block: 2px;
+/* Note: Variables in :root affect Firefox UI globally */
+:root {
+    --arrowpanel-menuitem-border-radius: 4px; /* The radius of the rounded corners */
+    --panel-separator-margin-vertical: 4px;   /* The amount of padding around menu separators */
 }
 
 menupopup > menuitem,
 menupopup > menu {
-    /* Add padding on both sides */
-    margin: var(--arrowpanel-menuitem-margin) !important;
+    /* Add padding on both sides of the context menu */
+    margin: 0 4px !important;
 
-    /*
-    Add padding above and below menu entries and
-    align the menu items with the menu separator
-    */
-    padding: var(--arrowpanel-menuitem-padding-block) var(--arrowpanel-menuitem-padding-inline) !important;
-
-    /* Rounded corner */
+    /* Rounded corners */
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
 
-/* Add padding at the top and below of the context menu */
-menupopup:not(.in-menulist) {
-    --panel-padding: var(--arrowpanel-menuitem-padding-block) 0 !important;
-}
-
-/* Add padding before and after the menu separator */
+/* Add padding around the menu separator */
 menuseparator:not(.in-menulist) {
     margin-block: var(--panel-separator-margin-vertical) !important;
 }
 
 /* context-navigation are the buttons at the top of the context menu (previous page, reload etc) */
-/* Add padding around the context-navigation */
 #context-navigation {
-    padding-inline: var(--arrowpanel-menuitem-padding-inline) !important;
+    padding-inline: 4px !important; /* Align the context-navigation buttons with the menu items */
+    padding-top: 2px !important;    /* Center the context-navigation buttons vertically */
 }
 
 /* Rounded corner highlight in context-navigation */
