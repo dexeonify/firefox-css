@@ -53,8 +53,11 @@
     /* Flatten tree structure */
     #root { --tabs-indent: 0 }
 
-    /* Add small padding around the tabs */
-    .container { padding: 2px !important}
+    /* Add smaller padding around the tabs */
+    .container {
+        padding: 2px !important;
+        padding-bottom: 64px !important; /* Preserve overscrolling */
+    }
 
     /* Only display the active panel button */
     .panel-btn[data-active="true"] {
