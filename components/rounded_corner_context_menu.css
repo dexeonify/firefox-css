@@ -28,7 +28,7 @@ menuseparator:not(.in-menulist) {
 /* context-navigation are the buttons at the top of the context menu (previous page, reload etc) */
 #context-navigation {
     padding-inline: 4px !important; /* Align the context-navigation buttons with the menu items */
-    padding-top: 2px !important;    /* Center the context-navigation buttons vertically */
+    padding-bottom: 0px !important;    /* Center the context-navigation buttons vertically */
 }
 
 /* Rounded corner highlight in context-navigation */
