@@ -55,7 +55,7 @@
 
     /* Add smaller padding around the tabs */
     .container {
-        padding: 2px !important;
+        padding: 5px 2px !important;
         padding-bottom: 64px !important; /* Preserve overscrolling */
     }
 
