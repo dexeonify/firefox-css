@@ -27,6 +27,11 @@
     background-color: var(--tabs-bg-hover)
 }
 
+/* Make default placeholder favicons more visible */
+:is(.Tab, .PinnedTab) .placeholder > svg {
+    fill: #dddcee
+}
+
 /* Rounded corner tabs */
 .Tab, .PinnedTab {
     border-radius: 5px
