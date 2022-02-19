@@ -1,25 +1,44 @@
-# firefox-css
+# firefox-css <!-- omit in toc -->
 
-Some `userChrome.css` and `userContent.css` configurations to customise Firefox
-to my liking.
+Some `userChrome.css` configurations to customise Firefox to my liking.
 
 I'm currently daily-driving *Firefox Nightly*, so naturally I will try to
 update as soon as possible if there are any breaking changes.
 
+## Table of Contents <!-- omit in toc -->
+
+- [Features](#features)
+  - [Sidebery Autohide, Dynamic Indentation & Floating Tabs](#sidebery-autohide-dynamic-indentation--floating-tabs)
+  - [URL bar blur](#url-bar-blur)
+  - [Rounded corner context menu highlight](#rounded-corner-context-menu-highlight)
+  - [Custom startpage using nightTab](#custom-startpage-using-nighttab)
+    - [Base Theme](#base-theme)
+    - [Nord Theme](#nord-theme)
+- [Usage](#usage)
+  - [userChrome.css](#userchromecss)
+  - [Smooth scrolling](#smooth-scrolling)
+  - [Vertical tabs](#vertical-tabs)
+  - [Custom new tab](#custom-new-tab)
+- [References](#references)
+
 ## Features
+
+### Sidebery Autohide, Dynamic Indentation & Floating Tabs
+
+<https://user-images.githubusercontent.com/72267349/147921242-f2a5900d-1ef1-408a-b04e-a7c7440efb6a.mp4>
 
 ### URL bar blur
 
 ![Blurred URL Bar](https://i.imgur.com/s5036st.png)
 
-⚠️ Blur currently does not work in Nightly regardless of `layout.css.backdrop-filter.enabled`,
+⚠️ Blur currently **does not work** in Nightly regardless of `layout.css.backdrop-filter.enabled`,
 due to [bug 1741779](https://bugzilla.mozilla.org/show_bug.cgi?id=1741779).
 There's also [bug 1741305](https://bugzilla.mozilla.org/show_bug.cgi?id=1741305)
 which addresses the blocky artifacts caused by the blur filter.
 
-### Sidebery Autohide, Dynamic Indentation & Floating Tabs
+### Rounded corner context menu highlight
 
-<https://user-images.githubusercontent.com/72267349/147921242-f2a5900d-1ef1-408a-b04e-a7c7440efb6a.mp4>
+![Rounded Corner Context Menu](https://user-images.githubusercontent.com/72267349/154794069-1ecf9605-c22c-4b83-bea0-593d1ffa7cf4.png)
 
 ### Custom startpage using [nightTab](https://github.com/zombieFox/nightTab)
 
@@ -35,70 +54,57 @@ which addresses the blocky artifacts caused by the blur filter.
 
 ### userChrome.css
 
-A quick roundown on the basics of setting up `userChrome.css`:
-
 1. Go to `about:config`, and enable
    - `toolkit.legacyUserProfileCustomizations.stylesheets`
    - `layout.css.backdrop-filter.enabled`
-
 2. Go to `about:support` and click **Profile folder > Open Folder**.
-
 3. Create a new folder named `chrome`, download/clone this repo and copy the
    downloaded files into the `chrome` folder you just created.
-
 4. Restart Firefox.
 
-The directory tree should look something like this:
+<details>
+<summary>The directory tree should look something like this:</summary>
 
 ```css
 <your profile folder>
 │   user.js
 └── chrome/
     │   userChrome.css
-    │   userContent.css
     │   noise-512x512.png
     │
     └── components/
             autohide_sidebar.css
             hide_tabs_toolbar.css
-            proton_context_menu.css
+            rounded_corner_context_menu.css
             windows_controls_placeholder.css
 ```
 
-For a proper getting started guide, you should check out [r/FirefoxCSS's wiki](https://www.reddit.com/r/FirefoxCSS/wiki/index/tutorials).
+</details>
 
 ### Smooth scrolling
 
-Copy the `user.js` file (from the `misc/` folder) to the **Profile folder**,
-*NOT the `chrome/` folder*. The `user.js` file can be deleted afterwards.
+Copy the `user.js` file (from the `misc/` folder) to the **Profile folder**
+*(not the `chrome/` folder)*. The `user.js` file can be deleted afterwards.
 
 ### Vertical tabs
 
 0. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery/).
-
-1. Copy the content of `misc/sidebery.css`.
-
+1. Copy the contents of `misc/sidebery.css`.
 2. Navigate to **Sidebery Settings > Styles editor** and paste the CSS under
    "Sidebar" on the right.
-
-3. Individually set the following options under **Common** in Styles editor:
+3. Individually set the following options in Styles editor:
    - **Background color** to `#2B2A33`
    - **Info color** to `#9494AA`
    - **Color of active option** to `#9494AA`
    - **Color of inactive option** to `#52525E`
-
+   - Under "Context Menu", **Background color** to `#2B2A33`
+   - Under "Context Menu", **Option background color on hover** to `#2B2A33`
 4. Set window preface value in **Sidebery settings > Help > Preface value**
-   to **[Sidebery]**.
-
-   **Note:**
-   The preface value can be anything, but you would have to change it
+   to **[Sidebery]**.\
+   **Note:** The preface value can be anything, but you would have to change it
    accordingly inside the `userChrome.css` files as well.
-
 5. Alternatively, import `misc/sidebery-data.json` in **Sidebery Settings > Help > Import**,
    if you are fine with my settings. :P
-
-`treestyletabs.css` and `treestyletabs-config.json` are also included.
-The same steps can be done for Tree Styles Tab as well.
 
 ### Custom new tab
 
