@@ -42,3 +42,8 @@
 #sidebar-header {
     display: none
 }
+
+/* Tone down the outline below the toolbar */
+#navigator-toolbox {
+    border-bottom-color: rgb(28, 27, 34) !important;
+}
