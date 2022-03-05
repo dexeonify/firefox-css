@@ -20,7 +20,7 @@ See the above repository for updates as well as full license text.
 }
 
 #sidebar {
-    transition: min-width 200ms ease-in-out var(--uc-autohide-sidebar-delay) !important;
+    transition: min-width 200ms cubic-bezier(.15, .36, .3, 1) var(--uc-autohide-sidebar-delay) !important;
     min-width: var(--uc-sidebar-width) !important;
 }
 
