@@ -27,7 +27,11 @@
     display: none
 }
 
-/* Tone down the outline below the toolbar */
+/* Tone down the color of the black border found in the toolbar and findbar */
 #navigator-toolbox {
     border-bottom-color: rgb(28, 27, 34) !important;
+}
+
+findbar {
+    border-top-color: rgb(28, 27, 34) !important;
 }
