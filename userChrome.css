@@ -8,22 +8,6 @@
 /* Rounded corner highlight in context menu */
 @import url(components/rounded_corner_context_menu.css);
 
-/* URL bar blur */
-/*
-#urlbar[breakout][breakout-extend] #urlbar-background {
-    background-image: url(noise-512x512.png) !important;
-    background-color: #1C1B22BF !important;
-    backdrop-filter: saturate(2) blur(32px) !important;
-}
-*/
-
-/* Disable the default logan colour when the URL bar and dropdown is focused. */
-/*
-#navigator-toolbox {
-    --toolbar-field-focus-background-color: transparent !important
-}
-*/
-
 /* Remove "Send tab to device" and "Share" entry in tab context menu */
 #tabContextMenu #context_sendTabToDevice,
 .share-tab-url-item {
