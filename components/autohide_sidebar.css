@@ -11,7 +11,7 @@ See the above repository for updates as well as full license text.
 #sidebar-box {
     --uc-sidebar-width: 32px;
     --uc-sidebar-hover-width: 300px;
-    --uc-autohide-sidebar-delay: 600ms; /* Wait 0.6s before hiding sidebar */
+    --uc-autohide-sidebar-delay: .6s; /* Wait 0.6s before hiding sidebar */
     position: relative;
     min-width: var(--uc-sidebar-width) !important;
     width: var(--uc-sidebar-width) !important;
@@ -20,13 +20,13 @@ See the above repository for updates as well as full license text.
 }
 
 #sidebar {
-    transition: min-width 200ms cubic-bezier(.15, .36, .3, 1) var(--uc-autohide-sidebar-delay) !important;
+    transition: min-width .2s cubic-bezier(.15, .36, .3, 1) var(--uc-autohide-sidebar-delay) !important;
     min-width: var(--uc-sidebar-width) !important;
 }
 
 #sidebar-box:hover > #sidebar {
     min-width: var(--uc-sidebar-hover-width) !important;
-    transition-delay: 300ms !important;
+    transition-delay: .3s !important;
 
     /* Drop shadow when hovered */
     box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5)
