@@ -31,7 +31,7 @@ Remove "Email Image...", "Email Video...", "Send Link to Device" and
     display: none
 }
 
-/* Tone down the color of the black border found in the toolbar and findbar */
+/* Tone down the color of the black outline found in the toolbar and findbar */
 #navigator-toolbox {
     border-bottom-color: rgb(28, 27, 34) !important;
 }
