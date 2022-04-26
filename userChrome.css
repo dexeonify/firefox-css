@@ -14,8 +14,12 @@
     display: none
 }
 
-/* Remove "Email Image...", "Send Link to Device" and "Set As Desktop Background..." entry in context menu */
+/*
+Remove "Email Image...", "Email Video...", "Send Link to Device" and
+"Set As Desktop Background..." entries in context menu
+*/
 #context-sendimage,
+#context-sendvideo,
 #context-sendlinktodevice,
 #context-sep-setbackground,
 #context-setDesktopBackground {
