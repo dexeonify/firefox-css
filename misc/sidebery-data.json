@@ -1,53 +1,27 @@
 {
-    "containers_v4": {},
-    "panels_v4": [
-        {
-            "type": "bookmarks",
-            "id": "bookmarks",
-            "cookieStoreId": "bookmarks",
-            "name": "Bookmarks",
-            "icon": "icon_bookmarks",
-            "bookmarks": true,
-            "lockedPanel": false,
-            "skipOnSwitching": false
-        },
-        {
-            "type": "default",
-            "id": "firefox-default",
-            "name": "Default",
-            "icon": "icon_tabs",
-            "cookieStoreId": "firefox-default",
-            "lockedTabs": false,
-            "lockedPanel": false,
-            "skipOnSwitching": false,
-            "noEmpty": false,
-            "newTabCtx": "none",
-            "dropTabCtx": "none",
-            "moveTabCtx": "none",
-            "moveTabCtxNoChild": true
-        }
-    ],
     "settings": {
-        "version": "4.10.0",
         "nativeScrollbars": false,
+        "nativeScrollbarsThin": true,
         "selWinScreenshots": true,
-        "tabsCheck": true,
-        "tabsFix": "notify",
+        "updateSidebarTitle": true,
         "markWindow": true,
         "markWindowPreface": "[Sidebery] ",
+        "logLvl": 3,
         "ctxMenuNative": false,
-        "autoHideCtxMenu": "none",
         "ctxMenuRenderInact": true,
+        "ctxMenuRenderIcons": true,
         "ctxMenuIgnoreContainers": "",
         "navBarLayout": "horizontal",
         "navBarInline": true,
+        "navBarSide": "left",
         "hideAddBtn": false,
         "hideSettingsBtn": false,
         "navBtnCount": true,
         "hideEmptyPanels": false,
         "navActTabsPanelLeftClickAction": "none",
         "navActBookmarksPanelLeftClickAction": "none",
-        "navMidClickAction": "none",
+        "navTabsPanelMidClickAction": "none",
+        "navBookmarksPanelMidClickAction": "none",
         "navSwitchPanelsWheel": true,
         "groupLayout": "grid",
         "skipEmptyPanels": false,
@@ -55,18 +29,15 @@
         "dndTabActDelay": 750,
         "dndTabActMod": "none",
         "dndExp": "pointer",
-        "dndExpDelay": 0,
+        "dndExpDelay": 750,
         "dndExpMod": "none",
-        "stateStorage": "global",
+        "searchBarMode": "dynamic",
         "warnOnMultiTabClose": "none",
         "activateOnMouseUp": true,
         "activateLastTabOnPanelSwitching": true,
         "showTabRmBtn": true,
-        "showTabCtx": true,
         "hideInact": false,
         "activateAfterClosing": "prev_act",
-        "activateAfterClosingPrevRule": "visible",
-        "activateAfterClosingNextRule": "tree",
         "activateAfterClosingGlobal": false,
         "activateAfterClosingNoFolded": false,
         "activateAfterClosingNoDiscarded": true,
@@ -77,7 +48,9 @@
         "tabsUnreadMark": false,
         "tabsReloadLimit": 5,
         "tabsReloadLimitNotif": true,
-        "tabsPanelSwitchActMove": true,
+        "showNewTabBtns": true,
+        "newTabBarPosition": "after_tabs",
+        "tabsPanelSwitchActMove": false,
         "moveNewTabPin": "end",
         "moveNewTabParent": "last_child",
         "moveNewTabParentActPanel": false,
@@ -100,7 +73,6 @@
         "discardFoldedDelayUnit": "sec",
         "tabsTreeBookmarks": true,
         "treeRmOutdent": "branch",
-        "bookmarksPanel": true,
         "warnOnMultiBookmarkDelete": "collapsed",
         "openBookmarkNewTab": false,
         "midClickBookmark": "open_new_tab",
@@ -111,12 +83,14 @@
         "activateOpenBookmarkTab": false,
         "showBookmarkLen": true,
         "bookmarksRmUndoNote": true,
+        "loadBookmarksOnDemand": true,
+        "pinOpenedBookmarksFolder": true,
+        "loadHistoryOnDemand": true,
         "fontSize": "m",
-        "bgNoise": true,
         "animations": true,
         "animationSpeed": "fast",
-        "theme": "default",
-        "style": "auto",
+        "theme": "proton",
+        "colorScheme": "ff",
         "sidebarCSS": true,
         "groupCSS": false,
         "snapNotify": true,
@@ -126,165 +100,214 @@
         "snapLimit": 0,
         "snapLimitUnit": "snap",
         "hScrollThroughPanels": true,
-        "scrollThroughTabs": "none",
-        "scrollThroughVisibleTabs": false,
-        "scrollThroughTabsSkipDiscarded": false,
+        "navSwitchPanelsDelay": 128,
+        "scrollThroughTabs": "global",
+        "scrollThroughVisibleTabs": true,
+        "scrollThroughTabsSkipDiscarded": true,
         "scrollThroughTabsExceptOverflow": true,
-        "scrollThroughTabsCyclic": false,
-        "tabDoubleClick": "duplicate",
-        "tabLongLeftClick": "none",
+        "scrollThroughTabsCyclic": true,
+        "longClickDelay": 400,
+        "tabDoubleClick": "none",
+        "tabsSecondClickActPrev": true,
+        "tabLongLeftClick": "new_child",
         "tabLongRightClick": "new_after",
+        "tabCloseMiddleClick": "discard",
         "tabsPanelLeftClickAction": "none",
         "tabsPanelDoubleClickAction": "collapse",
         "tabsPanelRightClickAction": "menu",
         "tabsPanelMiddleClickAction": "tab",
         "syncName": "",
-        "syncSaveSettings": true,
-        "syncSaveCtxMenu": true,
-        "syncSaveStyles": true,
+        "syncSaveSettings": false,
+        "syncSaveCtxMenu": false,
+        "syncSaveStyles": false,
         "syncAutoApply": false
     },
-    "tabsMenu": [
-        [
-            {
-                "name": "Quick functions"
+    "sidebar": {
+        "panels": {
+            "W1u2pOHNRXif": {
+                "type": 1,
+                "id": "W1u2pOHNRXif",
+                "name": "Bookmarks",
+                "iconSVG": "icon_bookmarks",
+                "iconIMGSrc": "",
+                "iconIMG": "",
+                "color": "toolbar",
+                "lockedPanel": false,
+                "tempMode": false,
+                "skipOnSwitching": false,
+                "rootId": "root________",
+                "viewMode": "tree",
+                "autoConvert": false
             },
-            "undoRmTab",
-            "mute",
-            "reload",
-            "bookmark"
-        ],
-        "separator-1",
-        [
+            "YskKZUVeIzpf": {
+                "type": 2,
+                "id": "YskKZUVeIzpf",
+                "name": "Tabs",
+                "color": "toolbar",
+                "iconSVG": "icon_tabs",
+                "iconIMGSrc": "",
+                "iconIMG": "",
+                "lockedPanel": false,
+                "skipOnSwitching": false,
+                "noEmpty": false,
+                "newTabCtx": "none",
+                "dropTabCtx": "none",
+                "moveTabCtx": "none",
+                "moveTabCtxNoChild": true,
+                "urlRulesActive": false,
+                "urlRules": "",
+                "bookmarksFolderId": -1,
+                "newTabBtns": []
+            }
+        },
+        "nav": [
+            "W1u2pOHNRXif",
+            "YskKZUVeIzpf",
+            "add_tp",
+            "search",
+            "sp-0",
+            "settings"
+        ]
+    },
+    "contextMenu": {
+        "tabs": [
             {
-                "name": "Move to"
+                "opts": [
+                    "undoRmTab",
+                    "mute",
+                    "reload",
+                    "bookmark"
+                ]
             },
-            "moveToNewWin",
-            "moveToWin",
-            "moveToPanel"
-        ],
-        [
+            "separator-1",
             {
-                "name": "Containers"
+                "name": "Move to",
+                "opts": [
+                    "moveToNewWin",
+                    "moveToWin",
+                    "separator-5",
+                    "moveToPanel",
+                    "moveToNewPanel"
+                ]
             },
-            "reopenInCtr"
-        ],
-        "separator-2",
-        "duplicate",
-        "copyUrls",
-        "pin",
-        "separator-3",
-        [
             {
-                "name": "Tabs functions"
+                "name": "Reopen in",
+                "opts": [
+                    "reopenInNewWin",
+                    "reopenInWin",
+                    "separator-2",
+                    "reopenInCtr",
+                    "reopenInNewCtr"
+                ]
             },
+            "separator-4",
+            "pin",
+            "duplicate",
+            "copyTabsUrls",
+            "discard",
+            "separator-3",
             "group",
             "flatten",
-            "discard",
-            "clearCookies"
-        ],
-        "separator-4",
-        "close",
-        "closeDescendants",
-        "closeTabsAbove",
-        "closeTabsBelow"
-    ],
-    "bookmarksMenu": [
-        [
+            "separator-13373479732958216",
             {
-                "name": "Open in"
+                "name": "Close multiple tabs",
+                "opts": [
+                    "closeTabsAbove",
+                    "closeTabsBelow",
+                    "closeDescendants"
+                ]
             },
-            "openInNewWin",
-            "openInNewPrivWin"
+            "close"
         ],
-        [
+        "tabsPanel": [
             {
-                "name": "Containers"
+                "opts": [
+                    "undoRmTab",
+                    "muteAllAudibleTabs",
+                    "reloadTabs",
+                    "discardTabs"
+                ]
             },
-            "openInCtr"
+            "separator-7",
+            "collapseInactiveBranches",
+            "closeTabsDuplicates",
+            "closeTabs",
+            "separator-8",
+            "bookmarkTabsPanel",
+            "restoreFromBookmarks",
+            "convertToBookmarksPanel",
+            "separator-9",
+            "openPanelConfig",
+            "removePanel"
         ],
-        "separator-5",
-        "createBookmark",
-        "createFolder",
-        "createSeparator",
-        "separator-7",
-        "copyUrls",
-        "edit",
-        "delete"
-    ],
-    "cssVars": {
-        "bg": "#2B2A33",
-        "title_fg": null,
-        "sub_title_fg": null,
-        "label_fg": null,
-        "label_fg_hover": null,
-        "label_fg_active": null,
-        "info_fg": "#9494AA",
-        "true_fg": null,
-        "false_fg": null,
-        "active_fg": "#9494AA",
-        "inactive_fg": "#52525E",
-        "favicons_placeholder_bg": null,
-        "btn_bg": null,
-        "btn_bg_hover": null,
-        "btn_bg_active": null,
-        "btn_fg": null,
-        "btn_fg_hover": null,
-        "btn_fg_active": null,
-        "scroll_progress_h": null,
-        "scroll_progress_bg": null,
-        "ctx_menu_font": null,
-        "ctx_menu_bg": "#2B2A33",
-        "ctx_menu_bg_hover": "#52525E",
-        "ctx_menu_fg": null,
-        "nav_btn_fg": null,
-        "nav_btn_width": null,
-        "nav_btn_height": null,
-        "pinned_dock_overlay_bg": null,
-        "pinned_dock_overlay_shadow": null,
-        "tabs_height": null,
-        "tabs_pinned_height": null,
-        "tabs_pinned_width": null,
-        "tabs_indent": null,
-        "tabs_font": null,
-        "tabs_count_font": null,
-        "tabs_fg": null,
-        "tabs_fg_hover": null,
-        "tabs_fg_active": null,
-        "tabs_bg_hover": null,
-        "tabs_bg_active": null,
-        "tabs_activated_bg": null,
-        "tabs_activated_fg": null,
-        "tabs_selected_bg": null,
-        "tabs_selected_fg": null,
-        "tabs_border": null,
-        "tabs_activated_border": null,
-        "tabs_selected_border": null,
-        "tabs_shadow": null,
-        "tabs_activated_shadow": null,
-        "tabs_selected_shadow": null,
-        "tabs_lvl_indicator_bg": null,
-        "bookmarks_bookmark_height": null,
-        "bookmarks_folder_height": null,
-        "bookmarks_separator_height": null,
-        "bookmarks_bookmark_font": null,
-        "bookmarks_folder_font": null,
-        "bookmarks_node_title_fg": null,
-        "bookmarks_node_title_fg_hover": null,
-        "bookmarks_node_title_fg_active": null,
-        "bookmarks_node_bg_hover": null,
-        "bookmarks_node_bg_active": null,
-        "bookmarks_folder_closed_fg": null,
-        "bookmarks_folder_closed_fg_hover": null,
-        "bookmarks_folder_closed_fg_active": null,
-        "bookmarks_folder_open_fg": null,
-        "bookmarks_folder_open_fg_hover": null,
-        "bookmarks_folder_open_fg_active": null,
-        "bookmarks_folder_empty_fg": null,
-        "bookmarks_open_bookmark_fg": null
+        "bookmarks": [
+            {
+                "name": "Open in",
+                "opts": [
+                    "openInNewWin",
+                    "openInNewPrivWin",
+                    "separator-9",
+                    "openInPanel",
+                    "openInNewPanel",
+                    "separator-10",
+                    "openInCtr"
+                ]
+            },
+            {
+                "name": "Sort",
+                "opts": [
+                    "sortByNameAscending",
+                    "sortByNameDescending",
+                    "sortByLinkAscending",
+                    "sortByLinkDescending",
+                    "sortByTimeAscending",
+                    "sortByTimeDescending"
+                ]
+            },
+            "separator-5",
+            "createBookmark",
+            "createFolder",
+            "createSeparator",
+            "separator-8",
+            "openAsBookmarksPanel",
+            "openAsTabsPanel",
+            "separator-7",
+            "copyBookmarksUrls",
+            "copyBookmarksTitles",
+            "moveBookmarksTo",
+            "edit",
+            "delete"
+        ],
+        "bookmarksPanel": [
+            "collapseAllFolders",
+            "switchViewMode",
+            "convertToTabsPanel",
+            "separator-9",
+            "unloadPanelType",
+            "openPanelConfig",
+            "removePanel"
+        ]
     },
-    "sidebarCSS": "#root {\n    /* Increase tab height */\n    --tabs-height: 32px;\n\n    /* Drop shadow below the active and selected tab */\n    --tabs-activated-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);\n    --tabs-selected-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);\n\n    /* Follow Firefox dark theme */\n    /*\n    Follow the additional steps in https://github.com/dexeonify/firefox-css#vertical-tabs\n    to apply colors globally, not just the Sidebar\n    */\n    --bg: rgb(43, 42, 51) !important;                   /* Background color */\n    --tabs-bg-hover: rgba(66, 65, 77, 0.8) !important;  /* Tab color on hover */\n    --tabs-bg-active: rgba(66, 65, 77, 0.8) !important; /* Tab color on mouse click */\n    --tabs-activated-bg: rgb(66, 65, 77) !important;    /* Active tab color */\n    --tabs-selected-bg: rgb(82, 82, 94) !important;     /* Tab color on selection */\n}\n\n/* Make panel buttons in navigation strip follow dark theme */\n.NavigationBar .panel-btn[data-active] {\n    background-color: var(--tabs-activated-bg)\n}\n\n.NavigationBar .panel-btn:hover {\n    background-color: var(--tabs-bg-hover)\n}\n\n/* Rounded corner tabs */\n.Tab, .PinnedTab {\n    border-radius: 5px\n}\n\n/* Add padding around the tabs list */\n.container {\n    padding: 5px !important;\n    padding-bottom: 64px !important; /* Allow overscrolling after sidebar is full */\n}\n\n/* Fix pointer position for tab reordering */\n.Sidebar:not([data-panel-type=\"bookmarks\"]) > .pointer {\n    margin: 5px 0\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .lvl-wrapper {\n    border-left: solid 1px var(--tabs-selected-bg)\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 32px) {\n    /* Flatten tree structure */\n    #root { --tabs-indent: 0 }\n\n    /* Add smaller padding around the tabs */\n    .container {\n        padding-left: 2px !important;\n        padding-right: 2px !important;\n    }\n\n    /* Only display the active panel button */\n    .panel-btn[data-active=\"true\"] {\n        display: flex !important;\n        background: none !important\n    }\n\n    /* Hide the settings button and other panels' buttons */\n    .panel-btn, .settings-btn {\n        display: none !important\n    }\n}\n",
-    "groupCSS": "",
-    "snapshots_v4": [],
-    "ver": "4.10.0"
+    "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #79d2ff; /* Catpuccin theme */\n    /* --selected-border: #287f94; /* Firefox Dark theme */\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.container, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .container {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n}\n",
+    "disabledKeybindings": {
+        "activate": "Alt+Space"
+    },
+    "ver": "5.0.0b18",
+    "keybindings": {
+        "_execute_sidebar_action": "F1",
+        "next_panel": "Alt+Period",
+        "prev_panel": "Alt+Comma",
+        "new_tab_on_panel": "Ctrl+Space",
+        "new_tab_in_group": "Ctrl+Shift+Space",
+        "new_tab_as_last_child": "Ctrl+Alt+Space",
+        "up": "Alt+Up",
+        "down": "Alt+Down",
+        "up_shift": "Alt+Shift+Up",
+        "down_shift": "Alt+Shift+Down",
+        "reset_selection": "Alt+R",
+        "move_tabs_up": "Ctrl+Shift+Up",
+        "move_tabs_down": "Ctrl+Shift+Down",
+        "tabs_indent": "Ctrl+Shift+Right",
+        "tabs_outdent": "Ctrl+Shift+Left"
+    }
 }

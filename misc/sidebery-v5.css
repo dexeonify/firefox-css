@@ -1,0 +1,48 @@
+#root.root {
+    --nav-btn-width: 32px;
+    --nav-btn-height: 32px;
+
+    --tabs-pinned-width: 35px;
+    --tabs-pinned-height: 35px;
+    --tabs-height: 32px;
+
+    --selected-bg: var(--ff-tab-selected);
+    --selected-border: #287f94;
+
+    --bookmarks-folder-height: 32px;
+    --bookmarks-bookmark-height: 30px;
+}
+
+.container, .bookmarks-tree {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* Thin line beside the tabs to indicate sub-tree level */
+.Tab:not([data-lvl="0"]) .dnd-layer {
+    border-left: solid 1px var(--ff-tab-selected);
+}
+
+/* Visually flatten tree structure when sidebar is collapsed */
+@media screen and (max-width: 40px) {
+    #root.root {
+        --tabs-indent: 0px;
+        --bookmarks-indent: 0px;
+    }
+
+    .container {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    /* Hide static buttons to prevent obstructing the panel icons */
+    .static-btns {
+        visibility: collapse
+    }
+
+    /* Forces the active panel icon to be visible */
+    .main-items > .nav-item[data-active="true"] {
+        opacity: 100 !important;
+        transform: initial !important;
+    }
+}
