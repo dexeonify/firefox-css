@@ -2,10 +2,11 @@
     "settings": {
         "nativeScrollbars": false,
         "nativeScrollbarsThin": true,
+        "nativeScrollbarsLeft": false,
         "selWinScreenshots": true,
         "updateSidebarTitle": true,
         "markWindow": true,
-        "markWindowPreface": "[Sidebery] ",
+        "markWindowPreface": " ",
         "logLvl": 3,
         "ctxMenuNative": false,
         "ctxMenuRenderInact": true,
@@ -31,6 +32,7 @@
         "dndExp": "pointer",
         "dndExpDelay": 750,
         "dndExpMod": "none",
+        "dndOutside": "data",
         "searchBarMode": "dynamic",
         "warnOnMultiTabClose": "none",
         "activateOnMouseUp": true,
@@ -51,6 +53,7 @@
         "showNewTabBtns": true,
         "newTabBarPosition": "after_tabs",
         "tabsPanelSwitchActMove": false,
+        "openSubPanelOnMouseHover": false,
         "moveNewTabPin": "end",
         "moveNewTabParent": "last_child",
         "moveNewTabParentActPanel": false,
@@ -73,6 +76,7 @@
         "discardFoldedDelayUnit": "sec",
         "tabsTreeBookmarks": true,
         "treeRmOutdent": "branch",
+        "colorizeTabsBranches": false,
         "warnOnMultiBookmarkDelete": "collapsed",
         "openBookmarkNewTab": false,
         "midClickBookmark": "open_new_tab",
@@ -88,7 +92,7 @@
         "loadHistoryOnDemand": true,
         "fontSize": "m",
         "animations": true,
-        "animationSpeed": "fast",
+        "animationSpeed": "norm",
         "theme": "proton",
         "colorScheme": "ff",
         "sidebarCSS": true,
@@ -107,6 +111,9 @@
         "scrollThroughTabsExceptOverflow": true,
         "scrollThroughTabsCyclic": true,
         "longClickDelay": 400,
+        "wheelThreshold": false,
+        "wheelThresholdX": 10,
+        "wheelThresholdY": 60,
         "tabDoubleClick": "none",
         "tabsSecondClickActPrev": true,
         "tabLongLeftClick": "new_child",
@@ -120,7 +127,7 @@
         "syncSaveSettings": false,
         "syncSaveCtxMenu": false,
         "syncSaveStyles": false,
-        "syncAutoApply": false
+        "syncSaveKeybindings": false
     },
     "sidebar": {
         "panels": {
@@ -288,11 +295,8 @@
             "removePanel"
         ]
     },
-    "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #79d2ff; /* Catpuccin theme */\n    /* --selected-border: #287f94; /* Firefox Dark theme */\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.container, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .container {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n}\n",
-    "disabledKeybindings": {
-        "activate": "Alt+Space"
-    },
-    "ver": "5.0.0b18",
+    "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #79d2ff; /* Catpuccin theme */\n    /* --selected-border: #287f94; /* Firefox Dark theme */\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.container, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .container {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n}",
+    "ver": "5.0.0b20",
     "keybindings": {
         "_execute_sidebar_action": "F1",
         "next_panel": "Alt+Period",

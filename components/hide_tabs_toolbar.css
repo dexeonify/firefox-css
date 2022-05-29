@@ -6,24 +6,24 @@ See the above repository for updates as well as full license text.
 :root[tabsintitlebar] { --uc-toolbar-height: 40px }
 
 /* Hides tabs toolbar */
-:root[titlepreface*="Sidebery"] #TabsToolbar {
+:root[titlepreface=" "] #TabsToolbar {
     visibility: collapse !important
 }
 
 /* Make windows control visible in full screen */
-:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #TabsToolbar > :is(#window-controls, .titlebar-buttonbox-container) {
+:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > :is(#window-controls, .titlebar-buttonbox-container) {
     visibility: visible !important;
     z-index: 2;
 }
 
 /* Push up the address bar */
-:root[titlepreface*="Sidebery"]:not([inFullscreen]) #nav-bar {
+:root[titlepreface=" "]:not([inFullscreen]) #nav-bar {
     margin-top: calc(0px - var(--uc-toolbar-height, 0px));
     transition: margin-top .3s ease-in-out !important;
 }
 
 /* Push down the menu bar */
-:root[titlepreface*="Sidebery"][tabsintitlebar] #toolbar-menubar[autohide="true"] {
+:root[titlepreface=" "][tabsintitlebar] #toolbar-menubar[autohide="true"] {
     min-height: unset !important;
     height: var(--uc-toolbar-height, 0px) !important;
     position: relative;
@@ -34,19 +34,19 @@ See the above repository for updates as well as full license text.
 Modify the menu bar (usually accessed by Alt key) to be the same
 position as navigation/address bar, and add some pretty fade out ;)
 */
-:root[titlepreface*="Sidebery"][tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar {
+:root[titlepreface=" "][tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar {
     -moz-box-flex: 1;
     border-right: 30px solid transparent;
     border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
 }
 
 /* Menu bar won't work without this */
-:root[titlepreface*="Sidebery"] #toolbar-menubar:not([inactive]) {
+:root[titlepreface=" "] #toolbar-menubar:not([inactive]) {
     z-index: 2
 }
 
 /* Enables dragging if menu bar is inactive */
-:root[titlepreface*="Sidebery"] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
+:root[titlepreface=" "] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
     opacity: 0;
     pointer-events: none;
     margin-left: var(--uc-window-drag-space-pre, 0px)

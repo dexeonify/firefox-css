@@ -10,7 +10,7 @@ See the above repository for updates as well as full license text.
 /* Defaults for window controls on RIGHT side of the window */
 /* Modify these values to match your preferences */
 
-:root[titlepreface*="Sidebery"][tabsintitlebar] {
+:root[titlepreface=" "][tabsintitlebar] {
     /* Space reserved for window controls */
     --uc-window-control-width: 138px;
 
@@ -20,15 +20,15 @@ See the above repository for updates as well as full license text.
 }
 
 /* Remove left space when maximized */
-:root[titlepreface*="Sidebery"][tabsintitlebar][sizemode="maximized"] {
+:root[titlepreface=" "][tabsintitlebar][sizemode="maximized"] {
     --uc-window-drag-space-pre: 0px;
 }
 
 /* Hide windows control when in full screen */
-:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #navigator-toolbox { position: relative }
+:root[titlepreface=" "][sizemode="fullscreen"] #navigator-toolbox { position: relative }
 
 /* Show window control when the cursor is near the toolbar, when full screen */
-:root[titlepreface*="Sidebery"][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
+:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
     position: absolute;
     display: flex;
     top: 0;
@@ -37,7 +37,7 @@ See the above repository for updates as well as full license text.
 }
 
 /* Reduce width of address bar so icons don't overlap with window control */
-:root[titlepreface*="Sidebery"] #nav-bar {
+:root[titlepreface=" "] #nav-bar {
     border-inline: var(--uc-window-drag-space-pre, 0px) solid var(--toolbar-bgcolor);
     border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-post, 0px));
 }
