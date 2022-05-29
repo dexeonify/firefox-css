@@ -37,7 +37,7 @@ position as navigation/address bar, and add some pretty fade out ;)
 :root[titlepreface=" "][tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar {
     -moz-box-flex: 1;
     border-right: 30px solid transparent;
-    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
+    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px
 }
 
 /* Menu bar won't work without this */

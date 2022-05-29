@@ -25,7 +25,9 @@ See the above repository for updates as well as full license text.
 }
 
 /* Hide windows control when in full screen */
-:root[titlepreface=" "][sizemode="fullscreen"] #navigator-toolbox { position: relative }
+:root[titlepreface=" "][sizemode="fullscreen"] #navigator-toolbox {
+    position: relative
+}
 
 /* Show window control when the cursor is near the toolbar, when full screen */
 :root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
