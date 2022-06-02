@@ -84,7 +84,8 @@ which addresses the blocky artifacts caused by the blur filter.
 ### Smooth scrolling
 
 Copy the `user.js` file (from the `misc/` folder) to the **Profile folder**
-*(not the `chrome/` folder)*. The `user.js` file can be deleted afterwards.
+*(not the `chrome/` folder)*. Remove other unrelated tweaks, if needed.
+The `user.js` file can be deleted afterwards.
 
 ### Vertical tabs
 
