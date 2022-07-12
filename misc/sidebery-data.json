@@ -51,6 +51,7 @@
         "showNewTabBtns": true,
         "newTabBarPosition": "after_tabs",
         "tabsPanelSwitchActMove": false,
+        "tabsUrlInTooltip": "stripped",
         "openSubPanelOnMouseHover": false,
         "colorizeTabs": true,
         "colorizeTabsSrc": "container",
@@ -179,8 +180,8 @@
             "W1u2pOHNRXif",
             "YskKZUVeIzpf",
             "add_tp",
-            "search",
             "sp-0",
+            "search",
             "settings"
         ]
     },
@@ -304,7 +305,7 @@
         ]
     },
     "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #79d2ff; /* Catpuccin theme */\n    /* --selected-border: #287f94; /* Firefox Dark theme */\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.container, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .container {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n}",
-    "ver": "5.0.0b21",
+    "ver": "5.0.0b25",
     "keybindings": {
         "_execute_sidebar_action": "F1",
         "next_panel": "Alt+Period",
@@ -312,14 +313,15 @@
         "new_tab_on_panel": "Ctrl+Space",
         "new_tab_in_group": "Ctrl+Shift+Space",
         "new_tab_as_last_child": "Ctrl+Alt+Space",
-        "up": "Alt+Up",
-        "down": "Alt+Down",
-        "up_shift": "Alt+Shift+Up",
-        "down_shift": "Alt+Shift+Down",
-        "reset_selection": "Alt+R",
-        "move_tabs_up": "Ctrl+Shift+Up",
-        "move_tabs_down": "Ctrl+Shift+Down",
-        "tabs_indent": "Ctrl+Shift+Right",
-        "tabs_outdent": "Ctrl+Shift+Left"
+        "fold_branch": "Ctrl+Alt+F",
+        "expand_branch": "Ctrl+Alt+E",
+        "activate_prev_active_tab": "Alt+PageUp",
+        "activate_next_active_tab": "Alt+PageDown",
+        "move_tabs_up": "Ctrl+Alt+Up",
+        "move_tabs_down": "Ctrl+Alt+Down",
+        "tabs_indent": "Ctrl+Alt+Right",
+        "tabs_outdent": "Ctrl+Alt+Left",
+        "search": "Shift+F1",
+        "switch_to_parent_tab": "Ctrl+Home"
     }
 }
