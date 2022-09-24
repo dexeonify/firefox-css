@@ -3,51 +3,43 @@ Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hi
 See the above repository for updates as well as full license text.
 */
 
-:root[tabsintitlebar] { --uc-toolbar-height: 40px }
+/* HIDE TABS TOOLBAR */
 
-/* Hides tabs toolbar */
+:root { --uc-toolbar-height: 40px }
+
 :root[titlepreface=" "] #TabsToolbar {
     visibility: collapse !important
 }
 
-/* Make windows control visible in full screen */
-:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > :is(#window-controls, .titlebar-buttonbox-container) {
-    visibility: visible !important;
-    z-index: 2;
-}
-
-/* Push up the address bar */
 :root[titlepreface=" "]:not([inFullscreen]) #nav-bar {
     margin-top: calc(0px - var(--uc-toolbar-height, 0px));
     transition: margin-top .3s ease-in-out !important;
 }
 
-/* Push down the menu bar */
-:root[titlepreface=" "][tabsintitlebar] #toolbar-menubar[autohide="true"] {
-    min-height: unset !important;
+/* MENU BAR FIX */
+
+:root[titlepreface=" "] #toolbar-menubar[autohide="true"] {
     height: var(--uc-toolbar-height, 0px) !important;
     position: relative;
-    transition: margin-top .3s ease-in-out !important;
 }
 
-/*
-Modify the menu bar (usually accessed by Alt key) to be the same
-position as navigation/address bar, and add some pretty fade out ;)
-*/
-:root[titlepreface=" "][tabsintitlebar] #toolbar-menubar[autohide="true"] #main-menubar {
+:root[titlepreface=" "] #toolbar-menubar[autohide="false"] {
+    margin-bottom: var(--uc-toolbar-height, 0px);
+}
+
+/* Make the menu bar inline with the navigation bar and add some pretty fade out */
+:root[titlepreface=" "] #toolbar-menubar[autohide="true"] #main-menubar {
     -moz-box-flex: 1;
     border-right: 30px solid transparent;
-    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px
+    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
 }
 
-/* Menu bar won't work without this */
 :root[titlepreface=" "] #toolbar-menubar:not([inactive]) {
-    z-index: 2
+    z-index: 2;
 }
 
-/* Enables dragging if menu bar is inactive */
+/* Enable dragging if menu bar is inactive */
 :root[titlepreface=" "] #toolbar-menubar[autohide="true"][inactive] > #menubar-items {
     opacity: 0;
     pointer-events: none;
-    margin-left: var(--uc-window-drag-space-pre, 0px)
 }

@@ -8,16 +8,9 @@
 /* Rounded corner highlight in context menu */
 @import url(components/rounded_corner_context_menu.css);
 
-/* Remove "Send tab to device" and "Share" entry in tab context menu */
+/* Remove unneeded context menu entries */
 #tabContextMenu #context_sendTabToDevice,
-.share-tab-url-item {
-    display: none
-}
-
-/*
-Remove "Email Image...", "Email Video...", "Send Link to Device" and
-"Set As Desktop Background..." entries in context menu
-*/
+.share-tab-url-item,
 #context-sendimage,
 #context-sendvideo,
 #context-sendlinktodevice,
@@ -31,11 +24,11 @@ Remove "Email Image...", "Email Video...", "Send Link to Device" and
     display: none
 }
 
-/* Tone down the color of the black outline found in the toolbar and findbar */
+/* Theme navigation bar and findbar separators to be consistent */
 #navigator-toolbox {
-    border-bottom-color: rgb(48, 45, 65) !important;
+    border-bottom-color: var(--toolbar-field-background-color) !important;
 }
 
 findbar {
-    border-top-color: rgb(48, 45, 65) !important;
+    border-top-color: var(--toolbar-field-background-color) !important;
 }

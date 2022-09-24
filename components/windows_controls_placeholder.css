@@ -3,14 +3,16 @@ Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/wi
 See the above repository for updates as well as full license text.
 */
 
-/* Creates placeholders for window controls */
-/* This is a supporting file used by other stylesheets */
-/* This stylesheet is pretty much unnecessary if window titlebar is enabled */
-/* This file should preferably be imported before other stylesheets */
-/* Defaults for window controls on RIGHT side of the window */
-/* Modify these values to match your preferences */
+/*
+ * Creates placeholders for window controls
+ * This is a supporting file used by other stylesheets
+ * This stylesheet is pretty much unnecessary if window titlebar is enabled
+ * This file should preferably be imported before other stylesheets 
+ */
 
-:root[titlepreface=" "][tabsintitlebar] {
+/* Defaults for window controls on the RIGHT side of the window */
+/* Modify these values to match your preferences */
+:root[titlepreface=" "] {
     /* Space reserved for window controls */
     --uc-window-control-width: 138px;
 
@@ -19,27 +21,25 @@ See the above repository for updates as well as full license text.
     --uc-window-drag-space-post: 30px; /* right side */
 }
 
-/* Remove left space when maximized */
-:root[titlepreface=" "][tabsintitlebar][sizemode="maximized"] {
-    --uc-window-drag-space-pre: 0px;
-}
+/* ADDRESS BAR */
 
-/* Hide windows control when in full screen */
-:root[titlepreface=" "][sizemode="fullscreen"] #navigator-toolbox {
-    position: relative
-}
-
-/* Show window control when the cursor is near the toolbar, when full screen */
-:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
-    position: absolute;
-    display: flex;
-    top: 0;
-    right: 0;
-    height: 40px;
-}
-
-/* Reduce width of address bar so icons don't overlap with window control */
 :root[titlepreface=" "] #nav-bar {
     border-inline: var(--uc-window-drag-space-pre, 0px) solid var(--toolbar-bgcolor);
     border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-post, 0px));
+    border-inline-style: solid !important;
+}
+
+/* Remove drag space (on the left) when maximized or fullscreen */
+:root:is([sizemode="maximized"], [sizemode="fullscreen"]) {
+    --uc-window-drag-space-pre: 0px;
+}
+
+/* FULLSCREEN WINDOW CONTROLS FIX */
+
+:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container {
+    visibility: visible;
+    position: absolute;
+    display: flex;
+    right: 0;
+    height: 40px;
 }
