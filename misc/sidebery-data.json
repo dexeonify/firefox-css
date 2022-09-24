@@ -7,7 +7,6 @@
         "updateSidebarTitle": true,
         "markWindow": true,
         "markWindowPreface": " ",
-        "logLvl": 3,
         "ctxMenuNative": false,
         "ctxMenuRenderInact": true,
         "ctxMenuRenderIcons": true,
@@ -38,7 +37,7 @@
         "activateLastTabOnPanelSwitching": true,
         "showTabRmBtn": true,
         "hideInact": false,
-        "activateAfterClosing": "prev_act",
+        "activateAfterClosing": "none",
         "activateAfterClosingGlobal": false,
         "activateAfterClosingNoFolded": false,
         "activateAfterClosingNoDiscarded": true,
@@ -46,6 +45,7 @@
         "tabsRmUndoNote": true,
         "nativeHighlight": true,
         "tabsUnreadMark": false,
+        "tabsUpdateMark": "all",
         "tabsReloadLimit": 5,
         "tabsReloadLimitNotif": true,
         "showNewTabBtns": true,
@@ -58,9 +58,9 @@
         "moveNewTabPin": "end",
         "moveNewTabParent": "last_child",
         "moveNewTabParentActPanel": false,
-        "moveNewTab": "end",
+        "moveNewTab": "none",
         "pinnedTabsPosition": "panel",
-        "pinnedTabsList": false,
+        "pinnedTabsList": true,
         "pinnedAutoGroup": false,
         "tabsTree": true,
         "groupOnOpen": true,
@@ -109,8 +109,9 @@
         "scrollThroughTabsSkipDiscarded": true,
         "scrollThroughTabsExceptOverflow": false,
         "scrollThroughTabsCyclic": true,
-        "scrollThroughTabsScrollArea": 30,
+        "scrollThroughTabsScrollArea": 60,
         "autoMenuMultiSel": true,
+        "multipleMiddleClose": false,
         "longClickDelay": 400,
         "wheelThreshold": false,
         "wheelThresholdX": 10,
@@ -126,6 +127,7 @@
         "tabsPanelDoubleClickAction": "collapse",
         "tabsPanelRightClickAction": "menu",
         "tabsPanelMiddleClickAction": "tab",
+        "newTabMiddleClickAction": "reopen",
         "bookmarksLeftClickAction": "open_in_act",
         "bookmarksLeftClickActivate": false,
         "bookmarksLeftClickPos": "default",
@@ -133,10 +135,10 @@
         "bookmarksMidClickActivate": false,
         "bookmarksMidClickPos": "default",
         "syncName": "",
-        "syncSaveSettings": false,
-        "syncSaveCtxMenu": false,
-        "syncSaveStyles": false,
-        "syncSaveKeybindings": false
+        "syncSaveSettings": true,
+        "syncSaveCtxMenu": true,
+        "syncSaveStyles": true,
+        "syncSaveKeybindings": true
     },
     "sidebar": {
         "panels": {
@@ -173,7 +175,9 @@
                 "urlRulesActive": false,
                 "urlRules": "",
                 "bookmarksFolderId": -1,
-                "newTabBtns": []
+                "newTabBtns": [
+                    "School"
+                ]
             }
         },
         "nav": [
@@ -304,8 +308,8 @@
             "removePanel"
         ]
     },
-    "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #79d2ff; /* Catpuccin theme */\n    /* --selected-border: #287f94; /* Firefox Dark theme */\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.container, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .container {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n}",
-    "ver": "5.0.0b25",
+    "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #00ddff;\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .TabsPanel {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n\n    /* Make the bookmark folder's highlight box fit better */\n    .BookmarkNode > .body::before {\n        left: -6px;\n        width: calc(100% + .5em);\n    }\n}",
+    "ver": "5.0.0b27",
     "keybindings": {
         "_execute_sidebar_action": "F1",
         "next_panel": "Alt+Period",
@@ -315,8 +319,8 @@
         "new_tab_as_last_child": "Ctrl+Alt+Space",
         "fold_branch": "Ctrl+Alt+F",
         "expand_branch": "Ctrl+Alt+E",
-        "activate_prev_active_tab": "Alt+PageUp",
-        "activate_next_active_tab": "Alt+PageDown",
+        "activate_prev_active_tab": "Alt+PageDown",
+        "activate_next_active_tab": "Alt+PageUp",
         "move_tabs_up": "Ctrl+Alt+Up",
         "move_tabs_down": "Ctrl+Alt+Down",
         "tabs_indent": "Ctrl+Alt+Right",
