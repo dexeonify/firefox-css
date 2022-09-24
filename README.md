@@ -117,11 +117,9 @@ The `user.js` file can be deleted afterwards.
 
 ## References
 
-- [Guerra24/Firefox-UWP-Style](https://github.com/Guerra24/Firefox-UWP-Style)
 - [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
   - [hide_tabs_toolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/hide_tabs_toolbar.css)
   - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
   - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
   - [context_menus_more_proton.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/context_menus_more_proton.css)
-- [stonecrusher/simpleMenuWizard](https://github.com/stonecrusher/simpleMenuWizard)
-- [drannex42's Sidebery CSS](https://github.com/drannex42/FirefoxSidebar)
+- [mgastonportillo/gale-for-ff](https://github.com/mgastonportillo/gale-for-ff)
