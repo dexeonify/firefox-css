@@ -45,4 +45,10 @@
         opacity: 100 !important;
         transform: initial !important;
     }
+
+    /* Make the bookmark folder's highlight box fit better */
+    .BookmarkNode > .body::before {
+        left: -6px;
+        width: calc(100% + .5em);
+    }
 }
