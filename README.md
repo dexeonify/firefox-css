@@ -32,9 +32,7 @@ update as soon as possible if there are any breaking changes.
 ![Blurred URL Bar](https://i.imgur.com/s5036st.png)
 
 ⚠️ Blur currently **does not work** regardless of `layout.css.backdrop-filter.enabled`,
-due to [bug 1749625](https://bugzilla.mozilla.org/show_bug.cgi?id=1749625).
-There's also [bug 1741305](https://bugzilla.mozilla.org/show_bug.cgi?id=1741305)
-which addresses the blocky artifacts caused by the blur filter.
+due to [bug 1773402](https://bugzilla.mozilla.org/show_bug.cgi?id=1773402).
 
 ### Rounded corner context menu highlight
 
