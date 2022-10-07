@@ -8,7 +8,7 @@ update as soon as possible if there are any breaking changes.
 ## Table of Contents <!-- omit in toc -->
 
 - [Features](#features)
-  - [Sidebery Autohide, Dynamic Indentation & Floating Tabs](#sidebery-autohide-dynamic-indentation--floating-tabs)
+  - [Sidebery CSS](#sidebery-css)
   - [URL bar blur](#url-bar-blur)
   - [Rounded corner context menu highlight](#rounded-corner-context-menu-highlight)
   - [Custom startpage using nightTab](#custom-startpage-using-nighttab)
@@ -23,7 +23,7 @@ update as soon as possible if there are any breaking changes.
 
 ## Features
 
-### Sidebery Autohide, Dynamic Indentation & Floating Tabs
+### Sidebery CSS
 
 <https://user-images.githubusercontent.com/72267349/147921242-f2a5900d-1ef1-408a-b04e-a7c7440efb6a.mp4>
 
@@ -52,9 +52,7 @@ due to [bug 1773402](https://bugzilla.mozilla.org/show_bug.cgi?id=1773402).
 
 ### userChrome.css
 
-1. Go to `about:config`, and enable
-   - `toolkit.legacyUserProfileCustomizations.stylesheets`
-   - `layout.css.backdrop-filter.enabled`
+1. Go to `about:config` and enable `toolkit.legacyUserProfileCustomizations.stylesheets`
 2. Go to `about:support` and click **Profile folder > Open Folder**.
 3. Create a new folder named `chrome`, download/clone this repo and copy the
    downloaded files into the `chrome` folder you just created.
@@ -87,7 +85,7 @@ The `user.js` file can be deleted afterwards.
 
 ### Vertical tabs
 
-0. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery/).
+0. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery).
 1. Copy the contents of `misc/sidebery.css`.
 2. Navigate to **Sidebery Settings > Styles editor** and paste the CSS under
    "Sidebar" on the right.
@@ -99,7 +97,7 @@ The `user.js` file can be deleted afterwards.
    - Under "Context Menu", **Background color** to `#2B2A33`
    - Under "Context Menu", **Option background color on hover** to `#2B2A33`
 4. Set window preface value in **Sidebery settings > Help > Preface value**
-   to **[Sidebery]**.\
+   to " " (a space).\
    **Note:** The preface value can be anything, but you would have to change it
    accordingly inside the `userChrome.css` files as well.
 5. Alternatively, import `misc/sidebery-data.json` in **Sidebery Settings > Help > Import**,
