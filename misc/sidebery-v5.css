@@ -1,9 +1,8 @@
 #root.root {
-    --nav-btn-width: 32px;
-    --nav-btn-height: 32px;
+    --nav-btn-width: 35px;
+    --nav-btn-height: 35px;
 
-    --tabs-pinned-width: 35px;
-    --tabs-pinned-height: 35px;
+    --tabs-pinned-width: 32px;
     --tabs-height: 32px;
 
     --selected-bg: var(--ff-tab-selected);
@@ -21,6 +20,7 @@
 /* Thin line beside the tabs to indicate sub-tree level */
 .Tab:not([data-lvl="0"]) .dnd-layer {
     border-left: solid 1px var(--ff-tab-selected);
+    left: -2px;
 }
 
 /* Visually flatten tree structure when sidebar is collapsed */
@@ -48,7 +48,7 @@
 
     /* Make the bookmark folder's highlight box fit better */
     .BookmarkNode > .body::before {
-        left: -6px;
+        left: -7px;
         width: calc(100% + .5em);
     }
 }
