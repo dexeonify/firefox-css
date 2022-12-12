@@ -59,8 +59,9 @@
         "moveNewTabParent": "last_child",
         "moveNewTabParentActPanel": false,
         "moveNewTab": "none",
+        "moveNewTabActivePin": "start",
         "pinnedTabsPosition": "panel",
-        "pinnedTabsList": true,
+        "pinnedTabsList": false,
         "pinnedAutoGroup": false,
         "tabsTree": true,
         "groupOnOpen": true,
@@ -71,7 +72,7 @@
         "autoExpandTabs": false,
         "rmChildTabs": "folded",
         "tabsChildCount": true,
-        "tabsLvlDots": false,
+        "tabsLvlDots": true,
         "discardFolded": false,
         "discardFoldedDelay": 0,
         "discardFoldedDelayUnit": "sec",
@@ -93,6 +94,7 @@
         "animations": true,
         "animationSpeed": "norm",
         "theme": "proton",
+        "density": "default",
         "colorScheme": "ff",
         "sidebarCSS": true,
         "groupCSS": false,
@@ -157,9 +159,9 @@
                 "viewMode": "tree",
                 "autoConvert": false
             },
-            "YskKZUVeIzpf": {
+            "DOlZCHb-UZCt": {
                 "type": 2,
-                "id": "YskKZUVeIzpf",
+                "id": "DOlZCHb-UZCt",
                 "name": "Tabs",
                 "color": "toolbar",
                 "iconSVG": "icon_tabs",
@@ -182,7 +184,7 @@
         },
         "nav": [
             "W1u2pOHNRXif",
-            "YskKZUVeIzpf",
+            "DOlZCHb-UZCt",
             "add_tp",
             "sp-0",
             "search",
@@ -308,8 +310,8 @@
             "removePanel"
         ]
     },
-    "sidebarCSS": "#root.root {\n    --nav-btn-width: 32px;\n    --nav-btn-height: 32px;\n\n    --tabs-pinned-width: 35px;\n    --tabs-pinned-height: 35px;\n    --tabs-height: 32px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #00ddff;\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Thin line beside the tabs to indicate sub-tree level */\n.Tab:not([data-lvl=\"0\"]) .dnd-layer {\n    /* Firefox Dark Theme */\n    /* border-left: solid 1px var(--ff-tab-selected); */\n\n    /* Catppuccin Theme */\n    border-left: dashed 1px var(--ff-tab-line);\n}\n\n/* Visually flatten tree structure when sidebar is collapsed */\n@media screen and (max-width: 40px) {\n    #root.root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .TabsPanel {\n        padding-left: 2px;\n        padding-right: 2px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n\n    /* Make the bookmark folder's highlight box fit better */\n    .BookmarkNode > .body::before {\n        left: -6px;\n        width: calc(100% + .5em);\n    }\n}",
-    "ver": "5.0.0b27",
+    "sidebarCSS": "#root.root {\n    --nav-btn-width: 35px;\n    --nav-btn-height: 35px;\n\n    --tabs-height: 38px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #00ddff;\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 5px;\n    padding-right: 4px;\n}\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n.Tab[data-parent=\"false\"][data-colorized=\"true\"] .color-layer {\n    opacity: .15;\n}\n\n/*\n * Visually flatten tree structure when sidebar is collapsed\n */\n\n@media screen and (max-width: 50px) {\n    #root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .TabsPanel {\n        padding-left: 3px;\n        padding-right: 3px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n\n    /* Make the bookmark folder's highlight box fit better */\n    .BookmarkNode > .body::before {\n        left: -7px;\n        width: calc(100% + .5em);\n    }\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-title-padding: 8px;\n    --tabs-font-size: 14px;\n\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * Add glow effect to container indicator\n */\n\n .ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n",
+    "ver": "5.0.0b29",
     "keybindings": {
         "_execute_sidebar_action": "F1",
         "next_panel": "Alt+Period",
