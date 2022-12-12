@@ -30,6 +30,8 @@ See the above repository for updates as well as full license text.
 /* Make the menu bar inline with the navigation bar and add some pretty fade out */
 :root[titlepreface=" "] #toolbar-menubar[autohide="true"] #main-menubar {
     -moz-box-flex: 1;
+    background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
+    background-clip: padding-box;
     border-right: 30px solid transparent;
     border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
 }
