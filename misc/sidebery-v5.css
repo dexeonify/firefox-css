@@ -20,7 +20,7 @@
     font-weight: bold;
 }
 
-.Tab[data-parent="false"][data-colorized="true"] .color-layer {
+.Tab[data-parent="false"][data-colorized="true"]:not([data-lvl="0"]) .color-layer {
     opacity: .15;
 }
 
@@ -82,7 +82,7 @@
  * Add glow effect to container indicator
  */
 
- .ctx {
+.ctx {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0 1px 10px 1px var(--color);
 }
