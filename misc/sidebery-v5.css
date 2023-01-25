@@ -1,12 +1,7 @@
 #root.root {
     --nav-btn-width: 35px;
     --nav-btn-height: 35px;
-
     --tabs-height: 38px;
-
-    --selected-bg: var(--ff-tab-selected);
-    --selected-border: #00ddff;
-
     --bookmarks-folder-height: 32px;
     --bookmarks-bookmark-height: 30px;
 }
@@ -52,7 +47,7 @@
 
     /* Make the bookmark folder's highlight box fit better */
     .BookmarkNode > .body::before {
-        left: -7px;
+        left: -2px;
         width: calc(100% + .5em);
     }
 }

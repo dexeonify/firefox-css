@@ -35,9 +35,12 @@
         "searchBarMode": "dynamic",
         "warnOnMultiTabClose": "none",
         "activateLastTabOnPanelSwitching": true,
-        "showTabRmBtn": true,
+        "activateLastTabOnPanelSwitchingLoadedOnly": true,
+        "tabRmBtn": "hover",
         "hideInact": false,
         "activateAfterClosing": "none",
+        "activateAfterClosingFallbackToHistory": true,
+        "activateAfterClosingStayInPanel": false,
         "activateAfterClosingGlobal": false,
         "activateAfterClosingNoFolded": false,
         "activateAfterClosingNoDiscarded": true,
@@ -53,8 +56,7 @@
         "tabsPanelSwitchActMove": false,
         "tabsUrlInTooltip": "stripped",
         "openSubPanelOnMouseHover": false,
-        "colorizeTabs": true,
-        "colorizeTabsSrc": "container",
+        "selectActiveTabFirst": true,
         "moveNewTabPin": "end",
         "moveNewTabParent": "last_child",
         "moveNewTabParentActPanel": false,
@@ -67,6 +69,7 @@
         "groupOnOpen": true,
         "tabsTreeLimit": "none",
         "hideFoldedTabs": false,
+        "hideFoldedParent": "none",
         "autoFoldTabs": false,
         "autoFoldTabsExcept": "none",
         "autoExpandTabs": false,
@@ -78,8 +81,11 @@
         "discardFoldedDelayUnit": "sec",
         "tabsTreeBookmarks": true,
         "treeRmOutdent": "branch",
+        "colorizeTabs": true,
+        "colorizeTabsSrc": "container",
         "colorizeTabsBranches": true,
         "colorizeTabsBranchesSrc": "url",
+        "inheritCustomColor": true,
         "warnOnMultiBookmarkDelete": "collapsed",
         "autoCloseBookmarks": false,
         "autoRemoveOther": false,
@@ -111,7 +117,7 @@
         "scrollThroughTabsSkipDiscarded": true,
         "scrollThroughTabsExceptOverflow": false,
         "scrollThroughTabsCyclic": true,
-        "scrollThroughTabsScrollArea": 60,
+        "scrollThroughTabsScrollArea": 100,
         "autoMenuMultiSel": true,
         "multipleMiddleClose": false,
         "longClickDelay": 400,
@@ -120,6 +126,7 @@
         "wheelThresholdY": 60,
         "tabDoubleClick": "none",
         "tabsSecondClickActPrev": true,
+        "tabsSecondClickActPrevPanelOnly": false,
         "shiftSelAct": true,
         "activateOnMouseUp": true,
         "tabLongLeftClick": "new_child",
@@ -213,24 +220,30 @@
                 ]
             },
             {
-                "name": "Reopen in",
+                "name": "Containers",
                 "opts": [
-                    "reopenInNewWin",
-                    "reopenInWin",
-                    "separator-2",
                     "reopenInCtr",
-                    "reopenInNewCtr"
+                    "reopenInNewCtr",
+                    "separator-4",
+                    "openTabsInCtr"
                 ]
             },
-            "separator-4",
+            "separator-3",
             "pin",
             "duplicate",
             "copyTabsUrls",
             "discard",
-            "separator-3",
+            "separator-13373479732958216",
             "group",
             "flatten",
-            "separator-13373479732958216",
+            "editTabTitle",
+            {
+                "name": "Set color",
+                "opts": [
+                    "colorizeTab"
+                ]
+            },
+            "separator-9165811389970413",
             {
                 "name": "Close multiple tabs",
                 "opts": [
@@ -310,8 +323,8 @@
             "removePanel"
         ]
     },
-    "sidebarCSS": "#root.root {\n    --nav-btn-width: 35px;\n    --nav-btn-height: 35px;\n\n    --tabs-height: 38px;\n\n    --selected-bg: var(--ff-tab-selected);\n    --selected-border: #00ddff;\n\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 5px;\n    padding-right: 4px;\n}\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n.Tab[data-parent=\"false\"][data-colorized=\"true\"] .color-layer {\n    opacity: .15;\n}\n\n/*\n * Visually flatten tree structure when sidebar is collapsed\n */\n\n@media screen and (max-width: 50px) {\n    #root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .TabsPanel {\n        padding-left: 3px;\n        padding-right: 3px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n\n    /* Make the bookmark folder's highlight box fit better */\n    .BookmarkNode > .body::before {\n        left: -7px;\n        width: calc(100% + .5em);\n    }\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-title-padding: 8px;\n    --tabs-font-size: 14px;\n\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * Add glow effect to container indicator\n */\n\n .ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n",
-    "ver": "5.0.0b29",
+    "sidebarCSS": "#root.root {\n    --nav-btn-width: 35px;\n    --nav-btn-height: 35px;\n    --tabs-height: 38px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 5px;\n    padding-right: 4px;\n}\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n.Tab[data-parent=\"false\"][data-colorized=\"true\"]:not([data-lvl=\"0\"]) .color-layer {\n    opacity: .15;\n}\n\n/*\n * Visually flatten tree structure when sidebar is collapsed\n */\n\n@media screen and (max-width: 50px) {\n    #root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .TabsPanel {\n        padding-left: 3px;\n        padding-right: 3px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n\n    /* Make the bookmark folder's highlight box fit better */\n    .BookmarkNode > .body::before {\n        left: -2px;\n        width: calc(100% + .5em);\n    }\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-title-padding: 8px;\n    --tabs-font-size: 14px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * Add glow effect to container indicator\n */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}",
+    "ver": "5.0.0b30",
     "keybindings": {
         "_execute_sidebar_action": "F1",
         "next_panel": "Alt+Period",
