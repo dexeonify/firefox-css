@@ -43,3 +43,7 @@ See the above repository for updates as well as full license text.
     right: 0;
     height: 40px;
 }
+
+:root[titlepreface=" "][sizemode="fullscreen"] #navigator-toolbox {
+    position: relative;
+}
