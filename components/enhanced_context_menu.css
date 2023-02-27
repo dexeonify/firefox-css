@@ -35,3 +35,25 @@ menuseparator:not(.in-menulist) {
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
+
+/* Make context menu follow your theme */
+menupopup:not(.in-menulist) {
+    --panel-background: var(--arrowpanel-background) !important;
+    --panel-color: var(--arrowpanel-color) !important;
+    --panel-border-color: var(--arrowpanel-border-color) !important;
+}
+
+menupopup > menuseparator {
+    border-color: var(--arrowpanel-border-color) !important;
+}
+
+#context-navigation > menuitem[_moz-menuactive]:not([disabled]) .menu-iconic-icon,
+menupopup > menuitem[_moz-menuactive],
+menupopup > menu[_moz-menuactive] {
+    background-color: var(--panel-item-hover-bgcolor) !important;
+    color: var(--panel-color, inherit) !important;
+}
+
+#context-navigation > menuitem[_moz-menuactive][disabled] .menu-iconic-icon {
+    background-color: var(--panel-item-hover-bgcolor) !important;
+}
