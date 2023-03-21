@@ -48,8 +48,8 @@ menupopup > menuseparator {
 }
 
 #context-navigation > menuitem[_moz-menuactive]:not([disabled]) .menu-iconic-icon,
-menupopup > menuitem[_moz-menuactive],
-menupopup > menu[_moz-menuactive] {
+menupopup:not(#placesContext) > menuitem[_moz-menuactive],
+menupopup:not(#placesContext) > menu[_moz-menuactive] {
     background-color: var(--panel-item-hover-bgcolor) !important;
     color: var(--panel-color, inherit) !important;
 }
