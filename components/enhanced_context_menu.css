@@ -3,48 +3,45 @@ Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/co
 See the above repository for updates as well as full license text.
 */
 
-/* Adds rounded corners highlight to context menus. This is only going to work on Win10+ */
+/* Adds rounded corners to context menus' highlight. This is only going to work on Win10+ */
 
-/* Note: Variables in :root affect Firefox UI globally */
+/* Adjust the border radius of the menu items and the context menu here.
+ * Note: Changing these two variables may affect other parts of the UI,
+ *       such as the bookmark panel or history panel.
+ */
 :root {
-    --arrowpanel-menuitem-border-radius: 4px; /* The radius of the rounded corners */
-    --panel-separator-margin-vertical: 4px;   /* The amount of padding around menu separators */
+    --arrowpanel-menuitem-border-radius: 4px !important;
 }
 
+menupopup {
+    --panel-border-radius: 8px !important;
+}
+
+/* Add rounded corners and padding to the context menu */
 menupopup > menuitem,
 menupopup > menu {
-    /* Add padding on both sides of the context menu */
-    margin: 0 4px !important;
-
-    /* Rounded corners */
-    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+    margin: 0 4px;
+    border-radius: var(--arrowpanel-menuitem-border-radius);
 }
 
-/* Add padding around the menu separator */
-menuseparator:not(.in-menulist) {
-    margin-block: var(--panel-separator-margin-vertical) !important;
-}
-
-/* context-navigation are the buttons at the top of the context menu (previous page, reload etc) */
+/*
+ * context-navigation are the buttons at the top of the context menu
+ * Align the context-navigation buttons with the menu items
+ * Add rounded corners to the context-navigation's hover highlight
+ */
 #context-navigation {
-    padding-inline: 4px !important; /* Align the context-navigation buttons with the menu items */
-    padding-bottom: 0px !important; /* Center the context-navigation buttons vertically */
+    padding-inline: 4px;
 }
 
-/* Rounded corner highlight in context-navigation */
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
-    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
+    border-radius: var(--arrowpanel-menuitem-border-radius);
 }
 
-/* Make context menu follow your theme */
+/* THEMING */
 menupopup:not(.in-menulist) {
     --panel-background: var(--arrowpanel-background) !important;
     --panel-color: var(--arrowpanel-color) !important;
     --panel-border-color: var(--arrowpanel-border-color) !important;
-}
-
-menupopup > menuseparator {
-    border-color: var(--arrowpanel-border-color) !important;
 }
 
 #context-navigation > menuitem[_moz-menuactive]:not([disabled]) .menu-iconic-icon,
