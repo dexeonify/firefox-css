@@ -5,7 +5,6 @@ user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 750);
 user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 500);
 user_pref("mousewheel.acceleration.factor", 6);
 user_pref("mousewheel.acceleration.start", 6);
-user_pref("mousewheel.min_line_scroll_amount", 22);
 
 /* Enable userChrome customisations */
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
@@ -26,3 +25,11 @@ user_pref("browser.download.open_pdf_attachments_inline", true);
 
 /* Disable pocket */
 user_pref("extensions.pocket.enabled", false);
+
+/* Autofill URLs based on frequency and history */
+/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1597791 */
+user_pref("browser.urlbar.autoFill.adaptiveHistory.enabled", true);
+
+/* Allow searching using the search engine from the active page */
+/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1794823 */
+user_pref("browser.urlbar.contextualSearch.enabled", true);
