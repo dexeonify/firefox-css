@@ -15,10 +15,6 @@
     font-weight: bold;
 }
 
-.Tab[data-parent="false"][data-colorized="true"]:not([data-lvl="0"]) .color-layer {
-    opacity: .15;
-}
-
 /*
  * Visually flatten tree structure when sidebar is collapsed
  */
@@ -80,4 +76,32 @@
 .ctx {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0 1px 10px 1px var(--color);
+}
+
+/*
+ * The deeper the nested tabs, the dimmer the tab
+ */
+
+ .Tab[data-lvl="1"] .color-layer {
+    opacity: .175
+}
+
+.Tab[data-lvl="2"] .color-layer {
+    opacity: .15
+}
+
+.Tab[data-lvl="3"] .color-layer {
+    opacity: .125
+}
+
+.Tab[data-lvl="4"] .color-layer {
+    opacity: .1
+}
+
+.Tab[data-lvl="5"] .color-layer {
+    opacity: .08
+}
+
+.Tab[data-lvl="6"] .color-layer {
+    opacity: .06
 }
