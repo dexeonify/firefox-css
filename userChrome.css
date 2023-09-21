@@ -18,12 +18,3 @@
 #sidebar-header {
     display: none
 }
-
-/* Theme navigation bar and findbar separators to be consistent */
-#navigator-toolbox {
-    border-bottom-color: var(--toolbar-field-background-color) !important;
-}
-
-findbar {
-    border-top-color: var(--toolbar-field-background-color) !important;
-}
