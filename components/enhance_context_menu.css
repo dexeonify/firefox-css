@@ -9,28 +9,9 @@ See the above repository for updates as well as full license text.
  * Note: Changing these two variables may affect other parts of the UI,
  *       such as the bookmark panel or history panel.
  */
-:root {
-    --arrowpanel-menuitem-border-radius: 4px !important;
-}
-
 menupopup {
+    --arrowpanel-menuitem-border-radius: 4px !important;
     --panel-border-radius: 8px !important;
-}
-
-/* Add rounded corners and padding to the context menu */
-menupopup > menuitem,
-menupopup > menu {
-    margin: 0 4px;
-    border-radius: var(--arrowpanel-menuitem-border-radius);
-}
-
-/*
- * context-navigation are the buttons at the top of the context menu
- * Align the context-navigation buttons with the menu items
- * Add rounded corners to the context-navigation's hover highlight
- */
-#context-navigation {
-    padding-inline: 4px;
 }
 
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
