@@ -33,3 +33,7 @@ user_pref("browser.urlbar.autoFill.adaptiveHistory.enabled", true);
 /* Allow searching using the search engine from the active page */
 /* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1794823 */
 user_pref("browser.urlbar.contextualSearch.enabled", true);
+
+/* Tab search searches all tabs regardless of current tab container */
+/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1479858 */
+user_pref("browser.urlbar.switchTabs.searchAllContainers", true);
