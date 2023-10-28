@@ -27,7 +27,7 @@ menupopup:not(.in-menulist) {
 }
 
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon,
-#main-window menupopup > menuitem[_moz-menuactive],
+#main-window menupopup:not(.in-menulist) > menuitem[_moz-menuactive],
 #main-window menupopup > menu[_moz-menuactive] {
     background-color: var(--panel-item-hover-bgcolor) !important;
 }
