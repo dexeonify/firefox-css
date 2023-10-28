@@ -9,9 +9,11 @@ See the above repository for updates as well as full license text.
  * Note: Changing these two variables may affect other parts of the UI,
  *       such as the bookmark panel or history panel.
  */
-menupopup {
+panel, menupopup {
     --arrowpanel-menuitem-border-radius: 4px !important;
     --panel-border-radius: 8px !important;
+    --panel-item-hover-bgcolor: var(--toolbarbutton-hover-background) !important;
+    --panel-item-active-bgcolor: var(--toolbarbutton-hover-background) !important;
 }
 
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon {
@@ -27,10 +29,14 @@ menupopup:not(.in-menulist) {
 #context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon,
 #main-window menupopup > menuitem[_moz-menuactive],
 #main-window menupopup > menu[_moz-menuactive] {
-    background-color: var(--toolbarbutton-hover-background) !important;
+    background-color: var(--panel-item-hover-bgcolor) !important;
 }
 
 #context-navigation menuitem[_moz-menuactive][disabled] .menu-iconic-icon,
 #main-window menupopup > menuitem[_moz-menuactive][disabled] {
-     background-color: color-mix(in srgb, var(--toolbarbutton-hover-background) 50%, transparent) !important;
+     background-color: color-mix(in srgb, var(--panel-item-hover-bgcolor) 50%, transparent) !important;
+}
+
+panel toolbarbutton:active {
+    filter: brightness(1.25);
 }
