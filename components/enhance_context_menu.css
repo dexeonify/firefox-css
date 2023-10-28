@@ -21,17 +21,16 @@ menupopup {
 /* THEMING */
 menupopup:not(.in-menulist) {
     --panel-background: var(--arrowpanel-background) !important;
-    --panel-color: var(--arrowpanel-color) !important;
     --panel-border-color: var(--arrowpanel-border-color) !important;
 }
 
-#context-navigation > menuitem[_moz-menuactive]:not([disabled]) .menu-iconic-icon,
+#context-navigation > menuitem[_moz-menuactive] .menu-iconic-icon,
 #main-window menupopup > menuitem[_moz-menuactive],
 #main-window menupopup > menu[_moz-menuactive] {
-    background-color: var(--panel-item-hover-bgcolor) !important;
-    color: var(--panel-color, inherit) !important;
+    background-color: var(--toolbarbutton-hover-background) !important;
 }
 
-#context-navigation > menuitem[_moz-menuactive][disabled] .menu-iconic-icon {
-    background-color: var(--panel-item-hover-bgcolor) !important;
+#context-navigation menuitem[_moz-menuactive][disabled] .menu-iconic-icon,
+#main-window menupopup > menuitem[_moz-menuactive][disabled] {
+     background-color: color-mix(in srgb, var(--toolbarbutton-hover-background) 50%, transparent) !important;
 }
