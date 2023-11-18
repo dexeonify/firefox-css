@@ -12,26 +12,31 @@ See the above repository for updates as well as full license text.
     --uc-sidebar-width: 40px;
     --uc-sidebar-hover-width: 300px;
     --uc-autohide-sidebar-delay: .6s;
-    width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
     max-width: var(--uc-sidebar-width) !important;
     position: relative;
     z-index: 1;
 }
 
+#sidebar {
+    transition: min-width .2s cubic-bezier(.15, .36, .3, 1) var(--uc-autohide-sidebar-delay);
+    min-width: var(--uc-sidebar-width);
+}
+
+#sidebar-box:hover > #sidebar {
+    min-width: var(--uc-sidebar-hover-width);
+    transition-delay: .3s;
+    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Fix artifacts above sidebar on new tab when bookmark toolbar is set to only show on new tab */
 :root[BookmarksToolbarOverlapsBrowser] #sidebar-box {
     background-color: unset !important;
 }
 
-#sidebar {
-    transition: min-width .2s cubic-bezier(.15, .36, .3, 1) var(--uc-autohide-sidebar-delay) !important;
-    min-width: var(--uc-sidebar-width) !important;
-}
-
-#sidebar-box:hover > #sidebar {
-    min-width: var(--uc-sidebar-hover-width) !important;
-    transition-delay: .3s !important;
-    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
+/* Keep the sidebar hoverable when fullscreen */
+#main-window[sizemode="fullscreen"] #sidebar-box {
+    --uc-sidebar-width: 1px
 }
 
 /* Add sidebar divider */
@@ -42,9 +47,4 @@ See the above repository for updates as well as full license text.
 
 #sidebar-box[positionend] > * {
   border-inline-width: 1px 0px;
-}
-
-/* Decrease sidebar width to 1px while fullscreen so that it's still hoverable */
-#main-window[sizemode="fullscreen"] #sidebar-box {
-    --uc-sidebar-width: 1px
 }
