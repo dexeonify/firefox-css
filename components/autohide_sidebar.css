@@ -3,29 +3,28 @@ Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/au
 See the above repository for updates as well as full license text.
 */
 
-/* Enables the CSS to work when sidebar is on the right side */
-#sidebar-box[positionend] { direction: rtl }
-
 /* Show sidebar only when the cursor is over it  */
 /* The sidebar width is fixed and can only be modified in this CSS file */
-#sidebar-box {
+:root {
     --uc-sidebar-width: 40px;
     --uc-sidebar-hover-width: 300px;
-    --uc-autohide-sidebar-delay: .6s;
-    min-width: var(--uc-sidebar-width) !important;
-    max-width: var(--uc-sidebar-width) !important;
-    position: relative;
-    z-index: 1;
+    --uc-autohide-sidebar-delay: .5s;
 }
 
 #sidebar {
-    transition: min-width .2s cubic-bezier(.15, .36, .3, 1) var(--uc-autohide-sidebar-delay);
-    min-width: var(--uc-sidebar-width);
+    width: var(--uc-sidebar-hover-width) !important;
 }
 
-#sidebar-box:hover > #sidebar {
-    min-width: var(--uc-sidebar-hover-width);
-    transition-delay: .3s;
+#sidebar-box {
+    position: relative;
+    width: var(--uc-sidebar-width) !important;
+    min-width: var(--uc-sidebar-width) !important;
+    transition: all .2s ease-in-out var(--uc-autohide-sidebar-delay);
+}
+
+#sidebar-box:hover {
+    width: var(--uc-sidebar-hover-width) !important;
+    margin-left: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
     box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -46,5 +45,5 @@ See the above repository for updates as well as full license text.
 }
 
 #sidebar-box[positionend] > * {
-  border-inline-width: 1px 0px;
+    border-inline-width: 1px 0px;
 }

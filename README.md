@@ -119,3 +119,4 @@ The `user.js` file can be deleted afterwards.
   - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
   - [context_menus_more_proton.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/context_menus_more_proton.css)
 - [mgastonportillo/gale-for-ff](https://github.com/mgastonportillo/gale-for-ff)
+- [Redundakitties/colorful-minimalist](https://github.com/Redundakitties/colorful-minimalist)
