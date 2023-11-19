@@ -9,6 +9,7 @@ See the above repository for updates as well as full license text.
     --uc-sidebar-width: 40px;
     --uc-sidebar-hover-width: 300px;
     --uc-autohide-sidebar-delay: .5s;
+    --uc-autohide-transition-duration: .2s;
 }
 
 #sidebar {
@@ -20,12 +21,14 @@ See the above repository for updates as well as full license text.
     overflow-x: hidden;
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
-    transition: all .2s ease-in-out var(--uc-autohide-sidebar-delay);
+    transition:
+        all var(--uc-autohide-transition-duration) cubic-bezier(.23,1,.32,1) var(--uc-autohide-sidebar-delay),
+        box-shadow 0s;
 }
 
 #sidebar-box:hover {
     width: var(--uc-sidebar-hover-width) !important;
-    box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px black;
 }
 
 #sidebar-box[style*="order: 3"]:hover {
