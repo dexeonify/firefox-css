@@ -49,11 +49,6 @@ See the above repository for updates as well as full license text.
 }
 
 /* Add sidebar divider */
-#sidebar {
-    border-inline: 1px solid var(--toolbar-field-background-color);
-    border-inline-width: 0px 1px;
-}
-
-#sidebar-box[positionend] > * {
-    border-inline-width: 1px 0px;
+#sidebar-box {
+    outline: var(--chrome-content-separator-color) solid 1px;
 }
