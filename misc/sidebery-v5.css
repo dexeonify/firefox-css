@@ -1,4 +1,4 @@
-#root.root {
+#root {
     --nav-btn-width: 35px;
     --nav-btn-height: 35px;
     --tabs-height: 38px;
@@ -82,26 +82,9 @@
  * The deeper the nested tabs, the dimmer the tab
  */
 
- .Tab[data-lvl="1"] .color-layer {
-    opacity: .175
-}
-
-.Tab[data-lvl="2"] .color-layer {
-    opacity: .15
-}
-
-.Tab[data-lvl="3"] .color-layer {
-    opacity: .125
-}
-
-.Tab[data-lvl="4"] .color-layer {
-    opacity: .1
-}
-
-.Tab[data-lvl="5"] .color-layer {
-    opacity: .08
-}
-
-.Tab[data-lvl="6"] .color-layer {
-    opacity: .06
-}
+.Tab[data-lvl="1"] .color-layer { opacity: .175 }
+.Tab[data-lvl="2"] .color-layer { opacity: .15 }
+.Tab[data-lvl="3"] .color-layer { opacity: .125 }
+.Tab[data-lvl="4"] .color-layer { opacity: .1 }
+.Tab[data-lvl="5"] .color-layer { opacity: .08 }
+.Tab[data-lvl="6"] .color-layer { opacity: .06 }
