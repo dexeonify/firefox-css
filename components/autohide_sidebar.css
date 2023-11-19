@@ -16,7 +16,8 @@ See the above repository for updates as well as full license text.
 }
 
 #sidebar-box {
-    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
     transition: all .2s ease-in-out var(--uc-autohide-sidebar-delay);
@@ -24,8 +25,14 @@ See the above repository for updates as well as full license text.
 
 #sidebar-box:hover {
     width: var(--uc-sidebar-hover-width) !important;
-    margin-left: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
     box-shadow: 0px 6px 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+#sidebar-box[style*="order: 3"]:hover {
+    margin-left: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
+}
+#sidebar-box[style*="order: 1"]:hover {
+    margin-right: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
 }
 
 /* Fix artifacts above sidebar on new tab when bookmark toolbar is set to only show on new tab */
