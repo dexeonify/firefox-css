@@ -19,32 +19,27 @@
  * Visually flatten tree structure when sidebar is collapsed
  */
 
-@media screen and (max-width: 50px) {
-    #root {
-        --tabs-indent: 0px;
-        --bookmarks-indent: 0px;
+#root:not(:hover) {
+    --tabs-indent: 0px;
+    --bookmarks-indent: 0px;
+
+    .Tab, .BookmarkNode > .body::before {
+        width: 28px;
+        transition: width 0s .6s;
     }
 
-    .TabsPanel {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-
-    /* Hide static buttons to prevent obstructing the panel icons */
-    .static-btns {
-        visibility: collapse;
+    /* Hide bookmark titles and navigation buttons when collapsed */
+    .BookmarkNode .title,
+    .static-btns,
+    .nav-item:not([data-active="true"]) {
+        visibility: hidden;
+        transition: visibility 0s .6s;
     }
 
     /* Forces the current active panel icon to be visible */
-    .main-items > .nav-item[data-active="true"] {
-        opacity: 100 !important;
-        transform: initial !important;
-    }
-
-    /* Make the bookmark folder's highlight box fit better */
-    .BookmarkNode > .body::before {
-        left: -2px;
-        width: calc(100% + .5em);
+    .nav-item[data-active="true"] {
+        transform: initial;
+        transition: transform 0s .6s;
     }
 }
 
