@@ -21,9 +21,8 @@ See the above repository for updates as well as full license text.
     overflow-x: hidden;
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
-    transition:
-        all var(--uc-autohide-transition-duration) cubic-bezier(.23,1,.32,1) var(--uc-autohide-sidebar-delay),
-        box-shadow 0s;
+    transition: all var(--uc-autohide-transition-duration) cubic-bezier(.23,1,.32,1) var(--uc-autohide-sidebar-delay);
+    transition-property: width, margin;
 }
 
 #sidebar-box:hover {
