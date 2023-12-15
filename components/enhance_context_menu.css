@@ -12,6 +12,10 @@ panel, menupopup {
     --panel-border-radius: 8px !important;
 }
 
+richlistbox {
+    border-radius: var(--panel-border-radius);
+}
+
 #context-navigation > menuitem,
 menupopup:not(.in-menulist) > menuitem,
 menupopup > menu {
