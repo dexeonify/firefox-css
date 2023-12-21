@@ -24,9 +24,10 @@ See the above repository for updates as well as full license text.
 /* ADDRESS BAR */
 
 :root[titlepreface=" "] #nav-bar {
-    border-inline: var(--uc-window-drag-space-pre, 0px) solid var(--toolbar-bgcolor);
+    border-inline: var(--uc-window-drag-space-pre, 0px) solid transparent;
     border-right-width: calc(var(--uc-window-control-width, 0px) + var(--uc-window-drag-space-post, 0px));
     border-inline-style: solid !important;
+    background-clip: border-box !important;
 }
 
 /* Remove drag space (on the left) when maximized or fullscreen */
