@@ -48,8 +48,8 @@
  */
 
 #root {
-    --tabs-title-padding: 8px;
-    --tabs-font-size: 14px;
+    --tabs-title-padding: 6px;
+    --tabs-font-size: 13.5px;
     --tabs-title-lines: 2;
 }
 
