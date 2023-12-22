@@ -11,8 +11,10 @@ See the above repository for updates as well as full license text.
     visibility: collapse !important;
 }
 
-:root[titlepreface=" "] #titlebar {
+:root[titlepreface=" "] #titlebar{
     will-change: unset !important;
+    transition: none !important;
+    opacity: 1 !important;
 }
 
 :root[titlepreface=" "]:not([inFullscreen]) #nav-bar {
