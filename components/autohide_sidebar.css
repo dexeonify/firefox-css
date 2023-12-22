@@ -22,7 +22,7 @@ See the above repository for updates as well as full license text.
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
     transition: all var(--uc-autohide-transition-duration) cubic-bezier(.23,1,.32,1) var(--uc-autohide-sidebar-delay);
-    transition-property: width, margin;
+    transition-property: width, margin-left;
 }
 
 #sidebar-box:hover {
@@ -39,7 +39,8 @@ See the above repository for updates as well as full license text.
 
 /* Fix artifacts above sidebar on new tab when bookmark toolbar is set to only show on new tab */
 :root[BookmarksToolbarOverlapsBrowser] #sidebar-box {
-    background-color: unset !important;
+    padding-top: 0px !important;
+	margin-top: var(--bookmarks-toolbar-overlapping-browser-height) !important;
 }
 
 /* Keep the sidebar hoverable when fullscreen */
