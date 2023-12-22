@@ -45,7 +45,8 @@ See the above repository for updates as well as full license text.
 
 /* Keep the sidebar hoverable when fullscreen */
 #main-window[sizemode="fullscreen"] #sidebar-box {
-    --uc-sidebar-width: 1px
+    --uc-sidebar-width: 1px;
+    visibility: visible !important;
 }
 
 /* Add sidebar divider */
