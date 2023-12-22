@@ -8,12 +8,16 @@ See the above repository for updates as well as full license text.
 :root { --uc-toolbar-height: 40px }
 
 :root[titlepreface=" "] #TabsToolbar {
-    visibility: collapse !important
+    visibility: collapse !important;
+}
+
+:root[titlepreface=" "] #titlebar {
+    will-change: unset !important;
 }
 
 :root[titlepreface=" "]:not([inFullscreen]) #nav-bar {
     margin-top: calc(0px - var(--uc-toolbar-height, 0px));
-    transition: margin-top .3s ease-in-out !important;
+    transition: margin-top .3s ease !important;
 }
 
 /* MENU BAR FIX */
