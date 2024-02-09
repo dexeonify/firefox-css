@@ -183,14 +183,6 @@
         "selectActiveTabFirst": true
     },
     "sidebar": {
-        "nav": [
-            "W1u2pOHNRXif",
-            "DOlZCHb-UZCt",
-            "add_tp",
-            "create_snapshot",
-            "search",
-            "settings"
-        ],
         "panels": {
             "W1u2pOHNRXif": {
                 "type": 1,
@@ -221,17 +213,23 @@
                 "noEmpty": false,
                 "newTabCtx": "none",
                 "dropTabCtx": "none",
-                "moveTabCtx": "none",
-                "moveTabCtxNoChild": true,
+                "moveRules": [],
+                "moveExcludedTo": -1,
                 "bookmarksFolderId": -1,
                 "newTabBtns": [
                     "School"
                 ],
-                "moveRules": [],
-                "moveExcludedTo": -1,
                 "srcPanelConfig": null
             }
-        }
+        },
+        "nav": [
+            "W1u2pOHNRXif",
+            "DOlZCHb-UZCt",
+            "add_tp",
+            "create_snapshot",
+            "search",
+            "settings"
+        ]
     },
     "contextMenu": {
         "tabs": [
@@ -358,17 +356,20 @@
             "removePanel"
         ]
     },
-    "sidebarCSS": "#root.root {\n    --nav-btn-width: 35px;\n    --nav-btn-height: 35px;\n    --tabs-height: 38px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 5px;\n    padding-right: 4px;\n}\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n/*\n * Visually flatten tree structure when sidebar is collapsed\n */\n\n@media screen and (max-width: 50px) {\n    #root {\n        --tabs-indent: 0px;\n        --bookmarks-indent: 0px;\n    }\n\n    .TabsPanel {\n        padding-left: 3px;\n        padding-right: 3px;\n    }\n\n    /* Hide static buttons to prevent obstructing the panel icons */\n    .static-btns {\n        visibility: collapse;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .main-items > .nav-item[data-active=\"true\"] {\n        opacity: 100 !important;\n        transform: initial !important;\n    }\n\n    /* Make the bookmark folder's highlight box fit better */\n    .BookmarkNode > .body::before {\n        left: -2px;\n        width: calc(100% + .5em);\n    }\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-title-padding: 8px;\n    --tabs-font-size: 14px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * Add glow effect to container indicator\n */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n .Tab[data-lvl=\"1\"] .color-layer {\n    opacity: .175\n}\n\n.Tab[data-lvl=\"2\"] .color-layer {\n    opacity: .15\n}\n\n.Tab[data-lvl=\"3\"] .color-layer {\n    opacity: .125\n}\n\n.Tab[data-lvl=\"4\"] .color-layer {\n    opacity: .1\n}\n\n.Tab[data-lvl=\"5\"] .color-layer {\n    opacity: .08\n}\n\n.Tab[data-lvl=\"6\"] .color-layer {\n    opacity: .06\n}\n",
-    "ver": "5.0.0.1",
+    "sidebarCSS": "#root {\n    --nav-btn-width: 35px;\n    --nav-btn-height: 35px;\n    --tabs-height: 38px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 5px;\n    padding-right: 4px;\n}\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n/*\n * Visually flatten tree structure when sidebar is collapsed\n */\n\n@property --tabs-indent {\n  syntax: '<number>'; /* <- defined as type number for the transition to work */\n  initial-value: 40px;\n  inherits: false;\n}\n\n#root:not(:hover) {\n    --tabs-indent: 0px;\n    --bookmarks-indent: 0px;\n\n\t\ttransition: --tabs-indent 0s .6s;\n\n    .Tab, .BookmarkNode > .body::before {\n        width: 28px;\n        transition: width 0s .6s;\n    }\n\n    /* Hide bookmark titles and navigation buttons when collapsed */\n    .BookmarkNode .title,\n    .static-btns,\n    .nav-item:not([data-active=\"true\"]) {\n        visibility: hidden;\n        transition: visibility 0s .6s;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .nav-item[data-active=\"true\"] {\n        transform: initial;\n        transition: transform 0s .6s;\n    }\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-title-padding: 6px;\n    --tabs-font-size: 13.5px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * Add glow effect to container indicator\n */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n.Tab[data-lvl=\"1\"] .color-layer { opacity: .175 }\n.Tab[data-lvl=\"2\"] .color-layer { opacity: .15 }\n.Tab[data-lvl=\"3\"] .color-layer { opacity: .125 }\n.Tab[data-lvl=\"4\"] .color-layer { opacity: .1 }\n.Tab[data-lvl=\"5\"] .color-layer { opacity: .08 }\n.Tab[data-lvl=\"6\"] .color-layer { opacity: .06 }\n",
+    "ver": "5.1.1.1",
     "keybindings": {
         "_execute_sidebar_action": "F1",
-        "next_panel": "Alt+Period",
-        "prev_panel": "Alt+Comma",
         "new_tab_on_panel": "Ctrl+Space",
         "new_tab_in_group": "Ctrl+Shift+Space",
         "new_tab_as_last_child": "Ctrl+Alt+Space",
-        "fold_branch": "Ctrl+Alt+F",
-        "expand_branch": "Ctrl+Alt+E",
+        "up": "Alt+Up",
+        "down": "Alt+Down",
+        "up_shift": "Alt+Shift+Up",
+        "down_shift": "Alt+Shift+Down",
+        "reset_selection": "Alt+R",
+        "fold_branch": "Alt+Comma",
+        "expand_branch": "Alt+Period",
         "activate_prev_active_tab": "Alt+PageDown",
         "activate_next_active_tab": "Alt+PageUp",
         "move_tabs_up": "Ctrl+Alt+Up",
