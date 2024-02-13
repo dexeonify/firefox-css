@@ -11,7 +11,7 @@ See the above repository for updates as well as full license text.
     visibility: collapse !important;
 }
 
-:root[titlepreface=" "] #titlebar{
+:root[titlepreface=" "] #titlebar {
     will-change: unset !important;
     transition: none !important;
     opacity: 1 !important;
@@ -37,10 +37,17 @@ See the above repository for updates as well as full license text.
 :root[titlepreface=" "] #toolbar-menubar[autohide="true"] #main-menubar {
     flex-grow: 1;
     align-items: stretch;
-    background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
-    background-clip: padding-box;
-    border-right: 30px solid transparent;
-    border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
+    background-attachment: scroll, fixed, fixed;
+    background-position: 0 0, var(--lwt-background-alignment), right top;
+    background-repeat: repeat-x, var(--lwt-background-tiling), no-repeat;
+    background-size: auto 100%, var(--lwt-background-size, auto auto), auto auto;
+    padding-right: 20px;
+}
+
+:root[titlepreface=" "] #toolbar-menubar[autohide="true"]:not([inactive]) #main-menubar {
+    background-color: var(--lwt-accent-color);
+    background-image: linear-gradient(var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor),var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor)), var(--lwt-additional-images,none), var(--lwt-header-image, none);
+    mask-image: linear-gradient(to left, transparent, black 20px);
 }
 
 :root[titlepreface=" "] #toolbar-menubar:not([inactive]) {
