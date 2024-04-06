@@ -17,6 +17,10 @@ See the above repository for updates as well as full license text.
     opacity: 1 !important;
 }
 
+:root[titlepreface=" "] #nav-bar {
+    border-top: none !important;
+}
+
 :root[titlepreface=" "]:not([inFullscreen]) #nav-bar {
     margin-top: calc(0px - var(--uc-toolbar-height, 0px));
     transition: margin-top .3s ease !important;
