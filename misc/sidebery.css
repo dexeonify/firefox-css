@@ -19,8 +19,17 @@
  * Visually flatten tree structure when sidebar is collapsed
  */
 
+@property --tabs-indent {
+    syntax: "<length>";
+    inherits: true;
+}
+
+@keyframes CollapseTabs {
+    to { --tabs-indent: 0px }
+}
+
 #root:not(:hover) {
-    --tabs-indent: 0px;
+    animation: 0s .6s forwards CollapseTabs;
     --bookmarks-indent: 0px;
 
     .Tab, .BookmarkNode > .body::before {
