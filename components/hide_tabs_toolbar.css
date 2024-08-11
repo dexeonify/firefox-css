@@ -26,6 +26,10 @@ See the above repository for updates as well as full license text.
     transition: margin-top .3s ease !important;
 }
 
+:root[titlepreface=" "][sizemode="fullscreen"] #titlebar {
+    position: relative;
+}
+
 /* MENU BAR FIX */
 
 :root[titlepreface=" "] #toolbar-menubar[autohide="true"] {
