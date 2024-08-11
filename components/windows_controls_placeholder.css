@@ -4,21 +4,23 @@ See the above repository for updates as well as full license text.
 */
 
 /*
- * Creates placeholders for window controls
- * This is a supporting file used by other stylesheets
- * This stylesheet is pretty much unnecessary if window titlebar is enabled
- * This file should preferably be imported before other stylesheets 
+ * Creates placeholders for window controls.
+ * This is a supporting file used by other stylesheets and is mostly
+ * unnecessary if window titlebar is enabled.
+ * Should preferably be imported before other stylesheets,
+ * because some values in this style are deliberately overridden by other styles.
  */
 
-/* Defaults for window controls on the RIGHT side of the window */
 /* Modify these values to match your preferences */
+/* These reserve extra space on both sides of the nav-bar to be able to drag the window */
 :root[titlepreface=" "] {
-    /* Space reserved for window controls */
-    --uc-window-control-width: 138px;
-
-    /* Extra space reserved on both sides of the nav-bar to be able to drag the window */
     --uc-window-drag-space-pre: 30px;  /* left side */
     --uc-window-drag-space-post: 30px; /* right side */
+}
+
+/* Default width - used on Windows10+ */
+:root:is([titlepreface=" "], [tabsintitlebar], [sizemode="fullscreen"]) {
+    --uc-window-control-width: 138px;
 }
 
 /* ADDRESS BAR */
@@ -31,13 +33,13 @@ See the above repository for updates as well as full license text.
 }
 
 /* Remove drag space (on the left) when maximized or fullscreen */
-:root:is([sizemode="maximized"], [sizemode="fullscreen"]) {
+:root:is([titlepreface=" "], [sizemode="maximized"], [sizemode="fullscreen"]) {
     --uc-window-drag-space-pre: 0px;
 }
 
 /* FULLSCREEN WINDOW CONTROLS FIX */
 
-:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container {
+:root[titlepreface=" "][sizemode="fullscreen"] #TabsToolbar > .titlebar-buttonbox-container:last-child {
     visibility: visible;
     position: absolute;
     display: flex;
