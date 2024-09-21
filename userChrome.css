@@ -2,6 +2,11 @@
 @import url(components/hide_tabs_toolbar.css);
 @import url(components/autohide_sidebar.css);
 @import url(components/enhance_context_menu.css);
+@import url(components/iconized_content_context_menu.css);
+@import url(components/iconized_main_menu.css);
+@import url(components/iconized_places_context_menu.css);
+@import url(components/iconized_tabs_context_menu.css);
+@import url(components/iconized_textbox_context_menu.css);
 
 /* Remove unneeded context menu entries */
 #tabContextMenu #context_sendTabToDevice,
