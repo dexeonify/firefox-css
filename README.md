@@ -105,7 +105,7 @@ The `user.js` file can be deleted afterwards.
 
 ### Custom new tab
 
-0. Install [nightTab](https://addons.mozilla.org/firefox/addon/nighttab/).
+0. Install [nightTab](https://addons.mozilla.org/firefox/addon/nighttab).
 1. Open a new tab and click the settings icon.
 2. Navigate to **Data > Restore > Import from File**.
 3. Import any of the any of the `nightTab*.json` file.

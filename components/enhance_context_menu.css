@@ -41,5 +41,5 @@ panel, menupopup {
 
 #context-navigation menuitem[_moz-menuactive][disabled],
 #main-window menupopup > menuitem[_moz-menuactive][disabled] {
-     background-color: color-mix(in srgb, var(--panel-item-hover-bgcolor) 50%, transparent) !important;
+    background-color: color-mix(in srgb, var(--panel-item-hover-bgcolor) 50%, transparent) !important;
 }
