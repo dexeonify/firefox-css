@@ -50,6 +50,10 @@ See the above repository for updates as well as full license text.
 }
 
 /* Add sidebar divider */
+#sidebar-splitter {
+    display: none
+}
+
 #sidebar-box {
     outline: var(--chrome-content-separator-color) solid 1px;
 }
