@@ -17,7 +17,7 @@ See the above repository for updates as well as full license text.
 }
 
 #sidebar-box {
-    z-index: 1;
+    --browser-area-z-index-sidebar: 3;
     overflow-x: hidden;
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
