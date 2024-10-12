@@ -114,8 +114,7 @@ The `user.js` file can be deleted afterwards.
 ## References
 
 - [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
-  - [hide_tabs_toolbar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/hide_tabs_toolbar.css)
-  - [window_control_placeholder_support.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/window_control_placeholder_support.css)
+  - [hide_tabs_toolbar_v2.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/hide_tabs_toolbar_v2.css)
   - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
   - [context_menus_more_proton.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/context_menus_more_proton.css)
   - [iconized_content_context_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_content_context_menu.css)
