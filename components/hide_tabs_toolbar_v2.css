@@ -1,0 +1,36 @@
+/*
+Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/hide_tabs_toolbar_v2.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text.
+*/
+
+/* This requires Firefox 133+ to work */
+
+@media (-moz-bool-pref: "sidebar.verticalTabs") {
+    :root[titlepreface=" "] #sidebar-main {
+        visibility: collapse;
+    }
+}
+
+@media not (-moz-bool-pref: "sidebar.verticalTabs") {
+    :root[titlepreface=" "] #TabsToolbar {
+        visibility: collapse;
+    }
+    :root[titlepreface=" "][sizemode="fullscreen"] #nav-bar > .titlebar-buttonbox-container {
+        display: flex !important;
+    }
+    :root[titlepreface=" "][tabsintitlebar] #toolbar-menubar:not([autohide="false"]) ~ #nav-bar {
+        > .titlebar-buttonbox-container {
+            display: flex !important;
+        }
+        :root[sizemode="normal"] & {
+            > .titlebar-spacer {
+                display: flex !important;
+            }
+        }
+        :root[sizemode="maximized"] & {
+            > .titlebar-spacer[type="post-tabs"] {
+                display: flex !important;
+            }
+        }
+    }
+}
