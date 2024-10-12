@@ -15,6 +15,9 @@ See the above repository for updates as well as full license text.
     :root[titlepreface=" "] #TabsToolbar {
         visibility: collapse;
     }
+    :root[titlepreface=" "] #nav-bar {
+        border-top: none !important;
+    }
     :root[titlepreface=" "][sizemode="fullscreen"] #nav-bar > .titlebar-buttonbox-container {
         display: flex !important;
     }
