@@ -5,20 +5,14 @@ See the above repository for updates as well as full license text.
 
 /* Show sidebar only when the cursor is over it  */
 /* The sidebar width is fixed and can only be modified in this CSS file */
-:root {
+#sidebar-box {
     --uc-sidebar-width: 40px;
     --uc-sidebar-hover-width: 300px;
     --uc-autohide-sidebar-delay: .5s;
     --uc-autohide-transition-duration: .2s;
-}
-
-#sidebar {
-    width: var(--uc-sidebar-hover-width) !important;
-}
-
-#sidebar-box {
     --browser-area-z-index-sidebar: 3;
     overflow-x: hidden;
+    z-index: var(--browser-area-z-index-sidebar, 3);
     width: var(--uc-sidebar-width) !important;
     min-width: var(--uc-sidebar-width) !important;
     transition: all var(--uc-autohide-transition-duration) cubic-bezier(.23,1,.32,1) var(--uc-autohide-sidebar-delay);
@@ -35,6 +29,10 @@ See the above repository for updates as well as full license text.
 }
 #sidebar-box[style*="order: 2"]:hover {
     margin-right: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
+}
+
+#sidebar {
+    width: var(--uc-sidebar-hover-width) !important;
 }
 
 /* Fix artifacts above sidebar on new tab when bookmark toolbar is set to only show on new tab */
