@@ -30,6 +30,3 @@ user_pref("extensions.pocket.enabled", false);
 /* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1597791 */
 user_pref("browser.urlbar.autoFill.adaptiveHistory.enabled", true);
 
-/* Allow searching using the search engine from the active page */
-/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1794823 */
-user_pref("browser.urlbar.contextualSearch.enabled", true);
