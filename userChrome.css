@@ -24,3 +24,8 @@
 menu, menuitem {
     border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
+
+/* Remove the addons sidebar header */
+#webextpanels-window #sidebar-panel-header {
+    display: none
+}
