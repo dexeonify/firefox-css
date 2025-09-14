@@ -23,10 +23,4 @@ user_pref("general.autoscroll.prevent_to_collapse_selection_by_middle_mouse_down
 /* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1772569 */
 user_pref("browser.download.open_pdf_attachments_inline", true);
 
-/* Disable pocket */
-user_pref("extensions.pocket.enabled", false);
-
-/* Autofill URLs based on frequency and history */
-/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1597791 */
-user_pref("browser.urlbar.autoFill.adaptiveHistory.enabled", true);
 
