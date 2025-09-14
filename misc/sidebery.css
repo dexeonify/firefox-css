@@ -1,55 +1,31 @@
+/*
+ * Size and padding adjustments
+ */
 #root {
-    --nav-btn-width: 35px;
-    --nav-btn-height: 35px;
-    --tabs-height: 38px;
+    --nav-btn-width: 36px;
+    --nav-btn-height: 36px;
+    --tabs-height: 36px;
     --bookmarks-folder-height: 32px;
-    --bookmarks-bookmark-height: 30px;
+    --bookmarks-bookmark-height: 32px;
 }
 
 .TabsPanel, .bookmarks-tree {
-    padding-left: 5px;
+    padding-left: 4px;
     padding-right: 4px;
 }
+
+/* Bold title of parent tab */
 
 .Tab[data-parent="true"] .title {
     font-weight: bold;
 }
 
-/*
- * Visually flatten tree structure when sidebar is collapsed
- */
 
-@property --tabs-indent {
-    syntax: "<length>";
-    inherits: true;
-}
+/* Add glow effect to container indicator */
 
-@keyframes CollapseTabs {
-    to { --tabs-indent: 0px }
-}
-
-#root:not(:hover) {
-    animation: 0s .6s forwards CollapseTabs;
-    --bookmarks-indent: 0px;
-
-    .Tab, .BookmarkNode > .body::before {
-        width: 28px;
-        transition: width 0s .6s;
-    }
-
-    /* Hide bookmark titles and navigation buttons when collapsed */
-    .BookmarkNode .title,
-    .static-btns,
-    .nav-item:not([data-active="true"]) {
-        visibility: hidden;
-        transition: visibility 0s .6s;
-    }
-
-    /* Forces the current active panel icon to be visible */
-    .nav-item[data-active="true"] {
-        transform: initial;
-        transition: transform 0s .6s;
-    }
+.ctx {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 1px 10px 1px var(--color);
 }
 
 /*
@@ -57,8 +33,8 @@
  */
 
 #root {
-    --tabs-title-padding: 6px;
-    --tabs-font-size: 13.5px;
+    --tabs-font-size: 0.85rem;
+    --tabs-title-padding: 4px;
     --tabs-title-lines: 2;
 }
 
@@ -74,21 +50,16 @@
 }
 
 /*
- * Add glow effect to container indicator
+ * Progressively reduce the background opacity of nested tab levels
  */
 
-.ctx {
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0 1px 10px 1px var(--color);
+.Tab {
+    &[data-lvl="1"] .color-layer { opacity: 0.175; }
+    &[data-lvl="2"] .color-layer { opacity: 0.150; }
+    &[data-lvl="3"] .color-layer { opacity: 0.125; }
+    &[data-lvl="4"] .color-layer { opacity: 0.100; }
+    &[data-lvl="5"] .color-layer { opacity: 0.075; }
+    &[data-lvl="6"] .color-layer { opacity: 0.050; }
+    &[data-lvl="7"] .color-layer { opacity: 0.025; }
+    &[data-lvl="8"] .color-layer { opacity: 0.000; }
 }
-
-/*
- * The deeper the nested tabs, the dimmer the tab
- */
-
-.Tab[data-lvl="1"] .color-layer { opacity: .175 }
-.Tab[data-lvl="2"] .color-layer { opacity: .15 }
-.Tab[data-lvl="3"] .color-layer { opacity: .125 }
-.Tab[data-lvl="4"] .color-layer { opacity: .1 }
-.Tab[data-lvl="5"] .color-layer { opacity: .08 }
-.Tab[data-lvl="6"] .color-layer { opacity: .06 }
