@@ -1,12 +1,60 @@
 {
+    "containers": {
+        "firefox-container-1": {
+            "id": "firefox-container-1",
+            "cookieStoreId": "firefox-container-1",
+            "name": "Personal",
+            "icon": "fingerprint",
+            "color": "blue",
+            "colorCode": "#37adff",
+            "proxified": false,
+            "proxy": null,
+            "reopenRulesActive": true,
+            "reopenRules": [
+                {
+                    "id": "4BYWN4aInvIv",
+                    "active": true,
+                    "type": 2,
+                    "url": "priv.au"
+                }
+            ],
+            "userAgentActive": false,
+            "userAgent": ""
+        },
+        "firefox-container-7": {
+            "id": "firefox-container-7",
+            "cookieStoreId": "firefox-container-7",
+            "name": "University",
+            "icon": "fence",
+            "color": "red",
+            "colorCode": "#37adff",
+            "proxified": false,
+            "proxy": null,
+            "reopenRulesActive": true,
+            "reopenRules": [
+                {
+                    "id": "Mf7jaVZnbfyF",
+                    "active": true,
+                    "type": 2,
+                    "url": "priv.au"
+                }
+            ],
+            "userAgentActive": false,
+            "userAgent": ""
+        }
+    },
     "settings": {
         "nativeScrollbars": false,
         "nativeScrollbarsThin": true,
         "nativeScrollbarsLeft": false,
         "selWinScreenshots": true,
         "updateSidebarTitle": true,
-        "markWindow": true,
-        "markWindowPreface": " ",
+        "markWindow": false,
+        "markWindowPreface": "",
+        "copyTreeIndent": "",
+        "copyMultiBullet": "",
+        "copyTemplates": "HTML:%B<a href=\"%U\">%CT</a>\nMarkdown:%B[%CT](%U)",
+        "updTooltipDelay": 100,
         "ctxMenuNative": false,
         "ctxMenuRenderInact": true,
         "ctxMenuRenderIcons": true,
@@ -27,6 +75,7 @@
         "subPanelRecentlyClosedBar": true,
         "subPanelBookmarks": true,
         "subPanelHistory": false,
+        "subPanelSync": false,
         "groupLayout": "grid",
         "containersSortByName": false,
         "skipEmptyPanels": false,
@@ -36,7 +85,7 @@
         "dndExp": "pointer",
         "dndExpDelay": 750,
         "dndExpMod": "none",
-        "dndOutside": "data",
+        "dndOutside": "win",
         "dndActTabFromLink": true,
         "dndActSearchTab": true,
         "dndMoveTabs": false,
@@ -49,6 +98,7 @@
         "activateLastTabOnPanelSwitching": true,
         "activateLastTabOnPanelSwitchingLoadedOnly": true,
         "switchPanelAfterSwitchingTab": "always",
+        "scrollPanelAfterSwitchingTab": "mouseleave",
         "tabRmBtn": "hover",
         "activateAfterClosing": "none",
         "activateAfterClosingStayInPanel": false,
@@ -64,21 +114,26 @@
         "tabsReloadLimitNotif": true,
         "showNewTabBtns": true,
         "newTabBarPosition": "after_tabs",
-        "tabsPanelSwitchActMove": false,
+        "tabsPanelSwitchActMove": true,
         "tabsPanelSwitchActMoveAuto": true,
         "tabsUrlInTooltip": "stripped",
+        "tabsContainerInTooltip": true,
         "newTabCtxReopen": false,
         "tabWarmupOnHover": true,
         "tabSwitchDelay": 0,
+        "forceDiscard": true,
+        "tabUpdDelay": 150,
         "moveNewTabPin": "end",
         "moveNewTabParent": "last_child",
         "moveNewTabParentActPanel": false,
-        "moveNewTab": "none",
+        "moveNewTab": "end",
         "moveNewTabActivePin": "start",
+        "autoScrollToNewTab": true,
         "pinnedTabsPosition": "panel",
         "pinnedTabsList": true,
         "pinnedAutoGroup": false,
         "pinnedNoUnload": false,
+        "pinnedForcedDiscard": false,
         "tabsTree": true,
         "groupOnOpen": true,
         "tabsTreeLimit": "none",
@@ -88,25 +143,46 @@
         "autoExpandTabsOnNew": false,
         "rmChildTabs": "folded",
         "tabsLvlDots": true,
-        "discardFolded": false,
-        "discardFoldedDelay": 0,
-        "discardFoldedDelayUnit": "sec",
+        "discardFolded": true,
+        "discardFoldedDelay": 30,
+        "discardFoldedDelayUnit": "min",
         "tabsTreeBookmarks": true,
         "treeRmOutdent": "branch",
+        "autoGroupOnClose": false,
+        "autoGroupOnClose0Lvl": false,
+        "autoGroupOnCloseMouseOnly": false,
         "ignoreFoldedParent": false,
+        "showNewGroupConf": true,
+        "sortGroupsFirst": true,
         "colorizeTabs": true,
         "colorizeTabsSrc": "container",
         "colorizeTabsBranches": true,
         "colorizeTabsBranchesSrc": "url",
         "inheritCustomColor": true,
-        "hideInact": false,
+        "previewTabs": true,
+        "previewTabsMode": "p",
+        "previewTabsPageModeFallback": "i",
+        "previewTabsInlineHeight": 160,
+        "previewTabsPopupWidth": 320,
+        "previewTabsTitle": 2,
+        "previewTabsUrl": 3,
+        "previewTabsSide": "left",
+        "previewTabsDelay": 100,
+        "previewTabsFollowMouse": true,
+        "previewTabsWinOffsetY": 36,
+        "previewTabsWinOffsetX": 6,
+        "previewTabsInPageOffsetY": 0,
+        "previewTabsInPageOffsetX": 0,
+        "previewTabsCropRight": 0,
+        "hideInact": true,
         "hideFoldedTabs": false,
-        "hideFoldedParent": "none",
+        "hideFoldedParent": "group",
+        "hideUnloadedTabs": false,
         "nativeHighlight": true,
         "warnOnMultiBookmarkDelete": "collapsed",
         "autoCloseBookmarks": false,
-        "autoRemoveOther": false,
-        "highlightOpenBookmarks": false,
+        "autoRemoveOther": true,
+        "highlightOpenBookmarks": true,
         "activateOpenBookmarkTab": false,
         "showBookmarkLen": true,
         "bookmarksRmUndoNote": true,
@@ -115,52 +191,57 @@
         "oldBookmarksAfterSave": "ask",
         "loadHistoryOnDemand": true,
         "fontSize": "m",
+        "fontFamily": "Inter",
         "animations": true,
         "animationSpeed": "norm",
         "theme": "proton",
         "density": "default",
         "colorScheme": "ff",
-        "sidebarCSS": true,
-        "groupCSS": false,
         "snapNotify": true,
         "snapExcludePrivate": false,
-        "snapInterval": 2,
+        "snapInterval": 1,
         "snapIntervalUnit": "hr",
-        "snapLimit": 7,
+        "snapLimit": 14,
         "snapLimitUnit": "day",
         "snapAutoExport": false,
         "snapAutoExportType": "json",
         "snapAutoExportPath": "Sidebery/snapshot-%Y.%M.%D-%h.%m.%s",
         "snapMdFullTree": false,
         "hScrollAction": "none",
+        "onePanelSwitchPerScroll": false,
+        "wheelAccumulationX": true,
+        "wheelAccumulationY": true,
         "navSwitchPanelsDelay": 128,
-        "scrollThroughTabs": "global",
+        "scrollThroughTabs": "panel",
         "scrollThroughVisibleTabs": true,
         "scrollThroughTabsSkipDiscarded": true,
         "scrollThroughTabsExceptOverflow": false,
-        "scrollThroughTabsCyclic": true,
+        "scrollThroughTabsCyclic": false,
         "scrollThroughTabsScrollArea": 100,
         "autoMenuMultiSel": true,
         "multipleMiddleClose": true,
-        "longClickDelay": 400,
+        "longClickDelay": 500,
         "wheelThreshold": false,
         "wheelThresholdX": 10,
         "wheelThresholdY": 60,
         "tabDoubleClick": "none",
         "tabsSecondClickActPrev": true,
         "tabsSecondClickActPrevPanelOnly": false,
+        "tabsSecondClickActPrevNoUnload": true,
         "shiftSelAct": true,
+        "ctrlSelAct": true,
         "activateOnMouseUp": true,
         "tabLongLeftClick": "new_child",
         "tabLongRightClick": "new_after",
         "tabMiddleClick": "close",
+        "tabPinnedMiddleClick": "discard",
         "tabMiddleClickCtrl": "edit_title",
         "tabMiddleClickShift": "duplicate",
         "tabCloseMiddleClick": "discard",
         "tabsPanelLeftClickAction": "none",
         "tabsPanelDoubleClickAction": "collapse",
         "tabsPanelRightClickAction": "menu",
-        "tabsPanelMiddleClickAction": "tab",
+        "tabsPanelMiddleClickAction": "undo",
         "newTabMiddleClickAction": "reopen",
         "bookmarksLeftClickAction": "open_in_act",
         "bookmarksLeftClickActivate": false,
@@ -175,14 +256,29 @@
         "historyMidClickAction": "open_in_new",
         "historyMidClickActivate": false,
         "historyMidClickPos": "default",
-        "syncName": "",
+        "syncName": "Desktop",
+        "syncUseFirefox": true,
+        "syncUseGoogleDrive": false,
+        "syncUseGoogleDriveApi": false,
+        "syncUseGoogleDriveApiClientId": "",
         "syncSaveSettings": true,
         "syncSaveCtxMenu": true,
         "syncSaveStyles": true,
         "syncSaveKeybindings": true,
-        "selectActiveTabFirst": true
+        "selectActiveTabFirst": true,
+        "selectCyclic": false
     },
     "sidebar": {
+        "nav": [
+            "W1u2pOHNRXif",
+            "DOlZCHb-UZCt",
+            "lQmHbB8XUT3z",
+            "MXDPdScRwA84",
+            "add_tp",
+            "create_snapshot",
+            "search",
+            "settings"
+        ],
         "panels": {
             "W1u2pOHNRXif": {
                 "type": 1,
@@ -215,21 +311,52 @@
                 "dropTabCtx": "none",
                 "moveRules": [],
                 "moveExcludedTo": -1,
-                "bookmarksFolderId": -1,
+                "bookmarksFolderId": "69jJxukjX4OZ",
                 "newTabBtns": [
-                    "School"
+                    "School",
+                    "University"
                 ],
                 "srcPanelConfig": null
+            },
+            "lQmHbB8XUT3z": {
+                "type": 2,
+                "id": "lQmHbB8XUT3z",
+                "name": "Reddit",
+                "color": "red",
+                "iconSVG": "icon_coffee",
+                "iconIMGSrc": "",
+                "iconIMG": "",
+                "lockedPanel": false,
+                "skipOnSwitching": false,
+                "noEmpty": false,
+                "newTabCtx": "none",
+                "dropTabCtx": "none",
+                "moveRules": [],
+                "moveExcludedTo": -1,
+                "bookmarksFolderId": "qmJFaluoF7Ok",
+                "newTabBtns": [],
+                "srcPanelConfig": null
+            },
+            "MXDPdScRwA84": {
+                "type": 2,
+                "id": "MXDPdScRwA84",
+                "name": "Discover",
+                "color": "pink",
+                "iconSVG": "icon_circle",
+                "iconIMGSrc": "",
+                "iconIMG": "",
+                "lockedPanel": false,
+                "skipOnSwitching": false,
+                "noEmpty": false,
+                "newTabCtx": "none",
+                "dropTabCtx": "none",
+                "moveRules": [],
+                "moveExcludedTo": -1,
+                "bookmarksFolderId": "sLKMN8VcjopZ",
+                "newTabBtns": [],
+                "srcPanelConfig": null
             }
-        },
-        "nav": [
-            "W1u2pOHNRXif",
-            "DOlZCHb-UZCt",
-            "add_tp",
-            "create_snapshot",
-            "search",
-            "settings"
-        ]
+        }
     },
     "contextMenu": {
         "tabs": [
@@ -261,19 +388,42 @@
                     "openTabsInCtr"
                 ]
             },
-            "separator-3",
-            "pin",
-            "duplicate",
-            "copyTabsUrls",
-            "discard",
-            "separator-13373479732958216",
+            {
+                "name": "",
+                "opts": [
+                    "pin",
+                    "duplicate",
+                    "editTabTitle",
+                    "discard"
+                ]
+            },
             "group",
             "flatten",
-            "editTabTitle",
+            "dedupeTabs",
+            "separator-13373479732958216",
+            {
+                "name": "Copy",
+                "opts": [
+                    "copyTabsUrls",
+                    "copyTabsTitles",
+                    "copyTabsByTemplates"
+                ]
+            },
             {
                 "name": "Set color",
                 "opts": [
                     "colorizeTab"
+                ]
+            },
+            {
+                "name": "Sort tree",
+                "opts": [
+                    "sortTabsTreeByTitleAscending",
+                    "sortTabsTreeByTitleDescending",
+                    "sortTabsTreeByUrlAscending",
+                    "sortTabsTreeByUrlDescending",
+                    "sortTabsTreeByAccessTimeAscending",
+                    "sortTabsTreeByAccessTimeDescending"
                 ]
             },
             "separator-9165811389970413",
@@ -282,6 +432,7 @@
                 "opts": [
                     "closeTabsAbove",
                     "closeTabsBelow",
+                    "closeBranch",
                     "closeDescendants"
                 ]
             },
@@ -305,10 +456,19 @@
             "restoreFromBookmarks",
             "convertToBookmarksPanel",
             "separator-9",
-            "openPanelConfig",
-            "removePanel"
+            "removePanel",
+            "openPanelConfigInSidebar"
         ],
         "bookmarks": [
+            {
+                "name": "",
+                "opts": [
+                    "createBookmark",
+                    "createFolder",
+                    "createSeparator",
+                    "edit"
+                ]
+            },
             {
                 "name": "Open in",
                 "opts": [
@@ -321,6 +481,9 @@
                     "openInCtr"
                 ]
             },
+            "openAsTabsPanel",
+            "openAsBookmarksPanel",
+            "separator-7",
             {
                 "name": "Sort",
                 "opts": [
@@ -332,35 +495,31 @@
                     "sortByTimeDescending"
                 ]
             },
-            "separator-5",
-            "createBookmark",
-            "createFolder",
-            "createSeparator",
-            "separator-8",
-            "openAsBookmarksPanel",
-            "openAsTabsPanel",
-            "separator-7",
-            "copyBookmarksUrls",
-            "copyBookmarksTitles",
+            {
+                "name": "Copy & Paste",
+                "opts": [
+                    "copyBookmarksUrls",
+                    "copyBookmarksTitles",
+                    "copyBookmarksByTemplates",
+                    "separator-2494185936532265",
+                    "pasteBookmarks"
+                ]
+            },
             "moveBookmarksTo",
-            "edit",
             "delete"
         ],
         "bookmarksPanel": [
             "collapseAllFolders",
-            "switchViewMode",
             "convertToTabsPanel",
             "separator-9",
             "unloadPanelType",
-            "openPanelConfig",
-            "removePanel"
+            "openPanelConfigInSidebar"
         ]
     },
-    "sidebarCSS": "#root {\n    --nav-btn-width: 35px;\n    --nav-btn-height: 35px;\n    --tabs-height: 38px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 30px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 5px;\n    padding-right: 4px;\n}\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n/*\n * Visually flatten tree structure when sidebar is collapsed\n */\n\n@property --tabs-indent {\n  syntax: '<number>'; /* <- defined as type number for the transition to work */\n  initial-value: 40px;\n  inherits: false;\n}\n\n#root:not(:hover) {\n    --tabs-indent: 0px;\n    --bookmarks-indent: 0px;\n\n\t\ttransition: --tabs-indent 0s .6s;\n\n    .Tab, .BookmarkNode > .body::before {\n        width: 28px;\n        transition: width 0s .6s;\n    }\n\n    /* Hide bookmark titles and navigation buttons when collapsed */\n    .BookmarkNode .title,\n    .static-btns,\n    .nav-item:not([data-active=\"true\"]) {\n        visibility: hidden;\n        transition: visibility 0s .6s;\n    }\n\n    /* Forces the current active panel icon to be visible */\n    .nav-item[data-active=\"true\"] {\n        transform: initial;\n        transition: transform 0s .6s;\n    }\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-title-padding: 6px;\n    --tabs-font-size: 13.5px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * Add glow effect to container indicator\n */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n.Tab[data-lvl=\"1\"] .color-layer { opacity: .175 }\n.Tab[data-lvl=\"2\"] .color-layer { opacity: .15 }\n.Tab[data-lvl=\"3\"] .color-layer { opacity: .125 }\n.Tab[data-lvl=\"4\"] .color-layer { opacity: .1 }\n.Tab[data-lvl=\"5\"] .color-layer { opacity: .08 }\n.Tab[data-lvl=\"6\"] .color-layer { opacity: .06 }\n",
-    "ver": "5.1.1.1",
+    "sidebarCSS": "/*\n * Size and padding adjustments\n */\n#root {\n    --nav-btn-width: 36px;\n    --nav-btn-height: 36px;\n    --tabs-height: 36px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 32px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Bold title of parent tab */\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n\n/* Add glow effect to container indicator */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-font-size: 0.85rem;\n    --tabs-title-padding: 4px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n.Tab {\n  &[data-lvl=\"1\"] .color-layer { opacity: 0.175; }\n  &[data-lvl=\"2\"] .color-layer { opacity: 0.150; }\n  &[data-lvl=\"3\"] .color-layer { opacity: 0.125; }\n  &[data-lvl=\"4\"] .color-layer { opacity: 0.100; }\n  &[data-lvl=\"5\"] .color-layer { opacity: 0.075; }\n  &[data-lvl=\"6\"] .color-layer { opacity: 0.050; }\n  &[data-lvl=\"7\"] .color-layer { opacity: 0.025; }\n  &[data-lvl=\"8\"] .color-layer { opacity: 0.000; }\n}\n",
+    "ver": "5.3.3.25",
     "keybindings": {
         "_execute_sidebar_action": "F1",
-        "new_tab_on_panel": "Ctrl+Space",
         "new_tab_in_group": "Ctrl+Shift+Space",
         "new_tab_as_last_child": "Ctrl+Alt+Space",
         "up": "Alt+Up",
@@ -368,16 +527,17 @@
         "up_shift": "Alt+Shift+Up",
         "down_shift": "Alt+Shift+Down",
         "reset_selection": "Alt+R",
+        "lock_selection": "Alt+L",
         "fold_branch": "Alt+Comma",
         "expand_branch": "Alt+Period",
-        "activate_prev_active_tab": "Alt+PageDown",
-        "activate_next_active_tab": "Alt+PageUp",
+        "activate_panel_prev_active_tab": "Alt+PageUp",
+        "activate_panel_next_active_tab": "Alt+PageDown",
         "move_tabs_up": "Ctrl+Alt+Up",
         "move_tabs_down": "Ctrl+Alt+Down",
         "tabs_indent": "Ctrl+Alt+Right",
         "tabs_outdent": "Ctrl+Alt+Left",
-        "open_snap_viewer": "F2",
-        "search": "Shift+F1",
-        "switch_to_parent_tab": "Ctrl+Home"
+        "create_snapshot": "Shift+F1",
+        "switch_to_parent_tab": "Ctrl+Home",
+        "edit_title": "F2"
     }
 }
