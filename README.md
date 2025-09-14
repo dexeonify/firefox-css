@@ -10,7 +10,6 @@ update as soon as possible if there are any breaking changes.
 - [Features](#features)
   - [Sidebery CSS](#sidebery-css)
   - [URL bar blur](#url-bar-blur)
-  - [Rounded corner context menu highlight](#rounded-corner-context-menu-highlight)
   - [Custom startpage using nightTab](#custom-startpage-using-nighttab)
     - [Base Theme](#base-theme)
     - [Nord Theme](#nord-theme)
@@ -33,10 +32,6 @@ update as soon as possible if there are any breaking changes.
 
 ⚠️ Blur currently **does not work** regardless of `layout.css.backdrop-filter.enabled`,
 due to [bug 1773402](https://bugzilla.mozilla.org/show_bug.cgi?id=1773402).
-
-### Rounded corner context menu highlight
-
-![Rounded Corner Context Menu](https://user-images.githubusercontent.com/72267349/154794069-1ecf9605-c22c-4b83-bea0-593d1ffa7cf4.png)
 
 ### Custom startpage using [nightTab](https://github.com/zombieFox/nightTab)
 
@@ -70,38 +65,28 @@ due to [bug 1773402](https://bugzilla.mozilla.org/show_bug.cgi?id=1773402).
     │
     └── components/
             autohide_sidebar.css
-            hide_tabs_toolbar.css
-            rounded_corner_context_menu.css
-            windows_controls_placeholder.css
+            iconized_content_context_menu.css
+            iconized_main_menu.css
+            iconized_tabs_context_menu.css
+            iconized_textbox_context_menu.css
 ```
 
 </details>
 
 ### Smooth scrolling
 
-Copy the `user.js` file (from the `misc/` folder) to the **Profile folder**
+Copy the `user.js` file (from the `config/` folder) to the **Profile folder**
 *(not the `chrome/` folder)*. Remove other unrelated tweaks, if needed.
 The `user.js` file can be deleted afterwards.
 
 ### Vertical tabs
 
 0. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery).
-1. Copy the contents of `misc/sidebery.css`.
+1. Copy the contents of `config/sidebery.css`.
 2. Navigate to **Sidebery Settings > Styles editor** and paste the CSS under
    "Sidebar" on the right.
-3. Individually set the following options in Styles editor:
-   - **Background color** to `#2B2A33`
-   - **Info color** to `#9494AA`
-   - **Color of active option** to `#9494AA`
-   - **Color of inactive option** to `#52525E`
-   - Under "Context Menu", **Background color** to `#2B2A33`
-   - Under "Context Menu", **Option background color on hover** to `#2B2A33`
-4. Set window preface value in **Sidebery settings > Help > Preface value**
-   to " " (a space).\
-   **Note:** The preface value can be anything, but you would have to change it
-   accordingly inside the `userChrome.css` files as well.
-5. Alternatively, import `misc/sidebery-data.json` in **Sidebery Settings > Help > Import**,
-   if you are fine with my settings. :P
+3. Alternatively, import `config/sidebery-data.json` in **Sidebery Settings > Help > Import**,
+   if you are fine with my settings. 🙂
 
 ### Custom new tab
 
@@ -114,13 +99,9 @@ The `user.js` file can be deleted afterwards.
 ## References
 
 - [MrOtherGuy/firefox-csshacks](https://github.com/MrOtherGuy/firefox-csshacks)
-  - [hide_tabs_toolbar_v2.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/hide_tabs_toolbar_v2.css)
   - [autohide_sidebar.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/autohide_sidebar.css)
-  - [context_menus_more_proton.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/context_menus_more_proton.css)
-  - [iconized_content_context_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_content_context_menu.css)
   - [iconized_main_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_main_menu.css)
-  - [iconized_places_context_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_places_context_menu.css)
+  - [iconized_content_context_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_content_context_menu.css)
   - [iconized_tabs_context_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_tabs_context_menu.css)
   - [iconized_textbox_context_menu.css](https://github.com/MrOtherGuy/firefox-csshacks/blob/master/chrome/iconized_textbox_context_menu.css)
-- [mgastonportillo/gale-for-ff](https://github.com/mgastonportillo/gale-for-ff)
 - [Redundakitties/colorful-minimalist](https://github.com/Redundakitties/colorful-minimalist)

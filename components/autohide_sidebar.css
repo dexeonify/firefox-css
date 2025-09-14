@@ -24,10 +24,10 @@ See the above repository for updates as well as full license text.
     box-shadow: 0 6px 12px black;
 }
 
-#sidebar-box[style*="order: 4"]:hover {
+#sidebar-box[style*="order: 5"]:hover {
     margin-left: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
 }
-#sidebar-box[style*="order: 2"]:hover {
+#sidebar-box[style*="order: 3"]:hover {
     margin-right: calc((var(--uc-sidebar-hover-width) - var(--uc-sidebar-width)) * -1);
 }
 

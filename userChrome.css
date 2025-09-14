@@ -4,19 +4,12 @@
 @import url(components/iconized_tabs_context_menu.css);
 @import url(components/iconized_textbox_context_menu.css);
 
-/* Remove unneeded context menu entries */
-#tabContextMenu #context_sendTabToDevice,
+/* Remove unwanted context menu entries */
 .share-tab-url-item,
 #context-sendimage,
 #context-sendvideo,
-#context-sendlinktodevice,
 #context-sep-setbackground,
 #context-setDesktopBackground {
-    display: none
-}
-
-/* Remove sidebar header */
-#sidebar-header {
     display: none
 }
 

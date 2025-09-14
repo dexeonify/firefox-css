@@ -15,8 +15,10 @@ user_pref("browser.bookmarks.openInTabClosesMenu", false);
 /* Increase the minimum tab width so that the tab title can be read */
 user_pref("browser.tabs.tabMinWidth", 140);
 
-/* Prevent middle-click (to autoscroll) from deselecting text */
-/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1714810 */
+/*
+ * Prevent middle-click (to autoscroll) from deselecting text
+ * Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1714810
+ */
 user_pref("general.autoscroll.prevent_to_collapse_selection_by_middle_mouse_down", true);
 
 /*
