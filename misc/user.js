@@ -19,8 +19,15 @@ user_pref("browser.tabs.tabMinWidth", 140);
 /* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1714810 */
 user_pref("general.autoscroll.prevent_to_collapse_selection_by_middle_mouse_down", true);
 
-/* Make PDFs sent as attachments open directly in Firefox without downloading */
-/* Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1772569 */
+/*
+ * Make PDFs sent as attachments open directly in Firefox without downloading
+ * https://connect.mozilla.org/t5/discussions/stop-saving-pdfs-to-downloads-when-viewing-in-firefox/m-p/78399/highlight/true#M29939
+ * Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1772569
+ *
+ * There's another related pref which controls PDF downloading.
+ * It was added in https://support.mozilla.org/en-US/kb/firefox-enterprise-118-release-notes
+ * Related bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1811830
+ */
 user_pref("browser.download.open_pdf_attachments_inline", true);
 
 
