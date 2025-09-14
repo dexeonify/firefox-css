@@ -30,4 +30,9 @@ user_pref("general.autoscroll.prevent_to_collapse_selection_by_middle_mouse_down
  */
 user_pref("browser.download.open_pdf_attachments_inline", true);
 
-
+/*
+ * Enable Mica effect on titlebar and sidebar
+ * As of writing, Mica effect on titlebar only works on the default Auto theme
+ * Relevant bug: https://bugzilla.mozilla.org/show_bug.cgi?id=1934143
+ */
+user_pref("widget.windows.mica", true)
