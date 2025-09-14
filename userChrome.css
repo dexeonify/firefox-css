@@ -1,9 +1,6 @@
-@import url(components/hide_tabs_toolbar_v2.css);
-@import url(components/autohide_sidebar.css);
-@import url(components/enhance_context_menu.css);
-@import url(components/iconized_content_context_menu.css);
+/* Add icons to menus */
 @import url(components/iconized_main_menu.css);
-@import url(components/iconized_places_context_menu.css);
+@import url(components/iconized_content_context_menu.css);
 @import url(components/iconized_tabs_context_menu.css);
 @import url(components/iconized_textbox_context_menu.css);
 
@@ -21,4 +18,9 @@
 /* Remove sidebar header */
 #sidebar-header {
     display: none
+}
+
+/* Make the context menu highlight corners more rounded */
+menu, menuitem {
+    border-radius: var(--arrowpanel-menuitem-border-radius) !important;
 }
