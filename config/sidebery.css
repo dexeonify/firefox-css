@@ -50,7 +50,7 @@
 }
 
 /*
- * Progressively reduce the background opacity of nested tab levels
+ * The deeper the nested tabs, the dimmer the tab
  */
 
 .Tab {
