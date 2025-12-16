@@ -11,6 +11,7 @@
         "copyMultiBullet": "",
         "copyTemplates": "HTML:%B<a href=\"%U\">%CT</a>\nMarkdown:%B[%CT](%U)",
         "updTooltipDelay": 100,
+        "selLen": true,
         "ctxMenuNative": false,
         "ctxMenuRenderInact": true,
         "ctxMenuRenderIcons": true,
@@ -18,12 +19,11 @@
         "navBarLayout": "horizontal",
         "navBarInline": true,
         "navBarSide": "left",
-        "hideAddBtn": false,
-        "hideSettingsBtn": false,
         "navBtnCount": true,
         "hideEmptyPanels": false,
         "hideDiscardedTabPanels": false,
         "navActTabsPanelLeftClickAction": "scroll",
+        "navActTabsPanelLeftClickTabPos": "general",
         "navActBookmarksPanelLeftClickAction": "scroll",
         "navTabsPanelMidClickAction": "none",
         "navBookmarksPanelMidClickAction": "none",
@@ -42,10 +42,12 @@
         "dndExpDelay": 750,
         "dndExpMod": "none",
         "dndOutside": "win",
+        "dndOutsideThresholdTimeout": 350,
         "dndActTabFromLink": true,
         "dndActSearchTab": true,
         "dndMoveTabs": false,
         "dndMoveBookmarks": false,
+        "dndTabToPanelPos": "end",
         "searchBarMode": "dynamic",
         "searchPanelSwitch": "same_type",
         "searchBookmarksShortcut": "*",
@@ -79,8 +81,10 @@
         "tabSwitchDelay": 0,
         "forceDiscard": true,
         "tabUpdDelay": 150,
+        "forceUpdTooltip": false,
         "moveNewTabPin": "end",
         "moveNewTabParent": "last_child",
+        "moveNewTabParentIndent": false,
         "moveNewTabParentActPanel": false,
         "moveNewTabButton": "end",
         "moveNewTabButtonActivePin": "start",
@@ -199,9 +203,12 @@
         "tabMiddleClickShift": "duplicate",
         "tabCloseMiddleClick": "discard",
         "tabsPanelLeftClickAction": "none",
+        "tabsPanelLeftClickTabPos": "general",
         "tabsPanelDoubleClickAction": "collapse",
+        "tabsPanelDoubleClickTabPos": "general",
         "tabsPanelRightClickAction": "menu",
         "tabsPanelMiddleClickAction": "undo",
+        "tabsPanelMiddleClickTabPos": "general",
         "newTabMiddleClickAction": "reopen",
         "bookmarksLeftClickAction": "open_in_act",
         "bookmarksLeftClickActivate": false,
@@ -226,18 +233,11 @@
         "syncSaveStyles": true,
         "syncSaveKeybindings": true,
         "selectActiveTabFirst": true,
-        "selectCyclic": false
+        "selectCyclic": false,
+        "loopPanelsIgnoreHidden": false,
+        "kbNewTabInPanelPos": "general"
     },
     "sidebar": {
-        "nav": [
-            "W1u2pOHNRXif",
-            "DOlZCHb-UZCt",
-            "MXDPdScRwA84",
-            "add_tp",
-            "search",
-            "create_snapshot",
-            "settings"
-        ],
         "panels": {
             "W1u2pOHNRXif": {
                 "type": 1,
@@ -277,12 +277,12 @@
                 ],
                 "srcPanelConfig": null
             },
-            "MXDPdScRwA84": {
+            "IZ2oA9bqe4EM": {
                 "type": 2,
-                "id": "MXDPdScRwA84",
-                "name": "Discover",
-                "color": "pink",
-                "iconSVG": "icon_circle",
+                "id": "IZ2oA9bqe4EM",
+                "name": "Notes",
+                "color": "turquoise",
+                "iconSVG": "icon_clipboard",
                 "iconIMGSrc": "",
                 "iconIMG": "",
                 "lockedPanel": false,
@@ -292,11 +292,20 @@
                 "dropTabCtx": "none",
                 "moveRules": [],
                 "moveExcludedTo": -1,
-                "bookmarksFolderId": "sLKMN8VcjopZ",
+                "bookmarksFolderId": "VB-m0TR16AmV",
                 "newTabBtns": [],
                 "srcPanelConfig": null
             }
-        }
+        },
+        "nav": [
+            "W1u2pOHNRXif",
+            "DOlZCHb-UZCt",
+            "IZ2oA9bqe4EM",
+            "add_tp",
+            "search",
+            "create_snapshot",
+            "settings"
+        ]
     },
     "contextMenu": {
         "tabs": [
@@ -456,8 +465,8 @@
             "openPanelConfigInSidebar"
         ]
     },
-    "sidebarCSS": "/*\n * Size and padding adjustments\n */\n#root {\n    --nav-btn-width: 36px;\n    --nav-btn-height: 36px;\n    --tabs-height: 36px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 32px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Bold title of parent tab */\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n\n/* Add glow effect to container indicator */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-font-size: 0.85rem;\n    --tabs-title-padding: 4px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n.Tab {\n  &[data-lvl=\"1\"] .color-layer { opacity: 0.175; }\n  &[data-lvl=\"2\"] .color-layer { opacity: 0.150; }\n  &[data-lvl=\"3\"] .color-layer { opacity: 0.125; }\n  &[data-lvl=\"4\"] .color-layer { opacity: 0.100; }\n  &[data-lvl=\"5\"] .color-layer { opacity: 0.075; }\n  &[data-lvl=\"6\"] .color-layer { opacity: 0.050; }\n  &[data-lvl=\"7\"] .color-layer { opacity: 0.025; }\n  &[data-lvl=\"8\"] .color-layer { opacity: 0.000; }\n}",
-    "ver": "5.4.0.1",
+    "sidebarCSS": "/*\n * Size and padding adjustments\n */\n#root {\n    --nav-btn-width: 36px;\n    --nav-btn-height: 36px;\n    --tabs-height: 36px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 32px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Bold title of parent tab */\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n\n/* Add glow effect to container indicator */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-font-size: 0.85rem;\n    --tabs-title-padding: 4px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n.Tab {\n    &[data-lvl=\"1\"] .color-layer { opacity: 0.175; }\n    &[data-lvl=\"2\"] .color-layer { opacity: 0.150; }\n    &[data-lvl=\"3\"] .color-layer { opacity: 0.125; }\n    &[data-lvl=\"4\"] .color-layer { opacity: 0.100; }\n    &[data-lvl=\"5\"] .color-layer { opacity: 0.075; }\n    &[data-lvl=\"6\"] .color-layer { opacity: 0.050; }\n    &[data-lvl=\"7\"] .color-layer { opacity: 0.025; }\n    &[data-lvl=\"8\"] .color-layer { opacity: 0.000; }\n}\n",
+    "ver": "5.4.0.8",
     "keybindings": {
         "_execute_sidebar_action": "F1",
         "new_tab_in_group": "Ctrl+Shift+Space",
@@ -466,8 +475,8 @@
         "down": "Alt+Down",
         "up_shift": "Alt+Shift+Up",
         "down_shift": "Alt+Shift+Down",
-        "reset_selection": "Alt+R",
         "lock_selection": "Alt+L",
+        "reset_selection": "Alt+R",
         "fold_branch": "Alt+Comma",
         "expand_branch": "Alt+Period",
         "activate_panel_prev_active_tab": "Alt+PageUp",
