@@ -16,6 +16,14 @@
         "ctxMenuRenderInact": true,
         "ctxMenuRenderIcons": true,
         "ctxMenuIgnoreContainers": "",
+        "omniReopenInCtr": true,
+        "omniReopenInCtrPrefix": "",
+        "omniSwitchToPanel": true,
+        "omniSwitchToPanelPrefix": "",
+        "omniMoveToPanel": true,
+        "omniMoveToPanelPrefix": "",
+        "omniMoveToGroup": true,
+        "omniMoveToGroupPrefix": "",
         "navBarLayout": "horizontal",
         "navBarInline": true,
         "navBarSide": "left",
@@ -50,8 +58,11 @@
         "dndTabToPanelPos": "end",
         "searchBarMode": "dynamic",
         "searchPanelSwitch": "same_type",
+        "searchTabSwitch": true,
+        "searchMenuTrig": false,
         "searchBookmarksShortcut": "*",
         "searchHistoryShortcut": "",
+        "searchInputTimeout": 300,
         "warnOnMultiTabClose": "none",
         "activateLastTabOnPanelSwitching": true,
         "activateLastTabOnPanelSwitchingLoadedOnly": true,
@@ -277,9 +288,9 @@
                 ],
                 "srcPanelConfig": null
             },
-            "IZ2oA9bqe4EM": {
+            "MZ4YDLIxudGL": {
                 "type": 2,
-                "id": "IZ2oA9bqe4EM",
+                "id": "MZ4YDLIxudGL",
                 "name": "Notes",
                 "color": "turquoise",
                 "iconSVG": "icon_clipboard",
@@ -300,7 +311,7 @@
         "nav": [
             "W1u2pOHNRXif",
             "DOlZCHb-UZCt",
-            "IZ2oA9bqe4EM",
+            "MZ4YDLIxudGL",
             "add_tp",
             "search",
             "create_snapshot",
@@ -466,9 +477,10 @@
         ]
     },
     "sidebarCSS": "/*\n * Size and padding adjustments\n */\n#root {\n    --nav-btn-width: 36px;\n    --nav-btn-height: 36px;\n    --tabs-height: 36px;\n    --bookmarks-folder-height: 32px;\n    --bookmarks-bookmark-height: 32px;\n}\n\n.TabsPanel, .bookmarks-tree {\n    padding-left: 4px;\n    padding-right: 4px;\n}\n\n/* Bold title of parent tab */\n\n.Tab[data-parent=\"true\"] .title {\n    font-weight: bold;\n}\n\n\n/* Add glow effect to container indicator */\n\n.ctx {\n    /* offset-x | offset-y | blur-radius | spread-radius | color */\n    box-shadow: 0 1px 10px 1px var(--color);\n}\n\n/*\n * Wrap tab title into multiple lines\n */\n\n#root {\n    --tabs-font-size: 0.85rem;\n    --tabs-title-padding: 4px;\n    --tabs-title-lines: 2;\n}\n\n.Tab .t-box {\n    align-items: center;\n    max-height: calc(var(--tabs-height) - var(--tabs-title-padding));\n}\n\n.Tab .title {\n    font-size: var(--tabs-font-size);\n    white-space: pre-wrap;\n    line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));\n}\n\n/*\n * The deeper the nested tabs, the dimmer the tab\n */\n\n.Tab {\n    &[data-lvl=\"1\"] .color-layer { opacity: 0.175; }\n    &[data-lvl=\"2\"] .color-layer { opacity: 0.150; }\n    &[data-lvl=\"3\"] .color-layer { opacity: 0.125; }\n    &[data-lvl=\"4\"] .color-layer { opacity: 0.100; }\n    &[data-lvl=\"5\"] .color-layer { opacity: 0.075; }\n    &[data-lvl=\"6\"] .color-layer { opacity: 0.050; }\n    &[data-lvl=\"7\"] .color-layer { opacity: 0.025; }\n    &[data-lvl=\"8\"] .color-layer { opacity: 0.000; }\n}\n",
-    "ver": "5.4.0.8",
+    "ver": "5.4.0.10",
     "keybindings": {
         "_execute_sidebar_action": "F1",
+        "reset_selection": "Alt+R",
         "new_tab_in_group": "Ctrl+Shift+Space",
         "new_tab_as_last_child": "Ctrl+Alt+Space",
         "up": "Alt+Up",
@@ -476,7 +488,6 @@
         "up_shift": "Alt+Shift+Up",
         "down_shift": "Alt+Shift+Down",
         "lock_selection": "Alt+L",
-        "reset_selection": "Alt+R",
         "fold_branch": "Alt+Comma",
         "expand_branch": "Alt+Period",
         "activate_panel_prev_active_tab": "Alt+PageUp",
@@ -486,6 +497,7 @@
         "tabs_indent": "Ctrl+Alt+Right",
         "tabs_outdent": "Ctrl+Alt+Left",
         "create_snapshot": "Shift+F1",
+        "search": "Shift+F2",
         "switch_to_parent_tab": "Ctrl+Home",
         "edit_title": "F2"
     }
