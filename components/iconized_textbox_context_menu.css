@@ -18,45 +18,58 @@ See the above repository for updates as well as full license text. */
     -moz-context-properties: fill;
     fill: currentColor;
 }
+
 :where(.textbox-contextmenu > menu),
 :where(.textbox-contextmenu > menuitem) {
     padding-inline-start: 1em !important;
 }
+
 .textbox-contextmenu > menuitem[type="checkbox"]::before {
     content: url("chrome://devtools/skin/images/checkbox.svg");
 }
-.textbox-contextmenu > menuitem[type="checkbox"] > :is(.menu-iconic-left,.menu-icon) {
+
+.textbox-contextmenu > menuitem[type="checkbox"] > :is(.menu-iconic-left, .menu-icon) {
     display: none;
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-undo"]::before,
 .textbox-contextmenu > [data-l10n-id="text-action-redo"]::before {
     content: url("chrome://global/skin/icons/undo.svg");
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-redo"]::before {
     transform-box: content-box;
     transform: scaleX(-1);
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-copy"]::before {
     content: url("chrome://global/skin/icons/edit-copy.svg");
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-strip-on-share"]::before {
     content: url("chrome://devtools/skin/images/command-always-on-top-window.svg");
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-cut"]::before {
     content: url("chrome://browser/skin/edit-cut.svg");
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-paste"]::before {
     content: url("chrome://browser/skin/edit-paste.svg");
 }
+
 .textbox-contextmenu > #paste-and-go::before {
     content: url("chrome://browser/skin/edit-paste.svg");
 }
+
 .textbox-contextmenu > .searchbar-paste-and-search::before {
     content: url("chrome://global/skin/icons/search-glass.svg");
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-delete"]::before {
     content: url("chrome://global/skin/icons/delete.svg");
 }
+
 .textbox-contextmenu > [data-l10n-id="text-action-select-all"]::before {
     content: url("chrome://global/skin/reader/character-spacing-20.svg");
     transform: scale(0.85);

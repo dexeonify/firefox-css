@@ -1,6 +1,6 @@
 {
     "file": "RedditEnhancer_backup",
-    "backup_time": "2026_Jan_02_124428",
+    "backup_time": "2026_Feb_20_224249",
     "addDownloadVideoButton": true,
     "addDropShadow": false,
     "addonTheme": "dark",
@@ -11,6 +11,7 @@
     "autoExpandValue": "0",
     "autoLoadMoreComments": false,
     "autoRedirectVersion": "off",
+    "betterCommentBox": true,
     "bgBlur": "12",
     "bionicReaderComments": false,
     "bionicReaderFontColour": false,
@@ -110,7 +111,7 @@
         "customFeeds": false,
         "recent": false,
         "communities": false,
-        "resources": true,
+        "resources": false,
         "topics": false
     },
     "removeCommentButtonIcons": false,
