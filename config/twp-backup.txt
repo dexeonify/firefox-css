@@ -1,6 +1,6 @@
 {
-    "timeStamp": 1767328997199,
-    "version": "10.1.1.1",
+    "timeStamp": 1792327352941,
+    "version": "10.2.1.0",
     "uiLanguage": "default",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
