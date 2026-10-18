@@ -24,6 +24,11 @@ See the above repository for updates as well as full license text. */
     padding-inline-start: 1em !important;
 }
 
+:where(#contentAreaContextMenu) > menu:not(.menu-iconic) > .menu-icon,
+:where(#contentAreaContextMenu) > menuitem:not(.menuitem-iconic) > .menu-icon {
+    display: none;
+}
+
 #contentAreaContextMenu > menuitem[type="checkbox"]::before {
     content: url("chrome://devtools/skin/images/checkbox.svg");
 }
