@@ -21,3 +21,10 @@
 #sidebar[src="chrome://browser/content/webext-panels.xhtml"] {
     border-radius: var(--border-radius-medium) var(--border-radius-medium) 0 0 !important
 }
+
+/* Blur URL bar popup */
+#urlbar[popover-open] .urlbarView-background {
+    background-color: color-mix(in srgb, var(--urlbar-background-color-focus) 60%, transparent) !important;
+    backdrop-filter: blur(32px);
+    background-image: url(noise-512x512.png) !important;
+}
